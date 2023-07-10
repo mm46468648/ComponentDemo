@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:id="@+id/tvCertificate"
+            android:text="证书"
+            android:textColor="#ff222222"
+            android:textSize="17sp"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tvMedal"
+            android:text="勋章"
+            android:textColor="#ff666666"
+            android:textSize="14sp"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llApply"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <View
+            android:background="#ffeeeeee"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+        <TextView
+            android:id="@+id/tvApply"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:text="证书申请"
+            android:drawableLeft="@mipmap/studyroom_ic_certificate_left"
+            android:drawableRight="@mipmap/common_ic_right_arrow_gray"
+            android:paddingRight="15dp"
+            android:drawablePadding="7dp"
+            android:textColor="#ff222222"
+            android:textSize="17sp"
+            android:paddingLeft="15dp"
+            />
+        <View
+            android:background="#ffeeeeee"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+    </LinearLayout>
+
+
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

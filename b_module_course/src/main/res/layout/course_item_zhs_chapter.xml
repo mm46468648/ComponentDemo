@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        tools:text="第一章  绪论"
+        android:textColor="@color/color_818181"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/ViewDividerFirst"
+       style="@style/ViewLine1pxStyle"/>
+    <TextView
+        android:id="@+id/tvSecondName"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        tools:text="第一章  绪论"
+        android:textColor="@color/color_818181"
+        android:textSize="16sp" />
+    <View
+        android:id="@+id/ViewDividerSecond"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        style="@style/ViewLine1pxStyle"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clThird"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+
+        <ImageView
+            android:id="@+id/ivPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:scaleType="center"
+            android:src="@mipmap/course_ic_zhs_play_gray"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvCourseName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.25"
+            android:maxLines="1"
+            android:textColor="@color/color_3"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvLength"
+            app:layout_constraintLeft_toRightOf="@+id/ivPlay"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="汉子的渊源（汉子的产生发展与演变）" />
+
+        <TextView
+            android:id="@+id/tvLength"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:maxLines="1"
+            android:textColor="@color/color_9"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/tvCourseName"
+            app:layout_constraintTop_toBottomOf="@+id/tvCourseName"
+            tools:text="00:00" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@+id/ViewDividerBottom"
+       style="@style/ViewLine8pxStyle"/>
+</LinearLayout>

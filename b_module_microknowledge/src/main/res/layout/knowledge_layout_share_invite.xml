@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="28dp"
+                android:background="@mipmap/common_bg_share_invite_top"
+                android:paddingBottom="10dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/iv_app_user_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@mipmap/common_ic_user_head_normal"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13dp"
+                        android:ellipsize="end"
+                        android:gravity="left"
+                        android:maxWidth="160dp"
+                        android:maxLines="2"
+                        android:textColor="@color/color_6"
+                        android:textSize="15sp"
+                        tools:ignore="MissingConstraints"
+                        tools:text="王大宽王大宽王大宽王大宽王大宽王大宽宽王大宽王大宽" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/user_invitation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="邀请你一起免费学习"
+                    android:textColor="#ff979797"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_top" />
+
+                <TextView
+                    android:id="@+id/intro"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="35dp"
+                    android:ellipsize="end"
+                    android:lineSpacingMultiplier="1.2"
+                    android:maxLines="3"
+                    android:textColor="#ff876540"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/user_invitation"
+                    tools:ignore="MissingConstraints"
+                    tools:text="在项目伊始时做一个用户研究的作用好过于在项目落地后再对50个用户过于在项目落地后再对50个用户进行测试在项目落地后再对50个用户进行测试" />
+
+
+                <ImageView
+                    android:id="@+id/line"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/common_iv_share_invite_line"
+                    app:layout_constraintLeft_toLeftOf="@+id/intro"
+                    app:layout_constraintRight_toRightOf="@+id/intro"
+                    app:layout_constraintTop_toBottomOf="@+id/intro" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/con"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:paddingBottom="10dp"
+                    android:background="@drawable/common_shape_share_invite_resource_bg"
+                    app:layout_constraintLeft_toLeftOf="@+id/intro"
+                    app:layout_constraintRight_toRightOf="@+id/intro"
+                    app:layout_constraintTop_toBottomOf="@+id/line"
+                    tools:ignore="MissingConstraints">
+
+
+                    <ImageView
+                        android:id="@+id/img_plan"
+                        android:layout_width="80dp"
+                        android:layout_height="53dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@mipmap/ic_share_launch"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+               />
+
+                    <TextView
+                        android:id="@+id/plan_intro"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="45dp"
+                        android:ellipsize="end"
+                        android:lineSpacingMultiplier="1.2"
+                        android:maxLines="2"
+                        android:textColor="#ff7a5e3c"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toRightOf="@+id/img_plan"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/img_plan"
+                        tools:text="但无论是哪种类型用户，都一定会有同种共性" />
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/img_tye"
+                    android:layout_width="49dp"
+                    android:layout_height="49dp"
+                    android:layout_marginRight="30dp"
+                    android:src="@mipmap/knowledge_ic_share_type"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/line"
+                    tools:ignore="MissingConstraints" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@mipmap/knowledge_bg_invite_share_bottom">
+
+                <ImageView
+                    android:id="@+id/qr_img"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="96dp"
+                    android:layout_marginTop="19dp"
+                    android:src="@mipmap/common_iv_app_qr_code"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/tip8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="军职在线"
+                    android:textColor="#ff666666"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@+id/qr_img"
+                    app:layout_constraintTop_toTopOf="@+id/qr_img" />
+
+                <TextView
+                    android:id="@+id/tip9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="长按二维码加入学习"
+                    android:textColor="#ff979797"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="@+id/tip8"
+                    app:layout_constraintTop_toBottomOf="@+id/tip8" />
+
+
+                <ImageView
+                    android:id="@+id/img_stamper"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@mipmap/common_share_invite_stamper"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tip9" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="一站式学习3000万+免费好资源"
+                    android:textColor="#ff9bd6be"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_stamper" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

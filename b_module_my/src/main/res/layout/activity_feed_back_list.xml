@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_white">
+
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@+id/send"
+            android:background="@drawable/shape_corner1_5_color_f1"
+            android:hint="@string/hint_txt_send"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/color_6"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/img_choose"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/common_ic_img_choose" />
+
+
+        <TextView
+            android:id="@+id/send"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="@string/txt_send"
+            android:textColor="@color/color_E5472D"
+            android:visibility="invisible" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/color_F1F1F1" />
+    </RelativeLayout>
+
+    <com.mooc.resource.widget.MoocSwipeRefreshLayout
+        android:id="@+id/swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/commonTitle">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_feedback_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp" />
+    </com.mooc.resource.widget.MoocSwipeRefreshLayout>
+
+    <com.mooc.resource.widget.CommonTitleLayout
+        android:id="@+id/commonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ctl_adapteStatusBar="true"
+        app:ctl_middle_text="意见反馈"
+        app:ctl_middle_text_color="@color/color_2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</RelativeLayout>
+

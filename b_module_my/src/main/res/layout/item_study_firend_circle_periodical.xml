@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="schoolSourceBean"
+            type="com.mooc.my.model.SchoolSourceBean" />
+
+        <variable
+            name="uid"
+            type="String" />
+
+        <variable
+            name="lifeOwner"
+            type="androidx.lifecycle.LifecycleOwner" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp">
+
+        <include
+            android:id="@+id/incloud_head"
+
+            layout="@layout/my_include_school_circle_head_new"
+            app:lifeOwner="@{lifeOwner}"
+            app:schoolSourceBean="@{schoolSourceBean}"
+            app:uid="@{uid}" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <include layout="@layout/commonrs_item_periodical" />
+
+        <View
+            android:id="@+id/line"
+            style="@style/ViewLine1pxStyle"
+            android:layout_marginTop="@dimen/dp_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/incloudItem" />
+    </LinearLayout>
+</layout>

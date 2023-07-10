@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/viewSpaceTop"
+        style="@style/ViewLine10pxStyle" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableLeft="@drawable/home_shape_solid_primary_width3_height12"
+            android:drawablePadding="5dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:paddingRight="10dp"
+            android:text="大家最近在学的资源"
+            android:textColor="@color/color_2"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@+id/tvTostudy"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvHostResourceName"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:ellipsize="end"-->
+<!--            android:maxLines="2"-->
+<!--            android:textColor="#ff222222"-->
+<!--            android:textSize="14sp"-->
+<!--            tools:text="一条踩坏的西裤，一个被放弃的机会两条拆坏的西裤，两个被放弃的机" />-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvStudyPlan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvStudyPlanName" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</LinearLayout>

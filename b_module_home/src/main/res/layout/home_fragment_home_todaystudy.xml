@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:background="@mipmap/home_bg_today_study_head"
+                android:tag="skin:home_bg_today_study_head:background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.mooc.resource.widget.StatusBarView
+                    android:id="@+id/stateBarView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp">
+
+
+
+                    <ImageView
+                        android:layout_marginTop="21dp"
+                        android:id="@+id/tvTopTip"
+                        android:layout_width="229dp"
+                        android:layout_height="46dp"
+                        android:layout_marginBottom="20dp"
+                        android:tag="skin:home_ic_today_study_top:src"
+                        android:src="@mipmap/home_ic_today_study_top"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/ivWang"
+                        android:layout_width="65dp"
+                        android:layout_height="75dp"
+                        android:scaleType="centerCrop"
+                        android:layout_marginRight="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvAllScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:paddingLeft="2dp"
+                        android:layout_marginRight="4dp"
+                        android:text="0"
+                        android:textColor="#ffffffff"
+                        android:gravity="right"
+                        android:textSize="35sp"
+                        app:layout_constraintBottom_toBottomOf="@id/guideHorizontal2"
+                        app:layout_constraintRight_toLeftOf="@+id/tvScoreStr"
+                        app:layout_constraintTop_toTopOf="@id/guideHorizontal"
+                        app:layout_constraintVertical_bias="0.6" />
+
+
+                    <TextView
+                        android:id="@+id/tvScoreStr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:drawableRight="@mipmap/home_ic_studyroom_right_arrow"
+                        android:drawablePadding="4dp"
+                        android:gravity="bottom"
+                        android:text="分"
+                        android:tag="skin:home_todaystudy_head_text:textColor"
+                        android:textColor="@color/home_todaystudy_head_text"
+                        android:textSize="13sp"
+                        app:layout_constraintBaseline_toBaselineOf="@id/tvAllScore"
+                        app:layout_constraintRight_toLeftOf="@+id/guideVertical" />
+
+                    <View
+                        android:id="@+id/viewAllClickRange"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvAllScore"
+                        app:layout_constraintLeft_toLeftOf="@+id/tvAllScore"
+                        app:layout_constraintRight_toRightOf="@+id/tvScoreStr"
+                        app:layout_constraintTop_toTopOf="@+id/tvAllScore" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideVertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.36"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideHorizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.42"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideHorizontal2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.66"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvCheckinScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="打卡      分"
+                        android:tag="skin:home_todaystudy_head_text:textColor"
+                        android:textColor="@color/home_todaystudy_head_text"
+                        android:textSize="13sp"
+                        app:layout_constraintLeft_toRightOf="@+id/guideVertical"
+                        app:layout_constraintTop_toTopOf="@+id/guideHorizontal" />
+
+                    <TextView
+                        android:id="@+id/tvReportScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="举报      分"
+                        android:tag="skin:home_todaystudy_head_text:textColor"
+                        android:textColor="@color/home_todaystudy_head_text"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/guideHorizontal2"
+                        app:layout_constraintLeft_toRightOf="@+id/guideVertical" />
+
+                    <TextView
+                        android:id="@+id/tvStudyScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="31dp"
+                        android:text="学习      分"
+                        android:tag="skin:home_todaystudy_head_text:textColor"
+                        android:textColor="@color/home_todaystudy_head_text"
+                        android:textSize="13sp"
+                        app:layout_constraintLeft_toRightOf="@+id/tvCheckinScore"
+                        app:layout_constraintTop_toTopOf="@+id/guideHorizontal" />
+
+                    <TextView
+                        android:id="@+id/tvShareScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分享      分"
+                        android:tag="skin:home_todaystudy_head_text:textColor"
+                        android:textColor="@color/home_todaystudy_head_text"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/guideHorizontal2"
+                        app:layout_constraintLeft_toLeftOf="@+id/tvStudyScore" />
+
+                    <TextView
+                        android:id="@+id/tvSourceDay"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="26dp"
+                        android:gravity="center"
+                        android:text="资源日学习目标  条，您可通过“调整目标”修改"
+                        android:tag="skin:home_todaystudy_head_text:textColor"
+                        android:textColor="@color/home_todaystudy_head_text"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--                <View-->
+<!--                    android:id="@+id/diver"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/dp_10"-->
+<!--                    android:background="@color/color_e2" />-->
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clFold"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="5dp">
+
+                    <TextView
+                        android:layout_marginBottom="10dp"
+                        android:id="@+id/tvChangeTarget"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:paddingRight="15dp"
+                        android:text="调整目标"
+                        android:tag="skin:home_todaystudy_head_text:textColor"
+                        android:textColor="@color/home_todaystudy_head_text"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvTodayStudy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="今日学习"
+                        android:textColor="#ffffffff"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvTodayScoreFold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:clickable="true"
+                        android:gravity="bottom"
+                        android:text="0 今日积分"
+                        android:textColor="#ffffffff"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/ivArrow" />
+
+                    <ImageView
+                        android:id="@+id/ivArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="2dp"
+                        android:src="@mipmap/home_ic_studyroom_right_arrow"
+                        app:layout_constraintBottom_toBottomOf="@id/tvTodayScoreFold"
+                        app:layout_constraintRight_toLeftOf="@+id/tvChangeTargetFold" />
+
+                    <TextView
+                        android:id="@+id/tvChangeTargetFold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:text="调整目标"
+                        android:textColor="#ffffffff"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+
+
+                    <androidx.constraintlayout.widget.Group
+                        android:id="@+id/groupToobal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        app:constraint_referenced_ids="tvTodayStudy,tvTodayScoreFold,ivArrow,tvChangeTargetFold" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+        <com.mooc.resource.widget.MCustomTablayout
+            android:id="@+id/mctTodayStudy"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/color_white"
+            app:mct_select_text_blod="true"
+            app:tabPaddingStart="1dp"
+            app:tabPaddingEnd="1dp"
+            app:mct_select_text_size="14sp"
+            app:mct_tab_layout="@layout/home_layout_tab_todaystudy"
+            app:mct_unselect_text_size="12sp"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/transparent"
+            app:tabIndicatorHeight="0dp"
+            app:tabMode="fixed"
+            app:tabRippleColor="@android:color/transparent"
+            app:tabSelectedTextColor="@color/color_2"
+            app:tabTextColor="@color/color_6" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/todayStudyVp2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"></androidx.viewpager2.widget.ViewPager2>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

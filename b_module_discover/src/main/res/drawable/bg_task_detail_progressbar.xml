@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="50dp" />
+            <solid android:color="#1A000000" />
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <scale
+            android:drawable="@drawable/shape_bg_progressbar"
+            android:scaleWidth="100%" />
+
+<!--        <shape>-->
+<!--            <gradient-->
+<!--                android:angle="180"-->
+<!--                android:endColor="#25C794"-->
+<!--                android:startColor="#10955B"-->
+<!--                android:type="linear" />-->
+<!--        </shape>-->
+    </item>
+</layer-list>

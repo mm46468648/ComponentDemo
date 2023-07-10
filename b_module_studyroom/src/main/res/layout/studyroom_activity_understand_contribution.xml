@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.mooc.resource.widget.CommonTitleLayout
+        android:id="@+id/commonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ctl_adapteStatusBar="true"
+        app:ctl_right_text_color="@color/color_2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <TextView-->
+<!--        android:padding="15dp"-->
+<!--        android:id="@+id/tvContent"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        tools:text="当你有一个傻瓜时，你会很痛苦；你有 50 个傻瓜是最幸福的，吃饭、睡觉、上厕所排着队去的；你有一个聪明人时很带劲，你有 50 个聪明人实际上是最痛苦的，谁都不服谁。我在公司里的作用就象水泥，把许多优秀的人才粘合起来，使他们力气往一个地方使"-->
+<!--        android:textColor="#ff4a4a4a"-->
+<!--        android:textSize="14sp"-->
+<!--        android:lineSpacingExtra="3dp"-->
+<!--        />-->
+
+    <FrameLayout
+        android:id="@+id/flRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.mooc.webview.WebviewActivity" >
+
+    </FrameLayout>
+
+
+</LinearLayout>

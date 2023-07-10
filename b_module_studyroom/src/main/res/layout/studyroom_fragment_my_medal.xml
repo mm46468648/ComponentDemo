@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
+
+        <com.mooc.resource.widget.MoocSwipeRefreshLayout
+            android:id="@+id/swipeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_white">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyvlerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.mooc.resource.widget.MoocSwipeRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

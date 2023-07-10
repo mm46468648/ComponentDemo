@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llContainer"
+    android:background="@color/color_white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+
+        <TextView
+            android:id="@+id/tvExam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="考试"
+            android:textColor="@color/color_6"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <View
+            android:id="@+id/viewExamLine"
+            android:layout_width="1dp"
+            android:layout_height="23dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/color_64e0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/tvExam"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvHaveExam"
+            android:layout_width="78dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/home_selector_coursetype_filter_bg"
+            android:gravity="center"
+            android:text="有考试"
+            android:textColor="@color/home_selector_coursetype_fileter_text"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/viewExamLine"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNoExam"
+            android:layout_width="78dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/home_selector_coursetype_filter_bg"
+
+            android:gravity="center"
+            android:text="无考试"
+            android:textColor="@color/home_selector_coursetype_fileter_text"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/tvHaveExam"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_64e0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+
+        <TextView
+            android:id="@+id/tvCert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="证书"
+            android:textColor="@color/color_6"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <View
+            android:id="@+id/viewCertLine"
+            android:layout_width="1dp"
+            android:layout_height="23dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/color_64e0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/tvCert"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvHaveCert"
+            android:layout_width="78dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/home_selector_coursetype_filter_bg"
+            android:gravity="center"
+            android:text="有证书"
+            android:textColor="@color/home_selector_coursetype_fileter_text"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/viewCertLine"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNoCert"
+            android:layout_width="78dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/home_selector_coursetype_filter_bg"
+            android:gravity="center"
+            android:text="无证书"
+            android:textColor="@color/home_selector_coursetype_fileter_text"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/tvHaveCert"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_64e0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+
+        <TextView
+            android:id="@+id/tvCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="费用"
+            android:textColor="@color/color_6"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <View
+            android:id="@+id/viewCostLine"
+            android:layout_width="1dp"
+            android:layout_height="23dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/color_64e0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/tvCost"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNoCost"
+            android:layout_width="78dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/home_selector_coursetype_filter_bg"
+            android:gravity="center"
+            android:text="免费"
+            android:textColor="@color/home_selector_coursetype_fileter_text"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/viewCostLine"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvHaveCost"
+            android:layout_width="78dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/home_selector_coursetype_filter_bg"
+            android:gravity="center"
+            android:text="付费"
+            android:textColor="@color/home_selector_coursetype_fileter_text"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/tvNoCost"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

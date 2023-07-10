@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_game_brum"
+    android:orientation="vertical">
+
+    <com.mooc.resource.widget.CommonTitleLayout
+        android:id="@+id/commonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ctl_left_icon="@mipmap/common_ic_back_white"
+        app:ctl_middle_text="开始答题"
+        app:ctl_middle_text_color="@color/white" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="17dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/frame_game_brum">
+
+
+
+            <View
+                android:layout_width="85dp"
+                android:layout_height="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="6dp"
+                android:background="@mipmap/icon_game_top_shape"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="85dp"
+                android:layout_height="8dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="15dp"
+                android:background="@mipmap/icon_game_top_shape"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_marginTop="52dp"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                tools:text="卤肉饭做饭答题比武"
+                android:textColor="#ffffffff"
+                android:textSize="33sp"
+                android:shadowColor="#91003bc0"
+                android:shadowDx="0"
+                android:shadowDy="1"
+                android:shadowRadius="3.0"
+                />
+
+           <LinearLayout
+               android:layout_marginTop="30dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <View
+                   android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:layout_height="8dp"
+                   android:layout_marginRight="15dp"
+                   android:layout_marginTop="6dp"
+                   android:background="@mipmap/icon_game_top_shape"
+                   app:layout_constraintLeft_toLeftOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <ImageView
+                   android:layout_width="17dp"
+                   android:src="@mipmap/icon_star"
+                   android:layout_height="17dp"/>
+               <View
+                   android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:layout_height="8dp"
+                   android:layout_marginTop="6dp"
+                   android:layout_marginLeft="15dp"
+                   android:background="@mipmap/icon_game_top_shape"
+                   app:layout_constraintRight_toRightOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+           </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvDesc1"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="57dp"
+                android:layout_marginRight="57dp"
+                android:text="连续回答100道题，限时30分钟。"
+                android:textColor="#ffd7d7d7"
+                android:textSize="15sp"
+                />
+
+
+            <View
+                android:layerType="software"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="57dp"
+                android:layout_marginRight="57dp"
+                android:background="@drawable/line_begin_skill_gap"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+
+            <TextView
+                android:id="@+id/tvDesc2"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="57dp"
+                android:layout_marginRight="57dp"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="10dp"
+                tools:text="每道题只有一次答题机会，开始答题后中途离场视为提交。"
+                android:textColor="#ffd7d7d7"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:id="@+id/tvBegin"
+                android:layout_width="147dp"
+                android:layout_height="50dp"
+                tools:layout_marginRight="15dp"
+                android:background="@mipmap/bg_match_button_left"
+                android:gravity="center"
+                android:layout_marginTop="60dp"
+                android:text="开始答题"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/sp_14"
+                android:visibility="visible" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

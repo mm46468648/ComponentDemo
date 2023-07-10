@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingLeft="116dp"
+    android:layout_height="50dp">
+
+    <TextView
+        android:id="@+id/tvNewVersionHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:background="@color/colorPrimary"
+        android:padding="2dp"
+        android:text="@string/text_has_new_version"
+        android:textColor="@color/color_white"
+        android:textSize="10sp" />
+</FrameLayout>
+
+

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">b_module_studyproject</string>
+
+    <string name="tip_simple_res_intro">该资源仅支持在《%1$s》学习项目中查看，请先报名该项目。</string>
+    <string name="study_enroll_time_plan">报名时间：</string>
+    <string name="study_plan_time">起始时间：</string>
+    <string name="study_plan_initiator">发&#160;&#160;起&#160;&#160;人：</string>
+    <string name="study_look_initiator">发起人简介</string>
+    <string name="text_study_plan_rule">参与规则</string>
+    <string name="study_plan_more">更多&#062;</string>
+    <string name="study_plan_source">学习清单</string>
+    <string name="study_plan_dynamic">动态</string>
+    <string name="study_sign_plan">打卡</string>
+    <string name="to_study">去学习</string>
+    <string name="only_show">仅浏览</string>
+    <string name="apply_dashi">报名参加</string>
+    <string name="study_plan_rule">参与规则：</string>
+    <string name="learn_user_name">%1$s等%2$d人</string>
+    <string name="text_time_to_time">%1$s~%2$s</string>
+    <string name="study_plan_count">%1$s人参与</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="not_wifi_only_wifi_false">当前为非Wifi环境，请注意流量资费</string>
+    <string name="study_plan_enrolment_un_start">报名尚未开始</string>
+    <string name="study_plan_start">加入项目</string>
+    <string name="study_plan_limit_num">报名人数已满</string>
+    <string name="study_plan_finish">项目已结束</string>
+    <string name="study_plan_enrolment_finish">报名结束</string>
+    <string name="study_plan_comment">发布我的动态</string>
+    <string name="study_plan_un_start">项目尚未开始</string>
+    <string name="text_share_study_plan">我正在浏览&#160;%1$s&#160;学习项目，一起来学吧~</string>
+    <string name="txt_input_exchange_code">请输入兑换码</string>
+    <string name="hint_input_exchange_code">请输兑换码</string>
+    <string name="join_with_exchange_code">兑换码参与</string>
+    <string name="tip_join_exchange_code">仅输入兑换码，不押积分，成功后可获得勋章、瓜分奖励积分，不可获得预存返还积分。</string>
+    <string name="tip_join_point">押积分参加，不需要兑换码，成功后可获得勋章、瓜分奖励积分、预存返还积分。</string>
+    <string name="text_str_integrity_commitment_cb_remind">请勾选诚信承诺</string>
+    <string name="text_str_integrity_commitment">维护公平、公正的学习环境是我们共同的责任。请承诺以诚信行为参加本学习项目，系统根据不同项目预先奖励一定诚信积分。同时，系统将不定期对涉嫌刷分情况进行检测，若在学习过程中有被系统判定有涉嫌刷分行为，将<span style="color:#D37C00;font-weight:700;">双倍扣除</span>诚信积分，并在平台公示。</string>
+    <string name="text_str_next_step">下一步</string>
+    <string name="join_with_point">押积分参与</string>
+    <string name="text_score_share">+%1$d</string>
+    <string name="text_study_day">连续学习%1$d天奖励</string>
+    <string name="text_study_resource_score">学习资源奖励积分</string>
+    <string name="title_learn_unfinish">未完成</string>
+    <string name="title_must_learn">必学</string>
+    <string name="title_chose_learn">选学</string>
+    <string name="title_learn_hasfinish">已完成</string>
+    <string name="try_listen">试听</string>
+    <string name="study_sign_time_plan">%1$s&#160;至&#160;%2$s</string>
+    <string name="study_lock_time">%1$s&#160;解锁</string>
+    <string name="study_re_score">此次重新操作需要%1$d分，您还剩余%2$d分。请加油赚积分，再来操作吧！</string>
+    <string name="study_can_re_score">此次重新操作需要%1$d分，您还剩余%2$d分。确认操作吗？</string>
+    <string name="study_bet_score">此次加入项目需扣除%1$d积分作为预存积分，是否确定加入？</string>
+    <string name="study_source_sign">确认操作吗？</string>
+    <string name="sign_member_title">最近这些小伙伴也在这里留下了足迹</string>
+    <string name="sign_member_title_part">坚持不易，给他们加个油吧</string>
+    <string name="study_plan_hightquality_dynamic">精华内容</string>
+    <string name="study_plan_stop">屏蔽</string>
+    <string name="text_delete">删除</string>
+    <string name="report_str">举报</string>
+    <string name="report_str_send">发送</string>
+    <string name="report_str_pop">请选择一个举报项</string>
+    <string name="study_plan_sign_dynamic">打卡动态</string>
+    <string name="text_initiator">发起人（%1$s）</string>
+    <string name="study_plan_cancel_stop">取消屏蔽</string>
+    <string name="study_del_sign_dynamic">本动态已关联打卡结果，删除后将影响打卡结果，可能导致打卡失败，请确认是否继续删除？</string>
+    <string name="study_plan_join">您已加入此项目</string>
+    <string name="study_bet_add">您选择预存%1$d分加入项目，您的积分不足。请加油赚积分,再来参加吧!</string>
+    <string name="text_bet_score">您已加入此项目，扣除%1$d积分</string>
+    <string name="study_no_bet_add">您选择不预存加入项目，确认加入吗？</string>
+    <string name="text_continue_del">继续删除</string>
+    <string name="del_message">确认删除？</string>
+    <string name="study_plan_stop_message">是否隐藏此条动态?</string>
+    <string name="study_plan_show_message">是否显示此条动态?</string>
+    <string name="text_no_complete_track">未完成音频学习</string>
+    <string name="text_has_complete_track">已完成音频学习</string>
+
+    <string name="text_publishing_dynamics">发布动态</string>
+    <string name="text_publishing_comment">发表评论</string>
+    <string name="tv_dynamic_word">文字</string>
+    <string name="hint_str_dynamic">请填写15字以上的动态</string>
+    <string name="permission_record_write">请允许获取录制音频、访问文件的权限。可前往设置中修改权限。</string>
+    <string name="permission_sd_write">请允许获取访问文件的权限。可前往设置中修改权限。</string>
+    <string name="permission_record">请允许获取录制音频的权限。可前往设置中修改权限。</string>
+    <string name="permission_camera_read">请允许获取相机、相册及访问文件的权限。可前往设置中修改权限。</string>
+    <string name="permission_file_read">请允许获取访问文件的权限。可前往设置中修改权限。</string>
+    <string name="submit">提交</string>
+    <string name="submit_comment">提交评论</string>
+    <string name="tip_pic">图片</string>
+    <string name="reset_record">重新录制</string>
+    <string name="comment">动态详情</string>
+    <string name="text_comment_str">评论区</string>
+    <string name="text_str_initiator">发起人</string>
+    <string name="comment_show_message">是否显示此条评论?</string>
+    <string name="comment_stop_message">是否隐藏此条评论?</string>
+    <string name="send_commend_succ">发表成功，等待审核</string>
+    <string name="send_commend_fail">发表评论失败</string>
+    <string name="show_str_title">%1$d&#047;%2$d</string>
+    <string name="save_image_failure">图片下载失败</string>
+    <string name="empty_army">资源正在建设中</string>
+    <string name="bet_point_title">积分预存说明：</string>
+    <string name="text_id_send">绑定码：</string>
+    <string name="join_study_sure">领取诚信积分并报名</string>
+    <string name="bet_point_no_join">不预存积分\n参加</string>
+    <string name="bet_point_tip">1、预存的积分不予退还。</string>
+    <string name="bet_point_split">1、预存的积分不予退还。\n2、您选择的是“积分瓜分模式”计划，计划失败者的预存的积分将进入积分池，额外奖励给计划完成者。\n额外奖励所得积分与您在学习平台的资源学习情况、学习项目动态质量等因素相关，额外奖励积分会在计划结束后统一由系统自动计算并发放。</string>
+
+    <string name="bet_id_intro">请填写您的邀请人ID（若无可不填）</string>
+    <string name="dynamic_nocopy">动态不支持复制</string>
+    <string name="clock_reminder">打卡提醒</string>
+    <string name="clock_reminder_already">已设置提醒</string>
+    <string name="apply_certificate">申请证书</string>
+    <string name="apply_certificate_finish">证书已申请</string>
+    <string name="item_observer_clock">订阅打卡提醒</string>
+    <string name="clock_remind_reminding">关注“梦课学堂”微信公众号，订阅打卡提醒后，您将收到提醒消息，避免错过打卡导致学习项目失败。</string>
+    <string name="res_underline">该资源已下线</string>
+    <string name="notice_more">公告专区</string>
+    <string name="text_str_hint_like">为他人加油可增加贡献点噢</string>
+    <string name="str_enroll">报名</string>
+
+    <string name="text_str_no_finish_study_check" tools:ignore="ExtraTranslation">暂无已完成的学习打卡</string>
+    <string name="text_str_finish_study_check" tools:ignore="ExtraTranslation">已完成所有学习打卡</string>
+    <string name="text_str_chose_learn_study_check" tools:ignore="ExtraTranslation">已完成所有选学学习打卡</string>
+    <string name="text_str_must_learn_study_check" tools:ignore="ExtraTranslation">已完成所有必学学习打卡</string>
+
+
+
+</resources>

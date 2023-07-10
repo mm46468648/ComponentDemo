@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.mooc.resource.widget.StatusBarView
+        app:appBarColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <com.mooc.video.PlayerViewWrapper
+            android:id="@+id/playerWrapper"
+            app:vpw_custom_controll_layout_id="@layout/course_layout_zhsplay_controll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+<!--        <com.mooc.video.widget.MCustomControlView-->
+<!--            android:id="@+id/mCustomControlView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            app:controller_layout_id="@layout/layout_custom_exo_player_controller_view"/>-->
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvCourseName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingLeft="15dp"
+        android:textColor="@color/color_4A4A4A"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/color_F1F1F1" />
+
+    <com.mooc.resource.widget.SimpleTabLayout
+        android:id="@+id/stlTitle"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:stlIndicatorColor="@color/color_A9EACE"
+        app:stlIndicatorHeight="4dp"
+        app:stlLineSize="33dp"
+        app:stlSelectedTabTextColor="@color/color_2"
+        app:stlSelectedTabTextSize="17sp"
+        app:stlShouldExpand="true"
+        app:stlTabPaddingLeftRight="10dp"
+        app:stlTabTextColor="@color/color_6"
+        app:stlTabTextSize="13sp"
+        app:stlUnderlineMarginBottom="15dp" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

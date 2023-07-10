@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="14dp"
+        android:background="@mipmap/bg_battle_answering1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="76dp"
+                    android:layout_marginRight="13dp">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivMyHead"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@mipmap/common_ic_user_head_default" />
+
+
+                        <TextView
+                            android:id="@+id/tvMyScore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="0"
+                            android:textColor="#ffffffff"
+                            android:textSize="20sp"
+                            tools:text="10000" />
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="3dp">
+
+                        <TextView
+                            android:id="@+id/tvMyName"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical"
+                            android:maxLines="2"
+                            android:textColor="#ffbed1fd"
+                            android:textSize="13sp"
+                            tools:text="王大宽王." />
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tvNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="#ffffffff"
+                            android:textSize="27sp"
+                            tools:text="1/15" />
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="7dp">
+
+                        <TextView
+                            android:id="@+id/tvOtherName"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:gravity="right|center_vertical"
+                            android:maxLines="2"
+                            android:textColor="#ffbed1fd"
+                            android:textSize="13sp"
+                            tools:text="王大宽王...\n王大宽王大宽" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivOtherHead"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@mipmap/common_ic_user_head_default" />
+
+
+                        <TextView
+                            android:id="@+id/tvOtherScore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="0"
+                            android:textColor="#ffffffff"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginRight="13dp">
+
+
+                    <com.mooc.resource.widget.expandabletextview.ExpandableTextView
+                        android:id="@+id/tvQuestionTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:lineSpacingExtra="3dp"
+                        android:lineSpacingMultiplier="1.2"
+                        android:textColor="@color/color_white"
+                        android:textSize="15sp"
+                        app:ep_contract_color="@color/color_8FB1F6"
+                        app:ep_expand_color="@color/color_8FB1F6"
+                        app:ep_max_line="5"
+                        app:ep_need_always_showright="true"
+                        app:ep_need_contract="true"
+                        tools:text="品牌也远不是强调名称，标志，品牌也远不是强调名称，标志，品牌也远不是强调名称，标志，品牌也远不是强调名称，标志，品牌也远不是强调名称，标志
+品牌也远不是强调名称，标志，品牌也远不是强调名称，标志，品牌也远不是强调名称，标志，品牌也远不是强调名称，标志，品牌也远不是强调名称，标志
+品牌也远不是强调名称，标志，品牌也远不是强调名称，标志，品牌也远不是强调名称，标志，品牌也远不是强调名称，标志，品牌也远不是强调名称，标志" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/llOptionContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:descendantFocusability="blocksDescendants"
+                    android:orientation="vertical"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvOptions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rlPublicTitle"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="20dp">
+
+
+            <ImageButton
+                android:id="@+id/tvBack"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:src="@mipmap/common_ic_back_white" />
+
+
+            <TextView
+                android:id="@+id/tvPublicTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxWidth="200dp"
+                android:maxLines="1"
+                android:text="本局回顾"
+                android:textColor="@color/color_white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/shape_game_review_bottom_bg">
+
+            <ImageButton
+                android:id="@+id/ivLeft"
+                android:layout_width="46dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:visibility="invisible"
+                android:src="@mipmap/ic_game_review_arrow_left" />
+
+            <ImageButton
+                android:id="@+id/ivRight"
+                android:layout_width="46dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:src="@mipmap/ic_game_review_arrow_right" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</layout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/item_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="课程标题" />
+
+
+    <com.mooc.resource.widget.MoocImageView
+        android:id="@+id/cover"
+        android:layout_width="97dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        tools:src="@mipmap/common_bg_cover_default" />
+
+
+    <TextView
+        android:id="@+id/type_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="3dp"
+        android:background="@drawable/shape_recommend_type"
+        android:gravity="center"
+        android:text="课程"
+        android:textColor="@color/color_white"
+        android:textSize="10sp"
+        app:layout_constraintRight_toRightOf="@+id/cover"
+        app:layout_constraintTop_toTopOf="@+id/cover" />
+
+    <TextView
+        android:id="@+id/tvTypeRecommendChild"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_recommend_custom_type"
+        android:gravity="center"
+        android:text="课程"
+        android:textColor="@color/color_white"
+        android:textSize="11sp"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="@+id/cover"
+        app:layout_constraintTop_toTopOf="@+id/cover" />
+
+
+    <TextView
+        android:id="@+id/org"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:textColor="#ff5d5d5d"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="@+id/title"
+        app:layout_constraintRight_toLeftOf="@+id/cover"
+        app:layout_constraintTop_toTopOf="@+id/cover"
+        tools:text="课程来源" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/res_type"
+        app:layout_constraintLeft_toLeftOf="@+id/title"
+        app:layout_constraintRight_toLeftOf="@+id/cover"
+        app:layout_constraintTop_toBottomOf="@+id/org">
+
+        <TextView
+            android:id="@+id/platform"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#ff5d5d5d"
+            android:textSize="13sp"
+            tools:text="阿斯顿发阿斯顿的骄傲了阿来得及安静就发了" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#ff10955b"
+            android:textSize="11sp"
+            tools:text="阿斯顿发阿斯顿" />
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/res_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_radius15_solid_ededed"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cover"
+        app:layout_constraintLeft_toLeftOf="@+id/title">
+
+
+        <TextView
+            android:id="@+id/tvExamType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:gravity="center"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textColor="@color/color_4A90E2"
+            android:textSize="10sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/tvCertificateType"
+            tools:ignore="MissingConstraints,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/tvCertificateType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:gravity="center"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textColor="@color/color_4A90E2"
+            android:textSize="10sp"
+            app:layout_constraintLeft_toRightOf="@+id/tvExamType"
+            app:layout_constraintRight_toLeftOf="@+id/tvPriceType"
+            tools:ignore="MissingConstraints,RtlHardcoded" />
+
+
+        <TextView
+            android:id="@+id/tvPriceType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textColor="@color/color_607EA2"
+            android:textSize="10sp"
+            app:layout_constraintLeft_toRightOf="@+id/tvCertificateType"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:ignore="MissingConstraints,RtlHardcoded" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/line"
+        style="@style/Style.Horizontal.Origin.Line"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cover" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

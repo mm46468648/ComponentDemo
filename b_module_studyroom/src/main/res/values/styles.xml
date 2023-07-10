@@ -1,0 +1,7 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="FriendRankTabLayoutTextStyle">
+        <item name="android:textSize">12sp</item>
+    </style>
+</resources>

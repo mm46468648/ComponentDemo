@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_medal_big"
+            android:layout_width="260dp"
+            android:layout_height="274dp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_medal_big"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            android:textColor="@color/color_white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_medal_time_big"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textColor="@color/color_white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_medal_share_big"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/common_bg_share_medal_shape"
+            android:gravity="center"
+            android:paddingLeft="68dp"
+            android:paddingTop="13dp"
+            android:paddingRight="68dp"
+            android:paddingBottom="13dp"
+            android:text="@string/medal_share"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tvLookMicroKnowShareBig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/common_bg_share_medal_shape"
+            android:gravity="center"
+            android:paddingLeft="68dp"
+            android:paddingTop="13dp"
+            android:paddingRight="68dp"
+            android:paddingBottom="13dp"
+            android:text="@string/str_look_micro_know"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/sp_14"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

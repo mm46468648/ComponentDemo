@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_hot_container"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="18dp"
+        android:id="@+id/tvHotTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:maxLines="2"
+        tools:text="阿斯顿发送到发送到发阿斯顿发阿舒服点撒发送到发阿斯顿发阿舒服点"
+        android:textColor="@color/color_2"
+        android:textSize="@dimen/sp_14" />
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_E0E0E0"/>
+
+</LinearLayout>

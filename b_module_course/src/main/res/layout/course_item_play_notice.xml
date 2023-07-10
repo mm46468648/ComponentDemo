@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_A5A5A5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="2020-11-23 00:00:00"
+        android:textSize="13sp" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvMore"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toTopOf="@id/tvDate"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        android:drawableRight="@mipmap/course_ic_notice_down"-->
+<!--        android:text="更多"-->
+<!--        android:textColor="@color/color_6C88BE"-->
+<!--        android:textSize="13sp" />-->
+
+    <com.mooc.resource.widget.expandabletextview.ExpandableTextView
+        android:id="@+id/tvContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvDate"
+        android:layout_marginTop="5dp"
+        app:ep_contract_color="#4A90E2"
+        app:ep_expand_color="#4A90E2"
+        app:ep_max_line="1"
+        app:ep_need_always_showright="true"
+        app:ep_need_contract="true"
+        android:lineSpacingExtra="10dp"
+        android:textColor="@color/color_474747"
+        android:textSize="13dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

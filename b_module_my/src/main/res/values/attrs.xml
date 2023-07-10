@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PointSeekBar">
+        <attr name="past_drawable" format="reference" />
+        <attr name="buffer_drawable" format="reference" />
+        <attr name="untrack_drawable" format="reference" />
+        <attr name="show_point_drawable" format="boolean" />
+    </declare-styleable>
+    <!-- 带文字的Progressbar -->
+    <declare-styleable name="TextProgressBar">
+        <attr name="textSize" format="dimension"/>
+        <attr name="textColor" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="ClearEditText">
+        <attr name="deleteDrawable" format="reference"/>
+        <attr name="passwordDrawable" format="reference"/>
+        <attr name="passwordDrawableInvisible" format="reference"/>
+        <attr name="isshowpassword" format="boolean"/>
+        <attr name="isCenter" format="boolean"/>
+        
+    </declare-styleable>
+    
+
+</resources>

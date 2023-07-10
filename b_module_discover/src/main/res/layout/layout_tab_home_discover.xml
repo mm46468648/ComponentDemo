@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    tools:background="@color/colorPrimary"
+    android:gravity="center"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:orientation="vertical"
+    android:layout_height="40dp">
+
+    <TextView
+        android:id="@+id/tvTabTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        tools:text="手动阀"
+        android:textStyle="bold"
+        android:tag="skin:home_discover_tab_text:textColor"
+        android:textColor="@color/home_discover_tab_text"
+        android:textSize="15sp" />
+
+    <View
+        android:id="@+id/viewTabLine"
+        android:layout_width="15dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="3dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:tag="skin:home_discover_tab_underlin:background"
+        android:background="@drawable/home_discover_tab_underlin"
+        tools:ignore="RtlHardcoded" />
+</FrameLayout>

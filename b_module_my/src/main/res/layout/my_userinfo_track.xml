@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/com.moocxuetang"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app1="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include
+        app1:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/bar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app1:layout_constraintTop_toTopOf="parent"
+        layout="@layout/commonrs_item_track"/>
+
+    <include
+        app1:layout_constraintTop_toBottomOf="@+id/bar"
+        app1:layout_constraintLeft_toLeftOf="parent"
+        app1:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/incloudBottom"
+        layout="@layout/my_include_item_myshare_bottom" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

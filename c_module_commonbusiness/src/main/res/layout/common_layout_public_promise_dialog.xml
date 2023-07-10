@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:maxHeight="500dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_radius3_stroke2_colorf">
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:lineSpacingExtra="8dp"
+        android:textColor="@color/color_2"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/llMsg"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/tvTitle"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp" >
+        <TextView
+            android:id="@+id/tvMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="8dp"
+            android:textColor="@color/color_2"
+            android:textSize="15sp" />
+
+        <com.tencent.smtt.sdk.WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:visibility="gone"
+            android:scrollbars="none"/>
+    </LinearLayout>
+
+
+    <CheckBox
+        android:id="@+id/cbText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llMsg"
+        android:background="@null"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="11dp"
+        android:layout_marginRight="20dp"
+        android:button="@drawable/common_selector_bg_cb_select"
+        android:text="@string/text_str_integrity_commitment_cb"
+        android:textSize="14sp"
+        android:textColor="@color/color_2"/>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_below="@id/cbText"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvLeft"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="-5dp"
+            android:layout_weight="1"
+            android:background="@mipmap/common_bg_cancel_gray"
+            android:gravity="center"
+            android:text="@string/text_think_again"
+            android:textColor="@color/color_787878"
+            android:textSize="15sp"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/tvRight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="-5dp"
+            android:layout_weight="1"
+            android:background="@mipmap/common_bg_ok_green"
+            android:gravity="center"
+            android:text="@string/text_cancel"
+            android:textColor="@color/color_white"
+            android:textSize="15sp"
+            tools:ignore="RtlHardcoded" />
+    </LinearLayout>
+</RelativeLayout>

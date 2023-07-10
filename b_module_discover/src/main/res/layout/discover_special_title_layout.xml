@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:paddingRight="5dp"
+    android:paddingLeft="44dp"
+    android:layout_height="44dp">
+
+    <TextView
+        android:id="@+id/tvTitleLeft"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_marginRight="24dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/color_2"
+        android:textSize="16sp"
+        tools:text="学习学习学习学习学习学习学习学习学习学习学习"
+        />
+
+    <TextView
+        android:id="@+id/tvSubscribe"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:textSize="13sp"
+        android:drawablePadding="4dp"
+        android:drawableStart="@mipmap/discover_ic_subscribe_add"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginEnd="9dp"
+        android:text="订阅" />
+
+    <ImageView
+        android:background="@android:color/transparent"
+        android:id="@+id/ivShare"
+        android:layout_width="30dp"
+        android:padding="7.5dp"
+        android:layout_height="30dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/common_ic_right_share_gray"
+        />
+
+
+</LinearLayout>

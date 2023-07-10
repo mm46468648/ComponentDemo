@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">b_module_splash</string>
+
+    <string name="text_wx_login">微信登录</string>
+    <string name="text_login_tourist">游客模式</string>
+
+    <string name="text_agree_tip">如您同意《隐私政策》和《用户服务协议》，请点击“同意”开始使用我们的产品和服务。</string>
+
+    <string name="text_str_privacy_policy">隐私策略</string>
+    <string name="text_str_user_service_intro">用户服务协议</string>
+    <string name="text_agree_ment">
+    我们深知个人隐私的重要性，在您使用我们的产品和服务时所提供的个人信息将只用于本《隐私政策》中规定的用途。为了您更好的使用本App，请您在使用前仔细阅读并确认您已经充分理解本《隐私政策》的内容，同时了解我们的《用户服务协议》。
+    </string>
+    <string name="text_agree_dec">感谢您信任并使用军职在线App。\n\n
+当您使用本App前，请仔细阅读《隐私政策》《用户服务协议》，了解我们对您个人信息的处理规则及申请权限的目的。</string>
+</resources>

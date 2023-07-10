@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/tvTrackTitle"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:background="@drawable/shape_radius2_stroke1_f2f2f2"
+        android:gravity="center"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:padding="10dp"
+        android:textSize="12sp"/>
+
+</FrameLayout>

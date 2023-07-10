@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mooc.studyroom">
+
+
+    <!--长按排序文件夹需要震动权限-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <application>
+        <activity
+            android:exported="false" android:name="com.mooc.studyroom.ui.activity.NodeActivity" />
+        <activity
+            android:exported="false" android:name="com.mooc.studyroom.ui.activity.CourseMsgDetailActivity" />
+        <activity
+            android:exported="false" android:name="com.mooc.studyroom.ui.activity.MyMsgActivity" />
+        <activity
+            android:exported="false" android:name="com.mooc.studyroom.ui.activity.StudyListSortActivity" />
+        <activity
+            android:exported="false" android:name="com.mooc.studyroom.ui.activity.StudyRoomFolderMoveActivity" />
+        <activity
+            android:exported="false" android:name="com.mooc.studyroom.ui.activity.StudyListDetailActivity" />
+        <activity
+            android:exported="false" android:name="com.mooc.studyroom.ui.activity.PublicStudyListActivity" />
+        <activity
+            android:exported="false" android:name="com.mooc.studyroom.ui.activity.DataBoardActivity" />
+        <activity
+            android:exported="false" android:name="com.mooc.studyroom.ui.activity.ScoreDetailActivity" />
+        <activity
+            android:exported="false" android:name="com.mooc.studyroom.ui.activity.StudyArchiveActivity" />
+        <activity
+            android:exported="false" android:name="com.mooc.studyroom.ui.activity.ScoreRuleActivity" />
+        <activity
+            android:exported="false" android:name="com.mooc.studyroom.ui.activity.download.MyDownloadActivity" />
+        <activity
+            android:exported="false" android:name="com.mooc.studyroom.ui.activity.download.DownloadCourseListActivity"/>
+        <activity
+            android:name="com.mooc.studyroom.ui.activity.IntegralExchangeActivity" />
+        <activity
+            android:name="com.mooc.studyroom.ui.activity.IntegralRecordActivity" />
+        <activity
+            android:name="com.mooc.studyroom.ui.activity.ExchangePointActivity" />
+<!--        <activity-->
+<!--            android:exported="false" android:name="com.mooc.studyroom.ui.activity.download.OldDownloadCourseListActivity"/>-->
+        <activity
+            android:exported="false" android:name="com.mooc.studyroom.ui.activity.download.DownloadCoursePlayActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            />
+        <activity
+            android:exported="false" android:name="com.mooc.studyroom.ui.activity.download.DownloadAlbumDetailActivity"/>
+        <activity
+            android:exported="false" android:name=".ui.activity.ContributeTaskActivity"/>
+        <activity
+            android:exported="false" android:name=".ui.activity.InviteFriendReadBookActivity"/>
+        <activity
+            android:exported="false" android:name=".ui.activity.UnderstandContributionActivity"/>
+        <activity
+            android:exported="false" android:name=".ui.activity.CollectStudyListActivity"/>
+        <activity
+            android:exported="false" android:name=".ui.activity.FriendScoreRankActivity"/>
+
+    </application>
+
+
+</manifest>

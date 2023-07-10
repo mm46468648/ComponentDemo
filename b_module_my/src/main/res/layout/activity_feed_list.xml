@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content">
+
+    <com.mooc.resource.widget.CommonTitleLayout
+        android:id="@+id/commonTitleLayout"
+        app:ctl_middle_text="意见反馈"
+        app:ctl_right_text="筛选"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:ctl_right_text_color="@color/color_2"
+        app:ctl_middle_text_color="@color/color_2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:ctl_adapteStatusBar="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.mooc.resource.widget.MoocSwipeRefreshLayout
+        android:id="@+id/swipe_feed_list"
+        app:layout_constraintTop_toBottomOf="@+id/commonTitleLayout"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_feed_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+            />
+
+    </com.mooc.resource.widget.MoocSwipeRefreshLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/color_EDEDED"
+        app:layout_constraintBottom_toBottomOf="@+id/llDetailContainer"
+        app:layout_constraintTop_toTopOf="@+id/ivSuccessPrise"
+        app:layout_goneMarginTop="10dp" />
+
+    <ImageView
+        android:id="@+id/ivSuccessPrise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="45dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/iv_task_success"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/llDetailContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="15dp"
+        app:layout_constraintTop_toTopOf="@+id/ivSuccessPrise"
+        app:layout_goneMarginTop="10dp">
+
+        <TextView
+            android:id="@+id/tvTaskTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@drawable/shape_oval_black_radius_5"
+            android:drawableRight="@mipmap/ic_right_arrow_gray"
+            android:drawablePadding="9dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textColor="#ff000000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:text="子任务：主题文章阅读任务一主题文章阅读任务一主题文章阅读任务一主题文章阅读任务一主题文章阅读任务一主题文章阅读任务一" />
+
+        <TextView
+            android:id="@+id/tvTaskTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:textColor="#ff767676"
+            android:textSize="14sp"
+            tools:text="任务时间：2034.09.12-2035.10.23" />
+
+        <TextView
+            android:id="@+id/tvTaskStatus"
+            android:layout_width="158dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="4dp"
+            android:textColor="#ff222222"
+            android:textSize="14sp"
+            tools:text="距任务截止还有 4 天。"
+            tools:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/llProgressContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical"
+            tools:visibility="visible">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="7dp"
+                android:layout_weight="1"
+                android:max="100"
+                android:progressDrawable="@drawable/bg_task_detail_progressbar"
+                android:visibility="visible"
+                tools:progress="40" />
+
+            <TextView
+                android:id="@+id/tvProcess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="#ff10955b"
+                android:textSize="14sp"
+                tools:text="4/15天" />
+        </LinearLayout>
+
+        <com.mooc.discover.view.TaskStartDayCutdownView
+            android:id="@+id/taskCutdownView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="15dp"
+            tools:visibility="gone" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

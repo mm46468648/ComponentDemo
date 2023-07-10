@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">b_module_home</string>
+
+    <string name="text_show_more_study_plan">查看更多</string>
+    <string name="text_exit_tip">再按一次返回键退出应用</string>
+
+
+    <string name="text_privacy">隐私政策</string>
+    <string name="text_policy">用户服务协议</string>
+
+    <string name="text_self_platform">加盟平台</string>
+    <string name="text_other_platform">其它平台</string>
+
+    <string name="str_reset">重置</string>
+    <string name="text_ok">确定</string>
+    <string name="update">更新</string>
+    <string name="today_finish">今日已完成</string>
+
+    <string name="text_honor_hint">以项目进行期内发布动态总次数进行排名</string>
+
+
+
+    <string name="text_app_share_invitation">邀请函</string>
+    <string name="text_app_share_your_friends">你的好友</string>
+    <string name="text_app_share_day">在「军职在线」已学习&#160;%1$d&#160;天，\n邀请你加入！</string>
+    <string name="text_app_share_distinguish">长按识别二维码下载</string>
+    <string name="text_app_share_accept">接受邀请</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="text_has_new_version">有新版本</string>
+
+
+    <string name="studyroom_data_board">数据看板</string>
+    <string name="studyroom_study_record">学习档案</string>
+    <string name="studyroom_my_download">我的下载</string>
+    <string name="my_daliy_read">每日一读</string>
+    <string name="my_str_checkin">打卡</string>
+    <string name="my_friend_circle">学友圈</string>
+    <string name="my_str_feedback">意见反馈</string>
+    <string name="my_str_share">分享</string>
+    <string name="my_update_log">更新日志</string>
+    <string name="my_version_update">版本更新</string>
+    <string name="look_details">查看详情</string>
+
+
+</resources>

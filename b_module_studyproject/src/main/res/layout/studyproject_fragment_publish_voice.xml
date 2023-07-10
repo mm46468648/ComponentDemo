@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/timeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="125dp"
+        android:text="00:00"
+        android:textColor="@color/color_9"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/tipPress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timeTv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="按住录音"
+        android:textColor="@color/color_9"
+        android:textSize="13sp" />
+
+    <com.mooc.studyproject.view.WhewView
+        android:id="@+id/wv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/recordImg"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/tipPress"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:src="@mipmap/studyproject_ic_voice_record" />
+
+    <LinearLayout
+        android:id="@+id/voicePlayerLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="150dp"
+        android:gravity="center_horizontal"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rl_player"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_radius2_solide_grayf2f2f2">
+
+            <ImageView
+                android:id="@+id/play_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="14dp"
+                android:src="@mipmap/common_ic_voice_play" />
+
+            <TextView
+                android:id="@+id/play_tv"
+                android:layout_width="48dp"
+                android:layout_centerVertical="true"
+                android:layout_height="match_parent" />
+
+            <SeekBar
+                android:id="@+id/play_prg"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/pro_time"
+                android:layout_toRightOf="@+id/play_voice"
+                android:max="100"
+                android:maxHeight="2dp"
+                android:minHeight="2dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:progressDrawable="@drawable/common_bg_progres"
+                android:thumb="@mipmap/common_ic_voice_seekbar" />
+
+            <TextView
+                android:id="@+id/pro_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="1dp"
+                android:layout_toLeftOf="@+id/diver"
+                android:text="00:00"
+                android:textColor="@color/color_9"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/diver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/total_time"
+                android:text="/" />
+
+            <TextView
+                android:id="@+id/total_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:text="00:00"
+                android:textColor="@color/color_9"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/sendLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btn_voice_submit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp"
+            android:background="@drawable/shape_conrners1_5_color_primary"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/submit_comment"
+            android:textColor="@color/color_white" />
+
+        <Button
+            android:id="@+id/resetVoiceBtn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="55dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_conrners2_stroke1_colore0"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/reset_record"
+            android:textColor="@color/colorPrimary" />
+
+    </LinearLayout>
+
+</RelativeLayout>

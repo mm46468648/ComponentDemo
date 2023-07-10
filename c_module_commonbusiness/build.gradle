@@ -1,0 +1,84 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-parcelize'
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            consumerProguardFiles 'proguard-rules.pro'
+        }
+    }
+
+    kapt {
+        arguments {
+            arg("AROUTER_MODULE_NAME", project.getName())
+            arg("room.schemaLocation", "$projectDir/schemas".toString())
+        }
+    }
+
+//    compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_8
+//        targetCompatibility JavaVersion.VERSION_1_8
+//    }
+
+    sourceSets{
+        main{
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    buildFeatures{
+        viewBinding true
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api project(path: ':t_module_skeleton')
+    //容联云
+//    api project(path: ':t_module_ykfsdk')
+
+    //kapt arouter
+    kapt rootProject.ext.dependencies["arouter-compiler"]
+    //resource
+    api project(":c_module_common")
+
+    api rootProject.ext.dependencies["room-runtime"]
+    kapt rootProject.ext.dependencies["room-compiler"]
+    api rootProject.ext.dependencies["gif"]
+
+    //内存泄漏
+    debugApi rootProject.ext.dependencies["leakcanary"]
+    //数据库查看
+    debugApi 'com.amitshekhar.android:debug-db:1.0.6'
+    //美团打包
+//    api rootProject.ext.dependencies["walle"]
+//    //blockcanary(卡顿检测)
+//    implementation rootProject.ext.dependencies["blockcanary"]
+
+    api(name: 'umeng-asms-armeabi-v1.6.0', ext: 'aar')
+    api(name: 'umeng-abtest-v1.0.1', ext: 'aar')
+
+    api 'org.htmlparser:htmlparser:2.1'
+
+    //友盟分享包
+    api 'com.umeng.umsdk:common:9.4.4'
+    api 'com.umeng.umsdk:apm:1.5.2'
+    api 'com.umeng.umsdk:share-core:7.1.4'
+    api 'com.umeng.umsdk:share-board:7.1.4'
+    api 'com.umeng.umsdk:share-wx:7.1.5'
+    api 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.6.5'
+    api project(':t_module_shadowLibrary')
+
+
+}

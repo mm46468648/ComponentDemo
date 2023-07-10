@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.mooc.resource.widget.CommonTitleLayout
+        android:id="@+id/commonTitle"
+        app:ctl_right_icon="@mipmap/common_ic_right_share_gray"
+        app:ctl_right_text_color="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvStudyList"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:layout_margin="15dp"
+        tools:orientation="horizontal" />
+
+<!--    <com.google.android.material.tabs.TabLayout-->
+<!--        android:id="@+id/tabLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="40dp"-->
+<!--        app:tabMode="scrollable"-->
+<!--        />-->
+
+    <com.mooc.resource.widget.MCustomTablayout
+        android:id="@+id/mctStudyList"
+        app:mct_tab_layout="@layout/common_layout_studyroom_tab_indicator"
+        app:mct_select_text_size="17sp"
+        app:mct_unselect_text_size="13sp"
+        android:background="@color/color_white"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="5dp"
+        app:tabIndicatorColor="@color/transparent"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="scrollable"
+        app:tabGravity="fill"
+        app:tabMinWidth="1dp"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabTextColor="@color/color_6"
+        app:tabSelectedTextColor="@color/color_2"
+        app:mct_select_text_blod="true"
+        />
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

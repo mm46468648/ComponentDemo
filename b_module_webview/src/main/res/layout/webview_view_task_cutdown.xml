@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:layout_marginRight="16dp"
+    android:gravity="right">
+
+    <com.lihang.ShadowLayout
+        app:hl_shadowColor="#2a000000"
+        app:hl_shadowLimit="2dp"
+        app:hl_cornerRadius="22dp"
+        android:layout_width="44dp"
+        android:layout_height="44dp">
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="13sp"
+            android:textColor="@color/colorPrimary"
+            tools:text="03:36" />
+
+        <!--        <com.mooc.resource.widget.CircleProgressView-->
+        <!--            android:id="@+id/circleProgressView"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            app:cpv_circle_color="@color/white"-->
+        <!--            app:cpv_location="top"-->
+        <!--            app:cpv_only_circle="true"-->
+        <!--            app:cpv_paint_color="@color/colorPrimary"-->
+        <!--            app:cpv_paint_width="2dp" />-->
+    </com.lihang.ShadowLayout>
+</LinearLayout>

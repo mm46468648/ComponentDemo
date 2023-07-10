@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="10dp">
+
+    <com.mooc.resource.widget.MoocImageView
+        android:id="@+id/cover"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="h,2:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/icon_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="4dp"
+        android:src="@mipmap/home_ic_study_room_play"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/cover"
+        app:layout_constraintRight_toRightOf="@+id/cover" />
+
+    <TextView
+        android:id="@+id/tv_identify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/shape_recommend_type"
+        android:gravity="center"
+        android:textColor="@color/color_white"
+        android:textSize="9sp"
+        android:visibility="visible"
+        app:layout_constraintRight_toRightOf="@+id/cover"
+        app:layout_constraintTop_toTopOf="@+id/cover" />
+
+    <TextView
+        android:id="@+id/tvTypeHomeTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/shape_recommend_type"
+        android:gravity="center"
+        android:textColor="@color/color_white"
+        android:textSize="11sp"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="@+id/cover"
+        app:layout_constraintTop_toTopOf="@+id/cover" />
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:lineSpacingExtra="3dp"
+        android:maxLines="2"
+        tools:text="撒旦法撒旦法阿斯蒂芬撒旦法撒旦法撒旦法是撒旦法撒旦法阿斯蒂芬sad发电房说的发烧"
+        android:textColor="@color/color_2"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@+id/cover"
+        app:layout_constraintRight_toRightOf="@+id/cover"
+        app:layout_constraintTop_toBottomOf="@+id/cover" />
+
+    <TextView
+        android:id="@+id/org"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_5D5D5D"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="@+id/cover"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        tools:text="阿斯顿发送到发阿斯顿发阿斯顿发阿斯顿发手动阀" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_5D5D5D"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="@+id/cover"
+        app:layout_constraintRight_toLeftOf="@+id/tvFrom2"
+        app:layout_constraintTop_toBottomOf="@+id/org"
+        app:layout_constraintWidth_percent="0.5"
+        tools:text="是的发" />
+
+    <TextView
+        android:id="@+id/tvFrom2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="right"
+        android:maxLines="1"
+        android:textColor="#ff999999"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toRightOf="@+id/time"
+        app:layout_constraintRight_toRightOf="@+id/cover"
+        app:layout_constraintTop_toTopOf="@+id/time"
+        tools:text="是的发送到发送短发手动阀是的发送到发送短发手动阀是的发送到发送短发手动阀" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

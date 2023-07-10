@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:ellipsize="end"
+    android:id="@+id/tv_notice"
+    android:maxLines="1"
+    android:gravity="center_vertical|left"
+    android:text="产品创造于工厂，而品牌创造于心灵"
+    android:textColor="#ffc8daff"
+    android:textSize="11sp"
+    android:layout_height="20dp">
+
+</TextView>

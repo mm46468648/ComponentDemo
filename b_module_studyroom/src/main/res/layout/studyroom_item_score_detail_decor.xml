@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/includeYear"
+        android:visibility="gone"
+        layout="@layout/studyroom_item_score_year" />
+
+    <LinearLayout
+        android:id="@+id/llMonth"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_F2F2F2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:drawableRight="@mipmap/studyroom_ic_score_detail_arrow_down"
+            android:drawablePadding="4dp"
+            android:textColor="@color/color_2"
+            android:textSize="15sp"
+            tools:ignore="RtlHardcoded,UseCompatTextViewDrawableXml"
+            tools:text="2020年8月" />
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/color_9"
+            android:textSize="12sp"
+            tools:ignore="RtlHardcoded"
+            tools:text="月积分" />
+    </LinearLayout>
+
+
+</LinearLayout>
+

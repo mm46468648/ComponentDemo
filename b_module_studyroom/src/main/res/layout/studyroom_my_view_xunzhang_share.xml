@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/con"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="H,327:537"
+            android:background="@mipmap/studyroom_bg_dedal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+
+            <ImageView
+                android:id="@+id/img_dedal"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.45" />
+
+
+            <TextView
+                android:id="@+id/tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="我在「军职在线」获得了"
+                android:textColor="#ffffffff"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_dedal"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tip1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:textColor="#ffffffff"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tip"
+                tools:text="连续打卡三日勋章" />
+
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="240dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="14dp"
+                android:background="#50E3C2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tip1" />
+
+
+            <ImageView
+                android:id="@+id/qr_img"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="23dp"
+                android:src="@mipmap/common_iv_app_qr_code"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="军职在线"
+                android:textColor="#ffc3f0dc"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@+id/qr_img"
+                app:layout_constraintTop_toTopOf="@+id/qr_img" />
+
+
+            <TextView
+                android:id="@+id/tip3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="@dimen/dp_4"
+                android:text="只服务于"
+                android:textColor="#ffc3f0dc"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/tip4"
+                app:layout_constraintLeft_toRightOf="@+id/qr_img" />
+
+            <TextView
+                android:id="@+id/tip4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="有自我成长需求的人"
+                android:textColor="#ffc3f0dc"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/qr_img"
+                app:layout_constraintLeft_toRightOf="@+id/qr_img" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="36dp"
+                android:layout_marginRight="28dp"
+                android:src="@mipmap/common_ic_share_logo_transparent"
+                app:layout_constraintBottom_toBottomOf="@+id/qr_img"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/qr_img" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.mooc.resource.widget.MoocImageView
+            android:id="@+id/share_point_header"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="@dimen/dp_40"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="王大宽"
+            android:textColor="#ff7feebe"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/share_point_header"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

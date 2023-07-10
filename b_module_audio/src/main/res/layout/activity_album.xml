@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.AlbumActivity">
+
+    <com.mooc.resource.widget.CommonTitleLayout
+        android:id="@+id/commonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ctl_middle_text="音频课"
+        app:ctl_right_icon="@mipmap/common_ic_title_right_menu"
+        app:ctl_right_second_icon="@mipmap/common_ic_title_right_add"
+        app:ctl_right_text="举报"
+        app:ctl_right_text_color="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:src="@mipmap/common_bg_cover_default"
+                android:id="@+id/ivCover"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="来源：喜马拉雅"
+                android:textColor="#ff999999"
+                android:textSize="12sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvAlbumTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:textColor="@color/color_3"
+                android:textSize="15sp"
+                tools:text="回到2049sdf习近平安德回到2049sdf习近平安德回到2049sdf习近平安德回到2049sdf习近平安德回到2049sdf习近平安德回到2049sdf习近平安德回到2049sdf习近平安德回到2049sdf习近平安德回到2049sdf习近平安德回到2049sdf习近平安德" />
+
+            <TextView
+                android:id="@+id/tvVoicer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:maxLines="1"
+                android:textSize="12sp"
+                tools:text="播音员" />
+
+            <TextView
+                android:id="@+id/tvPlayCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:maxLines="1"
+                android:textSize="12sp"
+                tools:text="播放: 26146.1万次" />
+
+            <TextView
+                android:id="@+id/tvAudioCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:textSize="12sp"
+                tools:text="音频集数1511集" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+
+        <TextView
+            android:id="@+id/tvAudioList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/list_track"
+            android:textColor="@color/color_3"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:text="@string/album_des"
+            android:textColor="@color/color_3"
+            android:textSize="13sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/tvAudioList"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvLoadSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:drawableLeft="@mipmap/audio_ic_album_sort_down"
+            android:drawablePadding="5dp"
+            android:text="@string/text_album_sort_down"
+            android:textColor="@color/color_6"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/tvDownload"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/tvDownload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/audio_ic_download_start"
+            android:drawablePadding="5dp"
+            android:text="@string/batch_download"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/tvAllSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:checked="false"
+            android:clickable="false"
+            android:drawableLeft="@mipmap/audio_ic_all_unselected"
+            android:drawablePadding="5dp"
+            android:longClickable="false"
+            android:text="@string/all_select"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/tvAllExit"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvAllExit"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_radius20_color_primary"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="退出"
+            android:textColor="@color/color_white"
+            android:textSize="13sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_64e0"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <com.mooc.resource.widget.MoocSwipeRefreshLayout
+        android:id="@+id/swiperefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAudioList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.mooc.resource.widget.MoocSwipeRefreshLayout>
+
+</LinearLayout>

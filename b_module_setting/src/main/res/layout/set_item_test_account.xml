@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/set_bg_rv_item_touch"
+    android:padding="5dp"
+    android:layout_height="60dp">
+
+    <TextView
+        android:id="@+id/tvName"
+        tools:text="xieyouming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:gravity="right"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvOpenid"
+            android:layout_width="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="openid: osCoowEcu8RSIaeDz3zAGkJKPBuU"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvUnionId"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="unionid: oPWZdxDjhk7a1V-TLkOXqlxTIjRI"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>

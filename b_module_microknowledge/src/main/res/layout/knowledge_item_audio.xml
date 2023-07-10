@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp">
+
+        <ImageView
+            android:id="@+id/ivImgAudio"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@mipmap/home_ic_study_room_play"
+            app:layout_constraintBottom_toBottomOf="@+id/ivImgAudio"
+            app:layout_constraintRight_toRightOf="@+id/ivImgAudio" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/color_e2"
+            app:layout_constraintTop_toBottomOf="@+id/ivImgAudio" />
+
+
+        <TextView
+            android:id="@+id/tvSourceAudio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/color_5D5D5D"
+            android:textSize="13sp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@+id/ivImgAudio"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleAudio" />
+
+        <TextView
+            android:id="@+id/tvDurationAudio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:drawableLeft="@mipmap/home_ic_study_room_track_duration"
+            android:drawablePadding="3dp"
+            android:textColor="@color/color_A3A3A3"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivImgAudio"
+            app:layout_constraintLeft_toRightOf="@+id/tvPlayNumAudio" />
+
+
+        <TextView
+            android:id="@+id/tvPlayNumAudio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@mipmap/home_ic_study_room_play_num"
+            android:drawablePadding="3dp"
+            android:textColor="@color/color_A3A3A3"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivImgAudio"
+            app:layout_constraintLeft_toRightOf="@+id/ivImgAudio" />
+
+
+        <TextView
+            android:id="@+id/tvTitleAudio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/color_2"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/ivImgAudio"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvOrg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:gravity="center"
+            android:text="喜马拉雅"
+            android:textColor="#ff5d5d5d"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvPlayNumAudio"
+            app:layout_constraintLeft_toLeftOf="@id/tvTitleAudio" />
+
+        <TextView
+            android:id="@+id/tvTypeAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/shape_color9e0_corners2"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="音频"
+            android:textColor="#ffffffff"
+            android:textSize="9sp"
+            app:layout_constraintRight_toRightOf="@id/ivImgAudio"
+            app:layout_constraintTop_toTopOf="@+id/ivImgAudio" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

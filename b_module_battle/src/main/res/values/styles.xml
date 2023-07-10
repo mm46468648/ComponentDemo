@@ -1,0 +1,8 @@
+<resources>
+
+    <!--setting item-->
+    <declare-styleable name="MainOptionView">
+        <attr name="mov_text" format="string"/>
+        <attr name="mov_left_icon" format="reference"/>
+    </declare-styleable>
+</resources>

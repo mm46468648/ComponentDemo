@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_F3F3F3"
+    android:paddingLeft="10dp"
+    android:paddingTop="7.5dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="7.5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="7.5dp"
+        android:background="@drawable/shape_bg_adapter_home2">
+
+        <LinearLayout
+            android:id="@+id/topview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginRight="10dp"
+            app:layout_constraintRight_toLeftOf="@+id/show_more"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:ellipsize="end"
+                android:maxWidth="170dp"
+                android:maxLines="1"
+                android:textColor="@color/color_2"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="军优阿斯顿发军优阿斯顿发军优阿斯顿发" />
+
+
+            <LinearLayout
+                android:id="@+id/llAddStudy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal"
+                android:paddingLeft="7dp"
+                android:paddingTop="3dp"
+                android:paddingRight="7dp"
+                android:paddingBottom="3dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/title"
+                app:layout_constraintLeft_toRightOf="@+id/title"
+                app:layout_constraintTop_toTopOf="@+id/title"
+                tools:ignore="RtlHardcoded"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/ivAddStudy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    tools:ignore="ContentDescription"
+                    tools:src="@mipmap/column_ic_subscribe_add" />
+
+                <TextView
+                    android:id="@+id/tvAddStudy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="@string/order"
+                    android:textColor="@color/color_2"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/show_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="15dp"
+            android:drawablePadding="5dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/topview"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/topview"
+            tools:visibility="visible">
+
+            <ImageView
+                android:id="@+id/show_moreicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_column_exchange"/>
+
+            <TextView
+                android:id="@+id/show_more_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@+id/show_moreicon"
+                android:text="@string/text_feed_all"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/sub_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/color_A3A3A3"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topview"
+            tools:text="阿斯顿发阿斯顿发阿斯顿发阿斯顿发阿斯顿发" />
+
+
+        <com.mooc.resource.widget.NoIntercepteRecyclerView
+            android:id="@+id/rcy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sub_title"
+            app:layout_goneMarginTop="15dp" />
+
+        <TextView
+            android:id="@+id/show_more_bottom"
+            android:layout_width="75dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@mipmap/bg_btn_show_all_type"
+            android:gravity="center"
+            android:text="查看全部"
+            android:textColor="@color/color_A5A5A5"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rcy" />
+
+        <RelativeLayout
+            android:id="@+id/rl_exchange"
+            android:layout_width="75dp"
+            android:layout_height="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@mipmap/bg_btn_type"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/show_more_bottom"
+            tools:visibility="visible">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_column_exchange" />
+
+            <TextView
+                android:id="@+id/tv_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@+id/icon"
+                android:text="@string/text_switch"
+                android:textColor="@color/color_A5A5A5"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

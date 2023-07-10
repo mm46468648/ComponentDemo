@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_game_brum"
+    android:orientation="vertical">
+
+    <com.mooc.resource.widget.CommonTitleLayout
+        android:id="@+id/commonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ctl_left_icon="@mipmap/common_ic_back_white"
+        app:ctl_middle_text="答题结果"
+        app:ctl_middle_text_color="@color/white" />
+
+
+    <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+        android:id="@+id/img_user_header"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="35dp"
+        android:src="@mipmap/common_ic_user_head_default"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_gravity="center_horizontal"
+        app:qmui_is_circle="true"
+        app:qmui_border_width="1dp"
+        app:qmui_border_color="#B89553"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="王大宽"
+        android:textColor="#ffbed1fd"
+        android:textSize="18sp"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="176dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@mipmap/frame_game_brum">
+
+
+
+        <View
+            android:layout_width="85dp"
+            android:layout_height="8dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="6dp"
+            android:background="@mipmap/icon_game_top_shape"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="85dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="15dp"
+            android:background="@mipmap/icon_game_top_shape"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinePercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.20" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinePercent1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.45" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinePercent2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.70" />
+        <TextView
+            android:id="@+id/tvOver"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="答题结束"
+            android:textColor="#ffbed1fd"
+            android:textSize="17sp"
+            />
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="30dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/tvToReview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="本局回顾"
+            android:drawablePadding="5dp"
+            android:layout_marginRight="30dp"
+            android:drawableRight="@mipmap/icon_arrow_right"
+            android:textColor="#ffbed1fd"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/tvRight"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/tvOver"
+            android:layout_marginTop="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="共答对"
+            android:textColor="#ffbfd8ff"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/tvTotalRight"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="110dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="15"
+            android:textColor="#ffffffff"
+            android:textSize="25sp"
+            />
+        <TextView
+            app:layout_constraintLeft_toRightOf="@+id/tvTotalRight"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTotalRight"
+            android:layout_marginTop="110dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="题"
+            android:textColor="#ffffffff"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/tvTime"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/guidelinePercent"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用时"
+            android:textColor="#ffbfd8ff"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/tvTotalTime"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/tvTime"
+            android:layout_marginTop="110dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="23:34"
+            android:textColor="#ffffffff"
+            android:textSize="25sp"
+            />
+
+        <TextView
+            android:id="@+id/tvScore"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/guidelinePercent1"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="获得分数"
+            android:textColor="#ffbfd8ff"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/tvScoreDetail"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/tvScore"
+            android:layout_marginTop="110dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="230"
+            android:textColor="#ffffffff"
+            android:textSize="25sp"
+            />
+
+        <TextView
+            app:layout_constraintLeft_toRightOf="@+id/tvScoreDetail"
+            app:layout_constraintBottom_toBottomOf="@+id/tvScoreDetail"
+            android:layout_marginTop="110dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分"
+            android:textColor="#ffffffff"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:id="@+id/tvExperience"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/guidelinePercent2"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="经验值"
+            android:textColor="#ffbfd8ff"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/tvPlus"
+            app:layout_constraintLeft_toLeftOf="@+id/tvExperience"
+            app:layout_constraintBottom_toBottomOf="@+id/tvExp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textColor="#ffffffff"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/tvExp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/tvPlus"
+            android:layout_marginTop="110dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="12"
+            android:textColor="#ffffffff"
+            android:textSize="25sp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/tvLookRank"
+        android:layout_width="147dp"
+        android:layout_height="50dp"
+        tools:layout_marginRight="15dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/bg_match_button_left"
+        android:gravity="center"
+        android:layout_marginTop="60dp"
+        android:text="查看排行"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/sp_14"
+        android:visibility="visible" />
+</LinearLayout>

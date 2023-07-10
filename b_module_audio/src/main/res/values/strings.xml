@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">b_module_audio</string>
+
+
+    <string name="list_track">音频列表</string>
+    <string name="track_des">音频简介</string>
+    <string name="album_des">音频课简介</string>
+    <string name="text_album_sort_down">倒序</string>
+    <string name="text_album_sort_up">正序</string>
+    <string name="batch_download">批量下载</string>
+    <string name="all_select">全选</string>
+    <string name="download_ing">下载中</string>
+    <string name="download">下载</string>
+    <string name="download_complete">下载完成</string>
+    <string name="download_pause">暂停中</string>
+    <string name="audio_download_allready">已下载</string>
+    <string name="audio_platform_jzzx">平台: 军职在线</string>
+    <string name="audio_time_zero">00:00</string>
+    <string name="audio_background">background</string>
+    <string name="audio_play_state">audio_play_state</string>
+</resources>

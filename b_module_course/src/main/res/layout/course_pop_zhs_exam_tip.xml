@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_radius3_white"
+    android:paddingLeft="24dp"
+    android:paddingTop="22dp"
+    android:paddingRight="24dp"
+    android:paddingBottom="30dp">
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="您有 1 次考试机会，点击确认后将进入计时，是否确认参加考试？"
+        android:textColor="@color/color_2"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tvMessage">
+
+
+        <Button
+            android:id="@+id/btCancle"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="@mipmap/common_bg_pop_cancel_left"
+            android:gravity="center"
+            android:text="取消"
+            tools:visibility="gone"
+            android:textColor="@color/color_9B9B9B"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="-3dp"
+            android:layout_weight="1"
+            android:background="@mipmap/common_bg_pop_ok_right"
+            android:gravity="center"
+            android:text="确认"
+            tools:visibility="gone"
+            android:textColor="@color/color_white"
+            android:textSize="15sp" />
+
+
+        <Button
+            android:id="@+id/btSingleConfirm"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_green_gradient25c794_primary_cornor15"
+            android:gravity="center"
+            android:text="确认"
+            android:visibility="gone"
+            android:textColor="@color/color_white"
+            android:textSize="15sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

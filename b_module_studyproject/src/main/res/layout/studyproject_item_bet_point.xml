@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="165dp"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/bgRl"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="7.5dp"
+        android:layout_marginRight="7.5dp"
+        android:background="@drawable/studyproject_colorprimary_width2_radius7">
+
+        <RelativeLayout
+            android:id="@+id/betRl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <View
+                android:id="@+id/diver"
+                android:layout_width="120dp"
+                android:layout_height="1sp"
+                android:layout_centerInParent="true"
+                android:background="@color/color_D8D8D8" />
+
+            <TextView
+                android:id="@+id/tip_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/diver"
+                android:layout_alignLeft="@+id/diver"
+                android:layout_marginBottom="15dp"
+                android:text="预存"
+                android:textColor="@color/color_797979"
+                android:textSize="25sp" />
+
+
+            <TextView
+                android:id="@+id/tip_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/diver"
+                android:layout_alignLeft="@+id/diver"
+                android:layout_marginTop="15dp"
+                android:text="获得"
+                android:textColor="@color/color_797979"
+                android:textSize="25sp" />
+
+
+            <TextView
+                android:id="@+id/betKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/diver"
+                android:layout_alignRight="@+id/diver"
+                android:layout_marginBottom="15dp"
+                android:layout_toRightOf="@+id/tip_key"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/color_797979"
+                android:textSize="25sp"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/betValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/diver"
+                android:layout_alignRight="@+id/diver"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/tip_value"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/color_797979"
+                android:textSize="25sp"
+                tools:ignore="RtlHardcoded" />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/noJonTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/bet_point_no_join"
+            android:textColor="@color/color_E5472D"
+            android:textSize="25sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/selectedImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:src="@mipmap/studyproject_iv_bet_true" />
+    </RelativeLayout>
+
+
+</LinearLayout>

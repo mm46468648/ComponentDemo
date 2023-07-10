@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mooc.discover">
+
+    <application>
+        <activity
+            android:name=".ui.SelectStudyListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.TaskDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.TaskMutualChoiceActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.DiscoverTaskActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.DiscoverAlreadyGetTaskActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.DiscoverHistoryTaskActivity"
+            android:exported="true" />
+        <activity android:name=".ui.RecommendSpecialListActivity" />
+        <activity android:name=".ui.NewOnLineActivity" />
+        <activity android:name=".ui.HotResourceActivity" />
+        <activity android:name="com.mooc.column.ui.allColumnSubscribe.AllColumnSubscribeActivity" />
+        <activity android:name=".column.ColumnListActivity" />
+        <activity android:name=".column.ColumnDetailActivity" />
+        <activity android:name=".ui.RecommendLookMoreActivity" />
+        <!-- <activity android:name=".ui.AnnouncementActivity"/> -->
+        <!-- <activity -->
+        <!-- android:exported="false" android:name=".ui.RecommendSpecialListActivity" /> -->
+        <!-- <activity -->
+        <!-- android:exported="false" android:name=".ui.NewOnLineActivity" /> -->
+        <!-- <activity -->
+        <!-- android:exported="false" android:name=".ui.HotResourceActivity" /> -->
+        <!-- <activity -->
+        <!-- android:exported="false" android:name="com.mooc.column.ui.allColumnSubscribe.AllColumnSubscribeActivity" /> -->
+        <!-- <activity -->
+        <!-- android:exported="false" android:name=".column.ColumnListActivity" /> -->
+        <!-- <activity -->
+        <!-- android:exported="false" android:name=".column.ColumnDetailActivity" /> -->
+        <!-- <activity -->
+        <!-- android:exported="false" android:name=".ui.RecommendLookMoreActivity"/> -->
+        <activity
+            android:name=".column.ColumnAllActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".column.ColumnQuickActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.TaskSignDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

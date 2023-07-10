@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_radius15_solid_ededed"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+
+    <TextView
+        android:id="@+id/tvExamType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="2dp"
+        android:gravity="center"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tvCertificateType"
+        tools:ignore="MissingConstraints,RtlHardcoded"
+        tools:text="有考试" />
+
+    <TextView
+        android:id="@+id/tvCertificateType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="2dp"
+        android:gravity="center"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toRightOf="@+id/tvExamType"
+        app:layout_constraintRight_toLeftOf="@+id/tvPriceType"
+        tools:ignore="MissingConstraints,RtlHardcoded"
+        tools:text="有证书" />
+
+
+    <TextView
+        android:id="@+id/tvPriceType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toRightOf="@+id/tvCertificateType"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints,RtlHardcoded"
+        tools:text="免费" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

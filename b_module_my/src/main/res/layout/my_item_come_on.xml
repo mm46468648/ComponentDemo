@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.mooc.resource.widget.MoocImageView
+            android:id="@+id/mivHead"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@mipmap/common_ic_user_head_default" />
+
+        <ImageView
+            android:id="@+id/ivPrise"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:visibility="gone"
+            android:src="@mipmap/my_ic_prise" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:ellipsize="end"
+        android:maxLength="6"
+        tools:text="哈哈哈" />
+</LinearLayout>

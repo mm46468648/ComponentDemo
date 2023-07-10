@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">b_module_classroom</string>
+
+    <string name="text_folder_sort_hint">拖动文件夹可上下移动位置</string>
+    <string name="text_folder_sort_success">文件夹排序完成</string>
+    <string name="text_into_next_file">进入下一级</string>
+
+
+    <!--数据看板相关-->
+    <string name="study_detail_online">我在军职在线学习</string>
+    <string name="study_course_num">课程&#160;</string>
+    <string name="study_course_min">学习时长&#160;</string>
+    <string name="study_periodical_count">期刊&#160;</string>
+    <string name="study_article_count">文章&#160;</string>
+    <string name="study_know_count">知识点&#160;</string>
+    <string name="study_bai_count">词条&#160;</string>
+    <string name="study_track_count">音频&#160;</string>
+    <string name="study_detail_rank">当前排名&#160;%1$s&#160;位</string>
+    <string name="study_integral_rule">积分规则：\n1.打卡获得积分，得分规则参见打卡页面说明；\n2.学习获得积分:\n(1)每有效学习1条资源获得1积分，每日上限30分。系统将根据不同的资源类型，结合您的学习行为判定是否为有效学习，刷分行为将不会获得积分。\n(2)连续学习奖励积分:\n学习1天，获得2积分；\n连续学习3天以上(包含3天)，每天获得3积分;\n连续学习7天以上(包含7天)，每天获得5积分;\n连续学习42天以上(包含42天)，每天获得7积分;\n(3)参与学习项目得积分:\n•加入并成功完成学习项目后，按选择的“预存-获得”的积分数获得积分(注意：预存积分在加入项目时会扣除);\n•若加入的学习项目为“积分瓜分模式”学习项目，还将获得额外奖励积分。额外奖励积分数与学习项目完成率、参与学习项目期间在平台获得的勋章数量、连续打卡天数、学习项目打卡质量、学习项目发表动态被点赞次数等综合因素有关。\n(4)在平台发表政治不正确等违规言论、内容涉及泄露个人或单位信息以及国家或军队秘密等，将被删除处理，同时每条扣除 5 积分，每日无上限，严重者账号将被禁用。\n若发表内容涉嫌水帖(水文、水评等)，将被屏蔽处理，同时每条扣除1积分，严重者将被删除，同时每条被扣5积分，每日无上限。\n同一账号累计被删除三次以上的，账号将被禁用。\n3.举报获得积分:\n参与举报平台中不良内容可获得积分，同样的举报内容，审核确认后的最早举报者获得积分，1条资源获得3积分，每日上限6分。举报内容可包括但不限于敏感内容、版权问题、广告信息等，通过资源详情页右上角“举报”按钮进行举报，经管理员审核确认后判定为是否举报成功。\n4.分享获得积分:\n每次分享获得1分，每日上限5分。分享内容包括平台资源（包括不限于文章、课程、期刊、专栏、音频、笔记等）、分享APP、分享每日一读、分享学习数据、分享勋章。</string>
+    <string name="study_score_rule">积分规则</string>
+    <string name="text_total_score">总积分</string>
+    <string name="text_total_check">累计打卡</string>
+    <string name="text_total_medal">获得勋章</string>
+    <string name="study_score_detail">查看积分明细</string>
+    <string name="text_long_study_time">有效学习时长</string>
+    <string name="text_long_study_time_tip">当天更新截至前天晚上24:00点数据</string>
+    <string name="text_continuous_learn">连续学习&#160;</string>
+    <string name="text_accumulating_learn">累计学习&#160;</string>
+    <string name="study_data_detail">数据详情</string>
+    <string name="study_course_look">课程已看</string>
+    <string name="study_screen_look">资源已看</string>
+    <string name="my_user_num">ID&#160;</string>
+    <string name="study_sign_count">%1$d天</string>
+    <string name="study_medal_count">%1$d个</string>
+    <string name="study_micro_count">微课&#160;</string>
+    <string name="study_book_count">电子书&#160;</string>
+    <string name="study_share_content_today_score">今日获得%1$s积分，</string>
+    <string name="study_share_content_total_score">总共挣得%1$s积分，</string>
+    <string name="study_share_content_medal">已经获得%1$d勋章，</string>
+    <string name="study_share_content">我在军职在线学习，%1$s快来和我一起学习吧！</string>
+    <string name="share_study_data_title">定制我的分享内容</string>
+    <string name="share_study_data_btn">点击分享</string>
+    <string name="my_msg">我的消息</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_medal_share_tv">只服务有自我成长需求的人</string>
+    <string name="text_str_resource_msg">资源链接：</string>
+    <string name="interaction_link_msg">%1$s&#160;赞了你在&#160;%2$s&#160;中发布的动态</string>
+    <string name="interaction_link_comment_msg">%1$s&#160;赞了你在&#160;%2$s&#160;中发布的评论</string>
+    <string name="interaction_comment_msg">%1$s&#160;评论了你在&#160;%2$s&#160;中发布的动态</string>
+    <string name="interaction_fuel_msg">%1$s&#160;在&#160;%2$s&#160;中给你加油打气</string>
+    <string name="interaction_follow_msg">%1$s&#160;关注了你</string>
+    <string name="interaction_like_school_resource_msg">%1$s&#160;赞了这条学友圈动态</string>
+    <string name="text_str_initiator">发起人</string>
+    <string name="del_str_msg">确定删除该消息？</string>
+    <string name="text_str_dynamic_is_del">该动态已删除</string>
+    <string name="del_message">确认删除？</string>
+    <string name="resource_course">课程：%1$s</string>
+    <string name="resource_know">知识点：%1$s</string>
+    <string name="resource_periodical">期刊：%1$s</string>
+    <string name="resource_article">文章：%1$s</string>
+    <string name="resource_link">友情链接：%1$s</string>
+    <string name="resource_ebook">电子书：%1$s</string>
+    <string name="resource_study_plan">学习项目：%1$s</string>
+    <string name="resource_special">合集：%1$s</string>
+    <string name="resource_column">专栏：%1$s</string>
+    <string name="resource_activity">活动：%1$s</string>
+    <string name="resource_activity_task">活动任务：%1$s</string>
+    <string name="resource_other">其他：%1$s</string>
+    <string name="resource_baike">百科：%1$s</string>
+    <string name="resource_test_volume">测试卷：%1$s</string>
+    <string name="resource_questionnaire">问卷：%1$s</string>
+    <string name="resource_track">音频：%1$s</string>
+    <string name="resource_album">音频课：%1$s</string>
+    <string name="resource_note">笔记：%1$s</string>
+    <string name="resource_master">大师课：%1$s</string>
+    <string name="note_del">删除</string>
+    <string name="note_move">移动</string>
+    <string name="note_copy">复制</string>
+    <string name="note_share">分享</string>
+    <string name="copy_success">复制成功</string>
+    <string name="study_room">学习室</string>
+    <string name="text_new_file">创建新的学习清单</string>
+    <string name="tip_folder_name_not_null">文件名不能为空</string>
+    <string name="text_continue_clock_in">继续操作</string>
+    <string name="text_cb_exit_study_plan">我自愿退出该学习项目，并自行承担一切后果！</string>
+
+    <string name="str_year">%1$s年&#160;</string>
+    <string name="str_year_score">年积分&#160;%1$s</string>
+
+    <string name="integral_exchange">可兑换</string>
+    <string name="text_str_more">%1$s&#8230;</string>
+    <string name="integral_exchange_score">%1$d&#160;积分</string>
+    <string name="integral_exchange_time">%1$s-%2$s</string>
+    <string name="integral_record_audit_tip">审核中</string>
+    <string name="integral_record_exchanged_tip">已兑换</string>
+    <string name="point_exchange">立即兑换</string>
+    <string name="integral_no_exchange">不可兑换</string>
+
+
+    <string name="integral_no_score">您的积分不足，快去努力学习获取积分吧！</string>
+    <string name="integral_score">兑换%1$s礼物，需要扣除%2$d积分，确定兑换吗？</string>
+    <string name="integral_exchange_success">%1$s兑换成功，扣除%2$d积分。</string>
+</resources>

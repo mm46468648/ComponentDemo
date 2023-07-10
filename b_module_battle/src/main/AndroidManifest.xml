@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mooc.battle">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application>
+
+        <activity android:name=".ui.activity.GameMatchActivity" android:configChanges="orientation|screenSize|keyboard"/>
+        <activity android:name=".ui.activity.GameResultActivity" android:configChanges="orientation|screenSize|keyboard"/>
+        <activity android:name=".ui.activity.GameMainActivity" android:configChanges="orientation|screenSize|keyboard"/>
+        <activity android:name=".ui.activity.GameHistoryRankActivity" android:configChanges="orientation|screenSize|keyboard"/>
+        <activity android:name=".ui.activity.GameRankActivity" android:configChanges="orientation|screenSize|keyboard"/>
+        <activity android:name=".ui.activity.GameReviewActivity" android:configChanges="orientation|screenSize|keyboard"/>
+        <activity android:name=".ui.activity.CompetitionDetailsActivity" android:configChanges="orientation|screenSize|keyboard"/>
+        <activity android:name=".ui.activity.WebViewAnnouncementActivity" android:configChanges="orientation|screenSize|keyboard"/>
+        <activity android:name=".ui.activity.WebViewParticipateRuleActivity" android:configChanges="orientation|screenSize|keyboard"/>
+        <activity android:name=".ui.activity.SkillMainActivity" android:configChanges="orientation|screenSize|keyboard"/>
+        <activity android:name=".ui.activity.SkillCreateActivity" android:configChanges="orientation|screenSize|keyboard"/>
+        <activity android:name=".ui.activity.BeginSkillActivity" android:configChanges="orientation|screenSize|keyboard"/>
+        <activity android:name=".ui.activity.SkillResultActivity" android:configChanges="orientation|screenSize|keyboard"/>
+        <activity android:name=".ui.activity.SkillReviewActivity" android:configChanges="orientation|screenSize|keyboard"/>
+        <activity android:name=".ui.activity.SkillListActivity" android:configChanges="orientation|screenSize|keyboard"/>
+        <activity android:name=".ui.activity.SkillRankActivity" android:configChanges="orientation|screenSize|keyboard"/>
+        <activity android:name=".ui.activity.SkillAnswerActivity" android:configChanges="orientation|screenSize|keyboard"/>
+
+    </application>
+
+</manifest>

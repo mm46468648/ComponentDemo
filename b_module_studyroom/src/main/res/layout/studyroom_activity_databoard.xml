@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.mooc.resource.widget.CommonTitleLayout
+        android:id="@+id/commonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ctl_middle_text="数据详情"
+        app:ctl_right_icon="@mipmap/studyroom_ic_databoard_share" />
+
+    <com.mooc.resource.widget.MoocSwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_F7"
+                android:orientation="vertical">
+
+<!--                <include -->
+<!--                    layout="@layout/studyroom_include_databoard_head" />-->
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/rl_study_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="195dp"
+                    android:background="@drawable/studyroom_bg_databoard_head"
+                    android:padding="15dp"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/study_detail_online"
+                        android:textColor="@color/color_white"
+                        android:textSize="16sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvStudyId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_white"
+                        android:textSize="16sp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="ID 101" />
+
+                    <View
+                        android:id="@+id/view_line_study"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@color/color_white"
+                        app:layout_constraintTop_toBottomOf="@id/tvStudyId" />
+
+                    <TextView
+                        android:id="@+id/tv_study_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/color_white"
+                        android:textSize="13sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view_line_study"
+                        tools:text="2020-11-06" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="今日获得"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/sp_14"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/tv_today_score"
+                        app:layout_constraintRight_toLeftOf="@+id/tv_today_score" />
+
+                    <TextView
+                        android:id="@+id/tv_today_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_white"
+                        android:textSize="60dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view_line_study"
+                        tools:text="2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="积分"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/sp_14"
+                        app:layout_constraintBaseline_toBaselineOf="@id/tv_today_score"
+                        app:layout_constraintLeft_toRightOf="@id/tv_today_score" />
+
+                    <TextView
+                        android:id="@+id/tvTotalScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_white"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/tvCheckinCount"
+                        tools:text="总积分\n\n9058" />
+
+                    <TextView
+                        android:id="@+id/tvCheckinCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_white"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="@id/tvTotalScore"
+                        app:layout_constraintLeft_toRightOf="@id/tvTotalScore"
+                        app:layout_constraintRight_toLeftOf="@+id/tvMedalCount"
+                        tools:text="累计打卡\n\n197天" />
+
+                    <TextView
+                        android:id="@+id/tvMedalCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_white"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="@id/tvTotalScore"
+                        app:layout_constraintLeft_toRightOf="@id/tvCheckinCount"
+                        app:layout_constraintRight_toRightOf="parent"
+                        tools:text="获得勋章\n\n22个" />
+
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="26dp"
+                        android:background="@color/color_81CCAD"
+                        app:layout_constraintBottom_toBottomOf="@id/tvTotalScore"
+                        app:layout_constraintLeft_toLeftOf="@id/tvTotalScore"
+                        app:layout_constraintRight_toRightOf="@id/tvCheckinCount"
+                        app:layout_constraintTop_toTopOf="@id/tvTotalScore" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="26dp"
+                        android:background="@color/color_81CCAD"
+                        app:layout_constraintBottom_toBottomOf="@id/tvTotalScore"
+                        app:layout_constraintLeft_toLeftOf="@id/tvCheckinCount"
+                        app:layout_constraintRight_toRightOf="@+id/tvMedalCount"
+                        app:layout_constraintTop_toTopOf="@id/tvTotalScore" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <LinearLayout
+                    android:id="@+id/ll_btn_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@color/color_white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvLookScoreDetail"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/study_score_detail"
+                        android:textColor="@color/color_6"
+                        android:textSize="@dimen/sp_14" />
+
+                    <TextView
+                        android:id="@+id/tvLookScoreRule"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/study_score_rule"
+                        android:textColor="@color/color_6"
+                        android:textSize="@dimen/sp_14" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/color_64e0" />
+                </LinearLayout>
+
+                <!--        </com.google.android.material.appbar.AppBarLayout>-->
+
+
+                <include
+                    android:id="@+id/detailInclude"
+                    layout="@layout/studyroom_include_databoard_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </com.mooc.resource.widget.MoocSwipeRefreshLayout>
+
+
+</LinearLayout>

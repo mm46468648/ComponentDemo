@@ -1,0 +1,262 @@
+import java.security.DigestInputStream
+apply from: "${rootProject.rootDir}/pgyer-upload.gradle"
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+//apply plugin: 'walle'
+//apply plugin: 'android-aspectjx'
+
+static def buildTime() {
+    return new Date().format("yyyyMMdd_hhmm");
+}
+
+int MILLIS_IN_MINUTE = 1000 * 60
+int minutesSinceEpoch = System.currentTimeMillis() / MILLIS_IN_MINUTE
+
+android {
+
+
+    signingConfigs {
+        release {
+            storeFile file('../keystore/moocxuetang.keystore')
+            keyAlias 'mooc'
+            keyPassword '15389211'
+            storePassword '15389211'
+        }
+    }
+
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        applicationId "com.moocxuetang"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        //打包时间
+        resValue "string", "build_time", buildTime()
+
+        multiDexEnabled true
+        flavorDimensions "versionCode"
+
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi-v7a', 'arm64-v8a'
+        }
+
+        //设置语言包
+        resConfigs "zh"
+
+        packagingOptions {
+            //解决编译时com.android.builder.merge.DuplicateRelativeFileException: More than one file was found with OS independent path 'META-INF/rxjava.properties'这个错误
+            exclude 'META-INF/rxjava.properties'
+        }
+
+        //arouter配置kotlin写法
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", project.getName())
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            //更改AndroidManifest.xml中预先定义好占位符信息
+            //manifestPlaceholders = [app_icon: "@drawable/icon"]
+            // 不显示Log
+            buildConfigField "boolean", "LEO_DEBUG", "false"
+            //是否zip对齐
+            zipAlignEnabled true
+            // 缩减resource文件
+            shrinkResources true
+            //Proguard
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //签名
+            signingConfig signingConfigs.release
+        }
+
+        debug {
+            signingConfig signingConfigs.release
+            //给applicationId添加后缀“.debug”
+//            applicationIdSuffix ".debug"
+            //manifestPlaceholders = [app_icon: "@drawable/launch_beta"]
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            zipAlignEnabled false
+            shrinkResources false
+            minifyEnabled false
+            debuggable true
+        }
+    }
+
+//    compileOptions {
+//        sourceCompatibility 1.8
+//        targetCompatibility 1.8
+//    }
+
+    buildFeatures {
+        dataBinding = true
+        // for view binding :
+        // viewBinding = true
+    }
+
+    productFlavors {
+        qh360 {
+            resValue "string", "channel", "qu360"
+        }
+        Xiaomi {
+            resValue "string", "channel", "xiaomi"
+
+        }
+        Huawei {
+            resValue "string", "channel", "huawei"
+
+        }
+        Vivo {
+            resValue "string", "channel", "vivo"
+
+        }
+        Oppo {
+            resValue "string", "channel", "oppo"
+
+        }
+        Tencent {
+            resValue "string", "channel", "tencent"
+
+        }
+
+        Moocnd {
+            resValue "string", "channel", "moocnd"
+        }
+
+        GFKD {
+            resValue "string", "channel", "gfkd"
+        }
+
+        TestUpgrade {
+            resValue "string", "channel", "testUpgrade"
+        }
+
+        TestUpgrade1 {
+            resValue "string", "channel", "testUpgrade"
+        }
+
+        CheckProblem {
+            resValue "string", "channel", "checkProblem"
+        }
+
+    }
+
+
+    android.applicationVariants.all { variant ->
+        String taskSuffix = variant.name.capitalize()
+        println "current variant name: ${taskSuffix}"
+
+        // 打TestUpgrade1渠道的时候版本号+1
+        if(taskSuffix.contains("TestUpgrade1")){
+            println rootProject.ext.android.versionName
+            println rootProject.ext.android.versionCode
+            def splits = rootProject.ext.android.versionName.split('\\.')
+            println "当前版本号数组: $splits"
+            def end = splits[splits.size()-1].toInteger()
+            def end1 = end + 1
+            splits[splits.size()-1] = end1.toString()
+            def tripIds = splits.join('.')
+            def newVersion = tripIds
+            def newCode = rootProject.ext.android.versionCode + 1
+            println newVersion
+            println newCode
+
+
+            variant.outputs.each {
+                output ->
+                    {
+                        output.versionNameOverride = newVersion
+                        output.versionCodeOverride = newCode
+                    }
+            }
+
+        }
+
+        // 打包完成后复制到的目录
+        def outputFileDir = "${project.rootDir}/outputs/release"
+        //确定输出文件名
+        def path = "app_${variant.productFlavors[0].name}_v${variant.versionName}.apk"
+
+        variant.outputs.forEach {
+            it.outputFileName = path
+        }
+
+        // 打包完成后做的一些事,复制apk到指定文件夹
+//        variant.assemble.doFirst {
+//            File out = new File(outputFileDir)
+//            copy {
+//                variant.outputs.forEach { file ->
+//                    copy {
+//                        from file.outputFile
+//                        into out
+//                    }
+//                }
+//            }
+//            outPutUpgradeInfo()
+
+//        }
+
+
+
+
+        if(taskSuffix.contains("Moocnd") || taskSuffix.contains("GFKD")){
+            task("pgyerBuild${taskSuffix}"){
+                dependsOn ":a_mooc_app:assemble${taskSuffix}"
+                group 'other'
+                description "Custom task for pgyUpload"
+                //上传到蒲公英
+                doLast {
+                    variant.outputs.all{ output ->
+                        println "执行上传任务${output.outputFile.getName()}"
+                        uploadApk(output.outputFile,taskSuffix.contains("Release"),taskSuffix.contains("GFKD"))
+                    }
+                }
+            }
+        }
+
+    }
+
+    productFlavors.all { flavor ->
+        flavor.manifestPlaceholders = [APP_CHANNEL_VALUE: flavor.name]
+    }
+}
+
+
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    kapt rootProject.ext.dependencies["arouter-compiler"]
+    if (!isBuildModule.toBoolean()) {
+        api project(':b_module_splash')
+        api project(':b_module_home')
+        api project(':b_module_studyroom')
+        api project(':b_module_webview')
+        api project(':b_module_login')
+        api project(':b_module_search')
+        api project(':b_module_my')
+        api project(':b_module_statistics')
+        api project(':b_module_setting')
+        api project(':b_module_course')
+        api project(':b_module_audio')
+        api project(':b_module_periodical')
+        api project(':b_module_microknowledge')
+        api project(':b_module_ebook')
+        api project(':b_module_studyproject')
+        api project(':b_module_battle')
+    }
+
+    api project(":c_module_commonbusiness")
+}
+
+
+
+
+

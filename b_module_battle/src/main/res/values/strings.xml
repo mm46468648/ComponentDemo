@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">b_module_periodical</string>
+
+
+    <string name="str_no_season_in_progress">暂无进行中的赛季</string>
+    <string name="str_no_season_in_progress_refresh">当前没有正在进行的赛季</string>
+    <string name="str_season">赛季</string>
+    <string name="str_level_completed_prompt">您已完成此等级的对战任务，请从当前等级进入对局</string>
+    <string name="str_no_unlock_level">未解锁此等级</string>
+    <string name="str_no_rank">暂无排名</string>
+    <string name="text_announcement_detail">公告详情</string>
+    <string name="str_participate_rule">参与规则</string>
+    <string name="text_click_refresh">点击刷新</string>
+
+</resources>

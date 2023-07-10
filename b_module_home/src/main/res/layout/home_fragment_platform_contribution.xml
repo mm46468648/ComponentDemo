@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/color_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:id="@+id/tvGetRule"
+            android:layout_width="75dp"
+            android:layout_height="23dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="0dp"
+            android:drawableRight="@mipmap/home_ic_honnor_look"
+            android:gravity="center"
+            android:text="了解贡献榜"
+            android:textColor="@color/color_82A2C7"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/ctlMiddle"
+            app:layout_constraintTop_toTopOf="@+id/ctlMiddle" />
+
+
+        <LinearLayout
+
+            android:orientation="horizontal"
+            android:id="@+id/ctlMiddle"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/tv_day"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/home_ic_honnor_green_left"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="日榜"
+                android:textColor="@color/color_white"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_month"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:background="@mipmap/home_ic_honnor_gray_right"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="月榜"
+                android:textColor="@color/color_white"
+                android:textSize="13sp"
+                app:layout_constraintLeft_toRightOf="@+id/tv_day"
+                app:layout_constraintTop_toTopOf="@+id/tv_day" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llContributionTask"
+            android:layout_width="70dp"
+            android:layout_height="22dp"
+            android:background="@mipmap/home_ic_honnor_green_left"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/ctlMiddle"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ctlMiddle" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="贡献任务"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_day_contribution"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btn_day_contribution" />
+
+            <ImageView
+                android:layout_width="3dp"
+                android:layout_height="5dp"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/icon_arrow_right"
+                />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="榜单每日12:00更新(日榜更新数据为前一日)"
+            android:textColor="@color/color_818282"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ctlMiddle" />
+
+
+        <TextView
+            android:id="@+id/tv_ranking"
+            android:layout_width="200dp"
+            android:layout_height="15dp"
+            android:text="我的贡献值：0"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <fragment
+        android:id="@+id/platformListFragment"
+        android:name="com.mooc.home.ui.hornowall.platformcontribution.PlatformContributionListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

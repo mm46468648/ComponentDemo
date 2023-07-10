@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_radius3_stroke2_colorf"
+    android:paddingBottom="@dimen/dp_40"
+    android:paddingTop="@dimen/dp_40">
+
+    <TextView
+        android:id="@+id/layout_dialog_confirm_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/share_study_data_title"
+        android:textColor="@color/color_3"
+        android:textSize="18sp" />
+
+    <CheckBox
+        android:id="@+id/cb_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_dialog_confirm_title"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginTop="22dp"
+        android:background="@null"
+        android:button="@drawable/common_btn_check_state"
+        android:clickable="true"
+        android:enabled="true"
+        android:padding="@dimen/dp_10"
+        android:text="今日获得积分"
+        android:textColor="@color/color_3" />
+
+    <CheckBox
+        android:id="@+id/cb_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cb_one"
+        android:layout_below="@+id/cb_one"
+        android:background="@null"
+        android:button="@drawable/common_btn_check_state"
+        android:clickable="true"
+        android:enabled="true"
+        android:padding="@dimen/dp_10"
+        android:text="总积分"
+        android:textColor="@color/color_3" />
+
+    <CheckBox
+        android:id="@+id/cb_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cb_two"
+        android:layout_below="@+id/cb_two"
+        android:background="@null"
+        android:button="@drawable/common_btn_check_state"
+        android:clickable="true"
+        android:enabled="true"
+        android:padding="@dimen/dp_10"
+        android:text="我的排名"
+        android:visibility="gone"
+        android:textColor="@color/color_3" />
+
+    <CheckBox
+        android:id="@+id/cb_four"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cb_three"
+        android:layout_below="@+id/cb_three"
+        android:background="@null"
+        android:button="@drawable/common_btn_check_state"
+        android:clickable="true"
+        android:drawablePadding="8dp"
+        android:enabled="true"
+        android:padding="@dimen/dp_10"
+        android:text="获得勋章数"
+        android:textColor="@color/color_3" />
+
+    <Button
+        android:id="@+id/to_share"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/cb_four"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="@dimen/dp_40"
+        android:background="@color/color_E0E0E0"
+        android:text="@string/share_study_data_btn"
+        android:textColor="@color/color_9" />
+
+</RelativeLayout>

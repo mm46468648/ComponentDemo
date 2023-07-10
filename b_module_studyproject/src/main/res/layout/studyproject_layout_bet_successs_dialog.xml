@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_radius3_stroke2_colorf">
+
+    <TextView
+        android:id="@+id/tvMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:lineSpacingExtra="8dp"
+        android:text="恭喜您,报名成功!"
+        android:textColor="@color/color_2"
+        android:textSize="18sp" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlCheng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvMsg">
+        <TextView
+            android:id="@+id/tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:text="诚信奖励积分"
+            android:textColor="@color/color_2"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/chengxinTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tip"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/end"
+            android:text=""
+            android:textColor="@color/color_D0021B"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:text="分"
+            android:textColor="@color/color_2"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/rlInvitation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/rlCheng">
+    <TextView
+        android:id="@+id/tip1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="25dp"
+        android:text="预存积分"
+        android:textColor="@color/color_2"
+        android:textSize="15sp" />
+    <TextView
+        android:id="@+id/invitationTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tip1"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/end1"
+        android:text=""
+        android:textColor="@color/color_D0021B"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/end1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tip1"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:text="分"
+        android:textColor="@color/color_2"
+        android:textSize="@dimen/sp_14" />
+</RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/rlGet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/rlInvitation"
+    android:visibility="gone">
+    <TextView
+        android:id="@+id/tip2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="25dp"
+        android:text="报名奖励积分"
+        android:textColor="@color/color_2"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:id="@+id/getScoreTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tip2"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/end2"
+        android:text=""
+        android:textColor="@color/color_D0021B"
+        android:textSize="22dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/end2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tip2"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:text="分"
+        android:textColor="@color/color_2"
+        android:textSize="@dimen/sp_14" />
+</RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@id/rlGet"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvButtonOne"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@mipmap/common_bg_green_btn"
+            android:gravity="center"
+            android:text="@string/text_ok"
+            android:textColor="@color/color_white"
+            android:textSize="15sp"
+            tools:ignore="RtlHardcoded" />
+    </LinearLayout>
+</RelativeLayout>

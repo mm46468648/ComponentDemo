@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="172dp"
+    android:id="@+id/rlRoot"
+    android:padding="20dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_radius5_white"
+    tools:background="@mipmap/bg_match_dialog">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/layout_left_dialog"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginRight="-5dp"
+            tools:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@mipmap/bg_btn_update_left"
+            tools:background="@mipmap/bg_match_button_left"
+            android:gravity="center"
+            android:text="@string/text_cancel"
+            android:textColor="@color/color_787878"
+            tools:textColor="@color/color_white"
+            android:textSize="@dimen/sp_14"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/layout_right_dialog"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="-5dp"
+            android:layout_weight="1"
+            android:background="@mipmap/bg_btn_update_right"
+            tools:background="@mipmap/bg_match_button_right"
+            android:gravity="center"
+            android:text="@string/text_ok"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/sp_14" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/layout_desc_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:lineSpacingExtra="3dp"
+        android:text=""
+        android:textColor="#ffdff7ff"
+        android:textSize="15sp"
+        tools:text="答题正在进行中，是否确认退出？" />
+</RelativeLayout>

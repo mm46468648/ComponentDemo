@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:paddingTop="10dp"
+        android:layout_height="41dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:drawableRight="@mipmap/home_ic_todaystudy_right_arrow"
+        android:maxLines="1"
+        tools:text="军人优惠"
+        android:textColor="@color/color_2"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_marginTop="19dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/tvDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="87dp"
+        android:minHeight="40dp"
+        tools:text="大的发售的发送到发阿斯顿斯顿发阿斯"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:maxLines="2"
+        android:textColor="@color/color_2"
+        android:textSize="14sp" />
+
+    <TextView
+        app:layout_constraintTop_toTopOf="@id/tvDesc"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/tvUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/shape_radius2_storke1_f5a623"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_marginTop="1dp"
+        android:text="@string/update"
+        android:paddingBottom="1dp"
+        android:textColor="@color/color_F5A623"
+        android:textSize="11sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:layout_marginTop="5dp"
+        android:maxLines="1"
+        android:textColor="@color/color_9"
+        android:textSize="12sp"
+        tools:text="2020-09-01"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tvDesc"
+        />
+    <View
+        android:id="@+id/viewBottomLine"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDesc"
+        android:layout_marginTop="20dp"
+        style="@style/ViewLine1pxStyle"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

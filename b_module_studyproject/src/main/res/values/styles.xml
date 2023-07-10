@@ -1,0 +1,10 @@
+<resources>
+
+
+    <style name="TabLayoutTextStyle">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+
+
+</resources>

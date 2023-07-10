@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/iv_progress_loading"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/common_gif_loading"
+        android:layout_centerHorizontal="true"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/layout_dialog_progress_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_progress_loading"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="@string/loading"
+        android:textColor="@color/color_9"
+        android:textSize="13sp"
+        android:visibility="visible" />
+
+</LinearLayout>

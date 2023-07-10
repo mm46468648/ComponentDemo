@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mooc.search">
+
+    <application android:theme="@style/AppTheme">
+<!--        <activity android:name=".ui.SearchBookActivity"></activity>-->
+        <activity
+            android:exported="false" android:name="com.mooc.search.ui.SearchShareBookActivity"/>
+        <activity
+            android:exported="false" android:name="com.mooc.search.ui.SearchListActivity" />
+        <activity
+            android:exported="false" android:name="com.mooc.search.ui.SearchActivity" />
+        <activity
+            android:exported="false" android:name="com.mooc.search.ui.SearchActivityNew" />
+    </application>
+
+</manifest>

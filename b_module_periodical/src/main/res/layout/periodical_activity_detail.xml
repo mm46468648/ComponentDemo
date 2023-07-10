@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.mooc.resource.widget.CommonTitleLayout
+        android:id="@+id/commonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ctl_middle_text="刊物"
+        app:ctl_right_text_color="@color/colorPrimary"
+        app:ctl_right_second_icon="@mipmap/common_ic_title_right_add"
+        app:ctl_right_text="举报" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="14dp">
+
+                    <FrameLayout
+                        android:id="@+id/flCover"
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:background="@mipmap/publication_bg_cover_shader"
+                        android:gravity="center"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.mooc.resource.widget.MoocImageView
+                            android:layout_gravity="center"
+                            android:id="@+id/mivCover"
+                            android:layout_width="97dp"
+                            android:layout_height="126dp"
+                            android:scaleType="fitXY"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:src="@mipmap/common_bg_cover_default" />
+                    </FrameLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="9dp"
+                        android:textColor="#ff222222"
+                        android:textSize="15sp"
+                        app:layout_constraintLeft_toRightOf="@+id/flCover"
+                        app:layout_constraintTop_toTopOf="@+id/flCover"
+                        tools:text="兵工学报" />
+
+                    <TextView
+                        android:id="@+id/tvUpdate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#ff999999"
+                        android:textSize="12sp"
+                        app:layout_constraintLeft_toLeftOf="@+id/tvTitle"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                        tools:text="更新至2025年 第13期" />
+
+                    <TextView
+                        android:id="@+id/tvOrg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#ff999999"
+                        android:textSize="12sp"
+                        app:layout_constraintLeft_toLeftOf="@+id/tvTitle"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvUpdate"
+                        tools:text="主办单位：中国兵工学会手动阀阿斯顿发撒地方阿斯顿发" />
+
+                    <TextView
+                        android:id="@+id/tvDes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="简介"
+                        android:textStyle="bold"
+                        android:textColor="#ff222222"
+                        android:textSize="17sp"
+                        android:visibility="invisible"
+                        app:layout_constraintLeft_toLeftOf="@id/flCover"
+                        app:layout_constraintTop_toBottomOf="@+id/flCover" />
+
+                    <com.mooc.resource.widget.expandabletextview.ExpandableTextView
+                        android:id="@+id/etvDes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        app:ep_contract_color="#4A90E2"
+                        app:ep_expand_color="#4A90E2"
+                        app:ep_expand_text="展开"
+                        app:ep_max_line="2"
+                        app:ep_need_always_showright="true"
+                        app:ep_need_contract="true"
+                        app:layout_constraintLeft_toLeftOf="@id/flCover"
+                        app:layout_constraintTop_toBottomOf="@+id/tvDes"
+                        android:textColor="@color/color_5D5D5D"
+                        android:textSize="15sp"
+                        tools:text="撒的方式地方阿斯顿发阿斯顿发阿斯顿发阿斯顿发阿斯顿发阿斯顿发阿斯顿" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llTerm"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#ff333333"
+                    android:textSize="15sp"
+                    tools:text="2023 年  第 1 期 " />
+
+                <ImageView
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/publication_term_select_down"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/rvList"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--           -->
+<!--            />-->
+        <FrameLayout
+            android:id="@+id/flContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nestedScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F7"
+        android:orientation="vertical"
+        android:paddingBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clMiddle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:tag="skin:home_bg_my_head:background"
+                android:background="@mipmap/home_bg_my_head"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.mooc.resource.widget.StatusBarView
+                android:id="@+id/statusBarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clHead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="55dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/shape_radius2_solid_white"
+                android:gravity="center"
+                android:padding="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/statusBarView">
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/groupLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:constraint_referenced_ids="tvBindCode,tvFans,tvFollow,viewGuideLine,tvID"
+                    tools:visibility="visible" />
+
+
+                <TextView
+                    android:id="@+id/tvID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="#ff222222"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="ID 3306132" />
+
+                <TextView
+                    android:id="@+id/tvBindCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:lineSpacingMultiplier="1.2"
+                    android:textColor="#ff666666"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvID"
+                    tools:text="绑定码:\n152f0f733a" />
+
+                <TextView
+                    android:id="@+id/tvFans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="47dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center"
+                    android:text="粉丝\n1000000"
+                    android:textColor="#ff666666"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/viewGuideLine" />
+
+                <View
+                    android:id="@+id/viewGuideLine"
+                    android:layout_width="0.5dp"
+                    android:layout_height="22dp"
+                    android:background="@color/color_e2"
+                    app:layout_constraintBottom_toBottomOf="@id/tvFans"
+                    app:layout_constraintHorizontal_bias="0.78"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvFans" />
+
+                <TextView
+                    android:id="@+id/tvFollow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="47dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="关注\n1000000"
+                    android:textColor="#ff666666"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/viewGuideLine" />
+
+
+                <TextView
+                    android:id="@+id/tvLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@mipmap/home_bg_green_btn"
+                    android:gravity="center"
+                    android:paddingBottom="15dp"
+                    android:text="登录"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:translationY="10dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="17dp"
+                android:ellipsize="end"
+                android:maxWidth="160dp"
+                android:maxLines="1"
+                android:textColor="@color/color_white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/statusBarView"
+                tools:text="夜色朦胧可乐是的发送到发送到发阿斯顿阿斯顿发" />
+
+            <ImageButton
+                android:id="@+id/ibEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginBottom="2dp"
+                android:background="@null"
+                android:src="@mipmap/home_ic_my_edit"
+                app:layout_constraintBottom_toBottomOf="@+id/tvUserName"
+                app:layout_constraintLeft_toRightOf="@+id/tvUserName" />
+
+
+            <com.mooc.commonbusiness.widget.HeadView
+                android:id="@+id/mivAvatar"
+                android:layout_width="102dp"
+                android:layout_height="102dp"
+                android:layout_marginRight="47dp"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/statusBarView" />
+
+            <com.mooc.resource.widget.MoocImageView
+                android:id="@+id/mivDefaultHead"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:src="@mipmap/common_ic_user_head_default"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvUserName"
+                tools:visibility="invisible" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupLogin2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="tvUserName,ibEdit,mivAvatar"
+                tools:visibility="visible" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clMiddle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/shape_radius2_solid_white"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/clHead">
+
+                <TextView
+                    android:id="@+id/tvCheckIn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@mipmap/home_ic_my_sign"
+                    android:drawablePadding="7dp"
+                    android:gravity="center"
+                    android:text="@string/my_str_checkin"
+                    android:textColor="#ff000000"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/tvSchoolCircle"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvSchoolCircle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@mipmap/home_ic_my_circle"
+                    android:drawablePadding="7dp"
+                    android:gravity="center"
+                    android:text="@string/my_friend_circle"
+                    android:textColor="#ff000000"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/tvCheckIn"
+                    app:layout_constraintRight_toLeftOf="@+id/tvReadOnceDay"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvReadOnceDay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@mipmap/home_ic_my_day_read"
+                    android:drawablePadding="7dp"
+                    android:gravity="center"
+                    android:text="@string/my_daliy_read"
+                    android:textColor="#ff000000"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/tvSchoolCircle"
+                    app:layout_constraintRight_toLeftOf="@+id/tvContributeTask"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvContributeTask"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@mipmap/home_ic_my_honor"
+                    android:drawablePadding="7dp"
+                    android:gravity="center"
+                    android:text="贡献任务"
+                    android:textColor="#ff000000"
+                    android:textSize="13sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/tvReadOnceDay"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!--        <com.mooc.resource.widget.DownloadCircleProgressView-->
+        <!--            android:id="@+id/dcpView"-->
+        <!--            app:dsv_simple_mode="true"-->
+        <!--            android:layout_width="100dp"-->
+        <!--            android:layout_height="100dp"/>-->
+        <com.mooc.resource.widget.CommonSettingItem
+            android:id="@+id/csQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:csi_left_icon="@mipmap/home_ic_my_question"
+            app:csi_left_text="@string/my_str_question"
+            app:csi_right_icon="@mipmap/home_ic_my_right_arrow"
+            app:csi_right_text="" />
+
+        <com.mooc.resource.widget.CommonSettingItem
+            android:id="@+id/feedBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:csi_left_icon="@mipmap/home_ic_my_feedback"
+            app:csi_left_text="@string/my_str_feedback"
+            app:csi_right_icon="@mipmap/home_ic_my_shake" />
+
+
+        <com.mooc.resource.widget.CommonSettingItem
+            android:id="@+id/csiShare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:csi_left_icon="@mipmap/home_ic_my_share"
+            app:csi_left_text="@string/my_str_share"
+            app:csi_right_icon="@mipmap/home_ic_my_right_arrow" />
+
+
+        <com.mooc.resource.widget.CommonSettingItem
+            android:id="@+id/csiVersionUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:csi_left_icon="@mipmap/home_ic_my_version"
+            app:csi_left_text="@string/my_version_update"
+            tools:csi_right_text="V 3.0.0" />
+
+        <com.mooc.resource.widget.CommonSettingItem
+            android:id="@+id/csiUpdateLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:csi_left_icon="@mipmap/home_ic_my_updatelog"
+            app:csi_left_text="@string/my_update_log"
+            app:csi_right_icon="@mipmap/home_ic_my_right_arrow" />
+
+        <com.mooc.resource.widget.CommonSettingItem
+            android:id="@+id/csiSetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:csi_left_icon="@mipmap/home_ic_my_setting"
+            app:csi_left_text="系统设置"
+            app:csi_right_icon="@mipmap/home_ic_my_right_arrow"
+            app:csi_showLine="false" />
+
+        <TextView
+            android:id="@+id/tvLogout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="退出登录"
+            android:textColor="#ff666666"
+            android:textSize="14sp" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="center_vertical"
+        android:text="专栏"
+        android:drawablePadding="15dp"
+        android:drawableLeft="@drawable/shape_solid_primary_width3_height12"
+        android:textColor="@color/color_3"
+        android:textSize="14sp"
+        />
+
+    <com.mooc.resource.widget.flowLayout.AutoFlowLayout
+        android:id="@+id/alfName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        app:horizontalSpace="10dp"
+        app:verticalSpace="5dp"
+        />
+</LinearLayout>

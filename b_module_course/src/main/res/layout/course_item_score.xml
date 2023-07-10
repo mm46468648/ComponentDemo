@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ratingbar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="25dp"
+    android:paddingTop="10dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/starType"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:text="教师参与"
+        android:textColor="@color/color_6"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.0分"
+        android:textColor="@color/color_6"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toRightOf="@+id/starBar"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.mooc.commonbusiness.widget.StarBar
+        android:id="@+id/starBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintLeft_toRightOf="@+id/starType"
+        app:layout_constraintTop_toTopOf="parent"
+        ratingbar:starCount="5"
+        ratingbar:starDistance="14dp"
+        ratingbar:starDrawable="@mipmap/common_star_select_big"
+        ratingbar:starEmpty="@mipmap/common_star_unselect_big"
+        ratingbar:starSize="24dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

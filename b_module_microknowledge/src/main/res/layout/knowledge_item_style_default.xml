@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/includeCourse"
+        layout="@layout/knowledge_item_course"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/includeEbook"
+        layout="@layout/knowledge_item_e_book"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/includeAlbum"
+        layout="@layout/knowledge_item_audio_album"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/includeSelfBuiltAudio"
+        layout="@layout/knowledge_item_ownbuild_audio"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/includeTrack"
+        layout="@layout/knowledge_item_audio"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/includeArticle"
+        layout="@layout/knowledge_item_article"
+        android:visibility="gone" />
+    <include
+        android:id="@+id/includePeriodical"
+        layout="@layout/knowledge_item_periodical"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/includeSpecial"
+        layout="@layout/knowledge_item_special"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/includeTask"
+        layout="@layout/knowledge_item_task"
+        android:visibility="gone" />
+    <include
+        android:id="@+id/includeFollowUp"
+        layout="@layout/knowledge_item_followup"
+        android:visibility="gone" />
+</LinearLayout>

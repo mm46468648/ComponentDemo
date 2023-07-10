@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="app_name">军职在线</string>
+    <string name="channel">moocjz</string>
+    <string name="str_empty">暂无数据</string>
+
+
+    <string name="text_wx_login">微信登录</string>
+    <string name="text_login">登录</string>
+
+    <string name="upload_img_faile">上传图片失败，请重试！</string>
+
+    <string name="invite_friends_read_book">请朋友读好书</string>
+
+    <string name="all">全部</string>
+    <string name="sort">排序</string>
+    <string name="str_default">默认</string>
+    <string name="article">文章</string>
+    <string name="str_task">任务</string>
+    <string name="album">音频课</string>
+    <string name="course">课程</string>
+    <string name="publicaton">刊物</string>
+    <string name="study_plan_list">学习清单</string>
+    <string name="ebook">电子书</string>
+    <string name="text_all">全部</string>
+    <string name="micro_course">微课</string>
+    <string name="baike">百科</string>
+    <string name="note">笔记</string>
+    <string name="periodical">期刊</string>
+    <string name="micro_knowledge">微知识</string>
+    <string name="track">音频</string>
+    <string name="track_course">音频课</string>
+    <string name="newline">新鲜上线</string>
+    <string name="oneself_track">自建音频</string>
+    <string name="all_column">全部栏目</string>
+    <string name="quick_column">栏目</string>
+    <string name="konwledge">知识点</string>
+    <string name="more">更多</string>
+    <string name="special">合集</string>
+    <string name="questionnaire">问卷</string>
+    <string name="column">专栏</string>
+    <string name="study_plan_dynamic">动态</string>
+    <string name="task">任务</string>
+
+    <string name="loading">加载中&#8230;</string>
+    <string name="tuling">知识库</string>
+    <string name="study_plan">学习项目</string>
+    <string name="text_my_readhistory">每日一读</string>
+    <string name="text_str_resource_count">一站式搜索3000万+资源</string>
+
+    <!-- share -->
+    <string name="share_wechat">微信</string>
+    <string name="share_circle">朋友圈</string>
+    <string name="share_school_circle">学友圈</string>
+    <!-- 我的-->
+    <string name="my_medal">我的荣耀</string>
+    <string name="apply_cer">证书申请</string>
+    <string name="medal_str_share">分享勋章</string>
+    <string name="medal_all_share">查看所有勋章</string>
+    <string name="medal_obtain_share">只看获得的勋章</string>
+    <string name="medal_str_sign">打卡勋章</string>
+    <string name="medal_str_study">学习勋章</string>
+    <string name="medal_str_special">神秘勋章</string>
+    <string name="medal_str_count">&#040;已获得%1$s枚&#041;</string>
+    <string name="medal_no_special_tv">您还没有获得神秘勋章</string>
+    <string name="medal_time_get">%1$s&#160;获得</string>
+    <string name="already_certification">已获得结课证书</string>
+    <string name="tip_no_honor">你还没有获得证书</string>
+    <string name="share_show">去炫耀一下</string>
+    <string name="no_certification">没有要申请的证书</string>
+    <string name="download_online_certification">下载证书</string>
+    <string name="product_certification">证书生成中</string>
+    <string name="tip_certificate_applly_suc">证书正在发放，请于3分钟后在“我的证书”页面查询和下载</string>
+    <string name="product_certification_but_no_down">已生成证书,但不能下载</string>
+    <string name="performance_evaluation">成绩评定:</string>
+    <string name="apply_cer2">申请证书</string>
+    <string name="str_xtzx">学堂在线</string>
+    <string name="text_ok">确定</string>
+    <string name="text_cancel">取消</string>
+    <string name="my_str_question">常见问题</string>
+
+    <string name="text_platform_policy">因平台功能发展及优化导致隐私政策、用户服务协议变更。请参阅新的《隐私政策》和《用户服务协议》，并充分理解相关条款，点击“同意并继续”以保证各项功能正常使用。为了方便您知晓变更情况，变更内容已在新版本中进行说明。</string>
+
+    <!--课程相关-->
+    <string name="course_str_have_exam">有考试</string>
+    <string name="course_str_no_exam">无考试</string>
+    <string name="course_str_have_certificate">有证书</string>
+    <string name="course_str_charge_certificate">收费证书</string>
+    <string name="course_str_free_certificate">免费证书</string>
+    <string name="course_str_no_certificate">无证书</string>
+    <string name="course_str_pay">付费</string>
+    <string name="course_str_free">免费</string>
+    <string name="point"> · </string>
+    <string name="text_del_img">是否要删除图片？</string>
+    <!--个人相关-->
+    <string name="text_my_fans">粉丝</string>
+    <string name="text_my_follow">关注</string>
+    <string name="text_my_followed">已关注</string>
+    <string name="text_my_add_follow">加关注</string>
+    <string name="text_my_each_follow">互相关注</string>
+    <string name="exchange_point">积分</string>
+    <string name="text_my_share">我的分享</string>
+    <string name="text_other_share">他的分享</string>
+    <string name="text_user_look_share">关注后可查看该学友全部分享</string>
+
+    <string name="text_share">分享</string>
+
+
+    <!--弹窗-->
+    <string name="text_minimize">最小化</string>
+    <string name="text_quit">退出</string>
+    <string name="text_continue_clock_in">继续操作</string>
+    <string name="track_dialog_quit">您还有音频正在播放中哦~点击“最小化”后台播放继续听，或点击“退出”停止播放并退出应用。</string>
+    <string name="test_volume">测试卷</string>
+    <string name="master_talk">大师课</string>
+    <string name="activity">活动</string>
+    <string name="activity_task">活动任务</string>
+    <string name="text_ser_del_resource">是否要删除所选资源？</string>
+
+    <string name="text_back_listen">返回收听</string>
+    <string name="study_dynamic_top">置顶</string>
+    <string name="recommend_list_test_volume">测试卷</string>
+    <!-- 网络和错误 -->
+    <string name="net_error">没有可用的网络连接，请设置网络后重试</string>
+    <string name="get_data_fail">获取数据失败，请稍后重试</string>
+    <string name="upload_head_fail">上传头像失败</string>
+    <string name="show_head_fail">头像加载失败</string>
+    <string name="load_data_fail">加载数据失败</string>
+    <string name="text_no_search_result">抱歉，没有搜到相关内容 \n换个词条试试吧</string>
+    <string name="text_no_resource_result">抱歉，该分类内容为空，换个试试吧</string>
+    <string name="text_no_data_result">抱歉，没有搜到相关内容 \n刷新下试试吧</string>
+    <string name="toast_upload_pic_too_large">图片太大,请重新选择上传</string>
+    <string name="toast_get_app_share_faile">获取分享信息失败</string>
+    <string name="toast_get_upvoice_faile">"上传语音失败，请重试！"</string>
+
+    <string name="share_study_title">我正在军职在线学习</string>
+    <string name="text_str_voice_del">音频已删除</string>
+    <string name="study_exit_dialog_title">退出学习项目后，预存的和项目报名奖励（若有）的积分会扣除，即使重新加入学习项目，其中做过的测试卷也不可重做，您确定要退出吗？</string>
+    <string name="text_str_cb_remind">请先勾选自愿退出</string>
+    <string name="medal_share">晒出我的勋章</string>
+    <string name="str_look_micro_know">查看微知识</string>
+    <string name="permission_file_read">请允许获取访问文件的权限。可前往设置中修改权限。</string>
+    <string name="text_str_self_recommend">我要自荐</string>
+    <string name="text_str_self_recommend_reason">我们欢迎您将质量好的动态内容推荐给我们（同时告之我们您的自荐理由），与平台用户共享</string>
+    <string name="hint_str_self_recommend">请输入文字</string>
+    <string name="hint_str_self_recommend_limit">至少还需输入%d个字</string>
+    <string name="hint_str_self_recommend_submit">提交</string>
+    <string name="text_str_privacy_agreement_title">军职在线个人信息保护指引</string>
+    <string name="text_str_read_privacy_agreement">我已阅读并同意《隐私政策》和《用户服务协议》</string>
+    <string name="text_str_close_setting">关闭该设置后，将影响部分功能的正常使用。</string>
+    <string name="text_str_privacy_setting">隐私设置</string>
+
+    <!--学习项目 -->
+    <string name="text_str_integrity_commitment_title">诚信承诺</string>
+    <string name="text_think_again">再想一想</string>
+    <string name="text_str_integrity_commitment_cb">我承诺以诚信行为参加本学习项目</string>
+    <string name="text_str_exit">是否要退出登录</string>
+    <string name="study_time_permanent_opening">永久开放</string>
+
+
+    <!--隐私策略相关-->
+    <string name="text_str_privacy_title">隐私政策/用户服务协议变更通知</string>
+    <string name="text_str_agree_again">同意并继续</string>
+    <string name="text_str_content_null">文本选择失败，请重试</string>
+    <string name="text_follow_user">确认关注该学友吗？</string>
+    <string name="text_cancel_follow_user">确认取消关注该学友吗？</string>
+    <string name="str_sign_unanimous">签名不一致</string>
+
+    <!--音频相关-->
+    <string name="text_str_album_count">%1$s集</string>
+
+    <!--首页工信部栏目提示-->
+    <string name="text_str_column_hint">该资源请登录\&#034;信息素养培训平台\&#034;公众号查询</string>
+
+
+</resources>

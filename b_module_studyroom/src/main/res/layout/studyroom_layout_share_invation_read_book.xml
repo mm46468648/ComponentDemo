@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="750dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/studyroom_bg_share_invite_readbook" />
+
+    <LinearLayout
+        android:id="@+id/con_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="48dp"
+        android:paddingTop="30dp"
+        android:paddingRight="48dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="这是我很喜欢的5本书，分享给你，一起免费阅读。"
+            android:textColor="#ff876540"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="right"
+            android:textColor="#ff876540"
+            android:textSize="14sp"
+            tools:text="——王大宽" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:drawableLeft="@drawable/studyroom_shape_line_dfd1b8"
+            android:drawableRight="@drawable/studyroom_shape_line_dfd1b8"
+            android:gravity="center"
+            android:text="★"
+            android:textColor="#dfd1b8" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvShareBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iVQrImg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="20dp"
+        android:text="长按二维码阅读"
+        android:textColor="#ff9bd6be"
+        android:textSize="12sp" />
+</FrameLayout>

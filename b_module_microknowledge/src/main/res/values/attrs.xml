@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--    &lt;!&ndash;播放器longding动画控件属性&ndash;&gt;-->
+<!--    <declare-styleable name="VideoLoadAnim">-->
+<!--        <attr name="vla_circleRadius" format="dimension" />-->
+<!--        <attr name="vla_circleSpacing" format="dimension" />-->
+<!--        <attr name="vla_cycle" format="integer" />-->
+<!--    </declare-styleable>-->
+
+
+<!--    &lt;!&ndash;自定义播放器属性&ndash;&gt;-->
+<!--    <declare-styleable name="VideoPlayerWrapper">-->
+<!--        &lt;!&ndash;自定义加载布局&ndash;&gt;-->
+<!--        <attr name="vpw_load_layout_id" format="reference" />-->
+<!--    </declare-styleable>-->
+
+
+
+</resources>

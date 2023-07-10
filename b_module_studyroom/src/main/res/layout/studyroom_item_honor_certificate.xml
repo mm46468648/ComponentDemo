@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_white">
+
+    <RelativeLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white">
+
+
+        <ImageView
+            android:id="@+id/clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="22dp"
+            android:background="@mipmap/my_bg_honor"
+            android:scaleType="centerInside" />
+
+
+        <TextView
+            android:id="@+id/tv_course_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@+id/clock"
+            android:gravity="start"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/color_3" />
+
+
+        <TextView
+            android:id="@+id/tv_honor_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_course_title"
+            android:layout_alignLeft="@+id/tv_course_title"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            tools:text="@string/already_certification"
+            android:textColor="@color/color_A5A5A5"
+            android:textSize="@dimen/sp_14" />
+
+
+        <Button
+            android:id="@+id/online_certificate"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_below="@+id/tv_honor_status"
+            android:layout_alignLeft="@+id/tv_course_title"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_radius5_color_green"
+            android:gravity="center"
+            tools:text="下载证书"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/sp_14"
+            />
+
+        <View
+            android:id="@+id/bottom_seperator"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/online_certificate"
+            style="@style/VerifyLine"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+<!--    <include-->
+<!--        android:id="@+id/include_honor_empty_status"-->
+<!--        layout="@layout/layout_empty_honor"-->
+<!--        android:visibility="gone" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mooc.course">
+
+    <application>
+        <activity
+            android:name=".ui.activity.CourseChoseUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.CourseMarkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.CourseDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.CoursePlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.CourseApplyVerifyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.ZHSCoursePlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.ZHSCourseDownloadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.NewXtCourseDownloadActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

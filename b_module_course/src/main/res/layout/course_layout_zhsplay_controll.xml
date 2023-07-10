@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/ib_back"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:src="@mipmap/common_ic_back_black"
+        android:background="@android:color/transparent" />
+
+    <ImageButton
+        android:id="@+id/ibDownload"
+        android:visibility="gone"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="right"
+        android:background="@null"
+        android:src="@mipmap/course_ic_zhs_down" />
+</FrameLayout>

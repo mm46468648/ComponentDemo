@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--带进度的ProgressBar -->
+    <declare-styleable name="ProgressWheel">
+        <attr name="wheelText" format="string" />
+        <attr name="wheelTextColor" format="color" />
+        <attr name="wheelTextSize" format="dimension" />
+        <attr name="wheelBarColor" format="color" />
+        <attr name="wheelRimColor" format="color" />
+        <attr name="wheelRimWidth" format="dimension" />
+        <attr name="wheelSpinSpeed" format="dimension" />
+        <attr name="wheelDelayMillis" format="integer" />
+        <attr name="wheelCircleColor" format="color" />
+        <attr name="wheelRadius" format="dimension" />
+        <attr name="wheelBarWidth" format="dimension" />
+        <attr name="wheelBarLength" format="dimension" />
+        <attr name="wheelContourColor" format="color" />
+        <attr name="wheelContourSize" format="dimension" />
+        <attr name="wheelStateDrawable" format="integer" />
+        <attr name="wheelStateUnstart" format="reference" />
+        <attr name="wheelStateDoing" format="reference" />
+        <attr name="wheelStateComplete" format="reference" />
+        <attr name="wheelStateLoading" format="reference" />
+        <attr name="wheelStatePause" format="reference" />
+        <attr name="wheelStateError" format="reference" />
+        <attr name="wheelLoadingWidth" format="dimension" />
+        <attr name="wheelLoadingLength" format="integer" />
+        <attr name="wheelLoadingColor" format="color" />
+    </declare-styleable>
+</resources>

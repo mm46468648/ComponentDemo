@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:paddingLeft="10dp"
+        android:id="@+id/tvResourceName"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:background="@color/color_F7"
+        android:drawableLeft="@drawable/home_shape_solid_primary_width3_height12"
+        android:drawablePadding="5dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/color_2"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="课程"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+
+        <TextView
+            android:id="@+id/tvTargetTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="26dp"
+            android:minHeight="22dp"
+            tools:text="我想用艺术感动人们的内心"
+            android:textColor="#ff222222"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/btAdjust"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTargetNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="每日学习1条"
+            android:textColor="#ff222222"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTargetTitle" />
+
+        <Button
+            android:id="@+id/btAdjust"
+            android:layout_width="57dp"
+            android:layout_height="22dp"
+            android:background="@drawable/shape_radius20_color_primary"
+            android:gravity="center"
+            android:text="调整"
+            android:textColor="#ffffffff"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvTargetTitle"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvTargetTitle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@+id/viewBottomLine"
+        style="@style/ViewLine1pxStyle"/>
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_recommend_style_five"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/ivPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/iv_recommend_style_five"
+        android:layout_alignBottom="@id/iv_recommend_style_five"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
+        android:src="@mipmap/home_ic_study_room_play"
+        android:visibility="gone"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/tvTypeFive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/iv_recommend_style_five"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/shape_recommend_type"
+        android:gravity="center"
+        android:textColor="@color/color_white"
+        android:textSize="9sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvTypeListFive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/iv_recommend_style_five"
+        android:background="@drawable/shape_recommend_custom_type"
+        android:gravity="center"
+        android:textColor="@color/color_white"
+        android:textSize="11sp"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/tv_title_style_five"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_recommend_style_five"
+        android:layout_alignLeft="@+id/iv_recommend_style_five"
+        android:layout_alignRight="@+id/iv_recommend_style_five"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/color_2"
+        android:textSize="15sp"
+        tools:text="撒旦法阿ZDF撒旦法是的发顺丰是的" />
+</RelativeLayout>
+
+
+

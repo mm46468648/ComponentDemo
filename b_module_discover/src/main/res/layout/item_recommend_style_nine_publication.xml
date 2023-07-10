@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp">
+
+        <ImageView
+            android:id="@+id/ivImgPublication"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            app:layout_constraintDimensionRatio="70:90"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@mipmap/common_bg_cover_vertical_default" />
+
+        <TextView
+            android:id="@+id/tvTypePublication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/shape_color9e0_corners2"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/publicaton"
+            android:textColor="#ffffffff"
+            android:textSize="9sp"
+            app:layout_constraintRight_toRightOf="@id/ivImgPublication"
+            app:layout_constraintTop_toTopOf="@+id/ivImgPublication" />
+
+        <TextView
+            android:id="@+id/tvTitlePublication"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/color_2"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@+id/ivImgPublication"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="刊物标题刊物标题刊物标题刊物标题刊物标题刊物标题刊物标题" />
+
+        <TextView
+            android:id="@+id/tvTimePublication"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_5D5D5D"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toRightOf="@+id/ivImgPublication"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitlePublication"
+            tools:text="刊物标题刊物标题刊物标题刊物标题刊物标题刊物标题刊物标题" />
+
+        <TextView
+            android:id="@+id/tvSourcePublication"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_5D5D5D"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toRightOf="@+id/ivImgPublication"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTimePublication"
+            tools:text="刊物标题刊物标题刊物标题刊物标题刊物标题刊物标题刊物标题" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/viewBottomLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/color_e2" />
+
+</LinearLayout>

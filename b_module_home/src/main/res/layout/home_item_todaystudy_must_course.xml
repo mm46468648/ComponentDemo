@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:drawableLeft="@drawable/home_shape_solid_primary_width3_height12"
+            android:drawablePadding="5dp"
+            android:paddingTop="10dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:paddingRight="10dp"
+            android:text="课程"
+            android:textColor="@color/color_2"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="35dp"
+            android:gravity="center_vertical"
+            android:minHeight="22dp"
+            android:maxLines="2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/tvTostudy"
+            android:textColor="@color/color_2"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvName"
+            tools:text="灵感是业余者的专属，我们" />
+
+        <TextView
+            android:id="@+id/tvTostudy"
+            android:layout_width="57dp"
+            android:layout_height="22dp"
+            android:tag="skin:shape_corner15_gradient_primary:background"
+            android:background="@drawable/shape_corner15_gradient_primary"
+            android:gravity="center"
+            android:text="去学习"
+            android:textColor="@color/color_white"
+            android:textSize="11sp"
+            android:visibility="visible"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvTitle"
+            app:layout_constraintBottom_toBottomOf="@id/tvTitle"/>
+
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="left"
+            android:textColor="@color/color_9"
+            android:textSize="11sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            tools:text="上次2020.09.11 10:30学过" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_E0E0E0"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime" />
+</LinearLayout>

@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.mooc.resource.widget.MoocSwipeRefreshLayout
+        android:id="@+id/swipeGameRank"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:addStatesFromChildren="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/cLContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/bg_game_rank">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:elevation="0dp"
+                android:orientation="vertical"
+                android:stateListAnimator="@drawable/appbar_elevation">
+
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="0dp"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="270dp"
+                        android:layout_marginTop="76dp">
+
+<!--                        <LinearLayout-->
+<!--                            android:id="@+id/llRefreshContainer"-->
+<!--                            app:layout_constraintTop_toTopOf="parent"-->
+<!--                            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                            app:layout_constraintRight_toRightOf="parent"-->
+<!--                            android:paddingLeft="6dp"-->
+<!--                            android:paddingRight="3dp"-->
+<!--                            android:visibility="gone"-->
+<!--                            tools:visibility="visible"-->
+<!--                            android:layout_marginTop="2dp"-->
+<!--                            android:background="@drawable/bg_game_rank_refresh_tip"-->
+<!--                            android:gravity="center_vertical"-->
+<!--                            android:layout_gravity="center_horizontal"-->
+<!--                            android:layout_width="178dp"-->
+<!--                            android:layout_height="15dp">-->
+<!--                            <ImageView-->
+<!--                                android:src="@mipmap/battle_ic_rank_notice"-->
+<!--                                android:layout_width="12dp"-->
+<!--                                android:layout_height="12dp"/>-->
+<!--                            <TextView-->
+<!--                                android:gravity="center"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="排行榜每10分钟刷新1次"-->
+<!--                                android:textColor="#ffe1eaff"-->
+<!--                                android:textSize="11sp"-->
+<!--                                />-->
+<!--                            <ImageView-->
+<!--                                android:id="@+id/ivClose"-->
+<!--                                android:padding="3dp"-->
+<!--                                android:src="@mipmap/battle_ic_rank_notice_close"-->
+<!--                                android:layout_width="15dp"-->
+<!--                                android:layout_height="15dp"/>-->
+<!--                        </LinearLayout>-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tvSeasonTime"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginLeft="@dimen/dp_15"-->
+<!--                            android:layout_marginTop="24dp"-->
+<!--                            android:layout_marginRight="@dimen/dp_15"-->
+<!--                            android:ellipsize="end"-->
+<!--                            android:gravity="center"-->
+<!--                            android:maxLines="1"-->
+<!--                            android:textColor="@color/color_BED1FD"-->
+<!--                            android:textSize="13sp"-->
+<!--                            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                            app:layout_constraintRight_toRightOf="parent"-->
+<!--                            app:layout_constraintTop_toTopOf="parent"-->
+<!--                            tools:text="2045年03月30日～2045年03月30日"-->
+<!--                            tools:visibility="visible" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tvSeasonName"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginLeft="@dimen/dp_15"-->
+<!--                            android:layout_marginTop="3dp"-->
+<!--                            android:layout_marginRight="@dimen/dp_15"-->
+<!--                            android:ellipsize="end"-->
+<!--                            android:gravity="center"-->
+<!--                            android:maxLines="1"-->
+<!--                            android:textColor="@color/color_white"-->
+<!--                            android:textSize="18sp"-->
+<!--                            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                            app:layout_constraintRight_toRightOf="parent"-->
+<!--                            app:layout_constraintTop_toBottomOf="@+id/tvSeasonTime"-->
+<!--                            tools:text="第一赛季第一"-->
+<!--                            tools:visibility="visible" />-->
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clRankOne"
+                            android:layout_width="117dp"
+                            android:layout_height="193dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@+id/clRankTwo">
+
+
+                            <ImageView
+                                android:id="@+id/ivRank2bg"
+                                android:layout_width="117dp"
+                                android:layout_height="103dp"
+                                android:src="@mipmap/ic_battle_season_rank2_bg"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tvRankName2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:maxLines="2"
+                                android:textColor="#ffaeebff"
+                                android:textSize="15sp"
+                                app:layout_constraintBottom_toTopOf="@+id/flHeadContainer2"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                tools:text="大聪明大聪明大聪明大大..." />
+
+                            <FrameLayout
+                                android:id="@+id/flHeadContainer2"
+                                android:layout_width="54dp"
+                                android:layout_height="56dp"
+                                android:layout_marginBottom="9dp"
+                                app:layout_constraintBottom_toTopOf="@+id/tvLevel2"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent">
+
+
+                                <ImageView
+                                    android:id="@+id/ivRankHead2"
+                                    android:layout_width="51dp"
+                                    android:layout_height="51dp"
+                                    android:layout_gravity="bottom"
+                                    android:src="@mipmap/common_ic_user_head_default" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+                                    android:src="@mipmap/ic_game_rank_level2" />
+                            </FrameLayout>
+
+
+                            <TextView
+                                android:id="@+id/tvLevel2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/shape_bg_game_rank_level_green"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:minWidth="55dp"
+                                android:paddingLeft="12dp"
+                                android:paddingTop="1dp"
+                                android:paddingRight="12dp"
+                                android:paddingBottom="1dp"
+                                android:textColor="#ffffffff"
+                                android:textSize="13sp"
+                                app:layout_constraintBottom_toTopOf="@+id/llScore2"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                tools:text="一级军士长" />
+
+
+                            <LinearLayout
+                                android:id="@+id/llScore2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="43dp"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent">
+
+                                <ImageView
+                                    android:layout_width="17dp"
+                                    android:layout_height="17dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@mipmap/iv_start_rank" />
+
+
+                                <TextView
+                                    android:id="@+id/tvScore2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:textColor="#ff1233a6"
+                                    android:textSize="13sp"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/flLevel2"
+                                    tools:text="1345" />
+
+                            </LinearLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clRankTwo"
+                            android:layout_width="117dp"
+                            android:layout_height="207dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/clRankOne"
+                            app:layout_constraintRight_toLeftOf="@+id/clRankThree">
+
+
+                            <ImageView
+                                android:id="@+id/ivRank1bg"
+                                android:layout_width="117dp"
+                                android:layout_height="119dp"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/ic_battle_season_rank1_bg"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tvRankName1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:maxLines="2"
+                                android:textColor="#ffaeebff"
+                                android:textSize="15sp"
+                                app:layout_constraintBottom_toTopOf="@+id/flHeadContainer1"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                tools:text="大聪明大聪明大聪明大大大大大大" />
+
+                            <FrameLayout
+                                android:id="@+id/flHeadContainer1"
+                                android:layout_width="54dp"
+                                android:layout_height="56dp"
+                                android:layout_marginBottom="9dp"
+                                app:layout_constraintBottom_toTopOf="@+id/tvLevel1"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent">
+
+
+                                <ImageView
+                                    android:id="@+id/ivRankHead1"
+                                    android:layout_width="51dp"
+                                    android:layout_height="51dp"
+                                    android:layout_gravity="bottom"
+                                    android:src="@mipmap/common_ic_user_head_default" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+                                    android:src="@mipmap/ic_game_rank_level1" />
+                            </FrameLayout>
+
+
+                            <TextView
+                                android:id="@+id/tvLevel1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/shape_bg_game_rank_level_green"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:minWidth="55dp"
+                                android:paddingLeft="12dp"
+                                android:paddingTop="1dp"
+                                android:paddingRight="12dp"
+                                android:paddingBottom="1dp"
+                                android:textColor="#ffffffff"
+                                android:textSize="13sp"
+                                app:layout_constraintBottom_toTopOf="@+id/llScore1"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                tools:text="上将" />
+
+
+                            <LinearLayout
+                                android:id="@+id/llScore1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="60dp"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent">
+
+                                <ImageView
+                                    android:layout_width="17dp"
+                                    android:layout_height="17dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@mipmap/iv_start_rank" />
+
+                                <TextView
+                                    android:id="@+id/tvScore1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:textColor="#ff1233a6"
+                                    android:textSize="13sp"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/flLevel1"
+                                    tools:text="1345" />
+                            </LinearLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clRankThree"
+                            android:layout_width="117dp"
+                            android:layout_height="181dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/clRankTwo"
+                            app:layout_constraintRight_toRightOf="parent">
+
+
+                            <ImageView
+                                android:id="@+id/ivRank3bg"
+                                android:layout_width="117dp"
+                                android:layout_height="93dp"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/ic_battle_season_rank3_bg"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tvRankName3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:maxLines="2"
+                                android:textColor="#ffaeebff"
+                                android:textSize="15sp"
+                                app:layout_constraintBottom_toTopOf="@+id/flHeadContainer3"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                tools:text="大胖SD889987111" />
+
+                            <FrameLayout
+                                android:id="@+id/flHeadContainer3"
+                                android:layout_width="54dp"
+                                android:layout_height="56dp"
+                                android:layout_marginBottom="9dp"
+                                app:layout_constraintBottom_toTopOf="@+id/tvLevel3"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent">
+
+
+                                <ImageView
+                                    android:id="@+id/ivRankHead3"
+                                    android:layout_width="51dp"
+                                    android:layout_height="51dp"
+                                    android:layout_gravity="bottom"
+                                    android:src="@mipmap/common_ic_user_head_default" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+                                    android:src="@mipmap/ic_game_rank_level3" />
+                            </FrameLayout>
+
+
+                            <TextView
+                                android:id="@+id/tvLevel3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/shape_bg_game_rank_level_green"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:minWidth="55dp"
+                                android:paddingLeft="12dp"
+                                android:paddingTop="1dp"
+                                android:paddingRight="12dp"
+                                android:paddingBottom="1dp"
+                                android:textColor="#ffffffff"
+                                android:textSize="13sp"
+                                app:layout_constraintBottom_toTopOf="@+id/llScore3"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                tools:text="一级军士长" />
+
+
+                            <LinearLayout
+                                android:id="@+id/llScore3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="34dp"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent">
+
+                                <ImageView
+                                    android:layout_width="17dp"
+                                    android:layout_height="17dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@mipmap/iv_start_rank" />
+
+                                <TextView
+                                    android:id="@+id/tvScore3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:textColor="#ff1233a6"
+                                    android:textSize="13sp"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/flLevel3"
+                                    tools:text="1345" />
+
+                            </LinearLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <ImageView
+                            android:id="@+id/ivbgAbove"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/bg_battle_season_rank_above"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/tbGameRank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="0dp"
+                        android:paddingTop="34dp"
+                        app:contentInsetStart="0dp"
+                        app:layout_collapseMode="pin">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/rlPublicTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="46dp">
+
+
+                                <ImageButton
+                                    android:id="@+id/tvBack"
+                                    android:layout_width="45dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:background="@null"
+                                    android:src="@mipmap/common_ic_back_white" />
+
+
+                                <TextView
+                                    android:id="@+id/tvPublicTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:maxWidth="200dp"
+                                    android:maxLines="1"
+                                    android:text="排行榜"
+                                    android:textColor="@color/color_white"
+                                    android:textSize="18sp" />
+
+
+                                <TextView
+                                    android:id="@+id/tvHistory"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="15dp"
+                                    android:text="历史赛季排行"
+                                    android:textColor="#C8DAFF"
+                                    android:textSize="15sp" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llSeasonFold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dp_15"
+                                android:orientation="vertical"
+                                android:visibility="visible"
+                                tools:visibility="visible"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <LinearLayout
+                                    android:id="@+id/llRefreshContainerFolder"
+                                    android:paddingLeft="6dp"
+                                    android:paddingRight="3dp"
+                                    android:visibility="gone"
+                                    tools:visibility="visible"
+                                    android:background="@drawable/bg_game_rank_refresh_tip"
+                                    android:gravity="center_vertical"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_width="178dp"
+                                    android:layout_height="15dp">
+                                    <ImageView
+                                        android:src="@mipmap/battle_ic_rank_notice"
+                                        android:layout_width="12dp"
+                                        android:layout_height="12dp"/>
+                                    <TextView
+                                        android:gravity="center"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="排行榜每10分钟刷新1次"
+                                        android:textColor="#ffe1eaff"
+                                        android:textSize="11sp"
+                                        />
+                                    <ImageView
+                                        android:id="@+id/ivCloseFolder"
+                                        android:padding="3dp"
+                                        android:src="@mipmap/battle_ic_rank_notice_close"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"/>
+                                </LinearLayout>
+                                <TextView
+                                    android:id="@+id/tvSeasonTimeFold"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:ellipsize="end"
+                                    android:layout_marginTop="9dp"
+                                    android:maxLines="1"
+                                    android:textColor="@color/color_BED1FD"
+                                    android:textSize="13sp"
+                                    android:visibility="visible"
+                                    tools:text="2045年03月30日～2045年03月30日" />
+
+                                <TextView
+                                    android:id="@+id/tvSeasonNameFold"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginRight="8dp"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:textColor="@color/color_white"
+                                    android:textSize="18sp"
+                                    tools:text="第一赛季第一赛季第一" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </androidx.appcompat.widget.Toolbar>
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/con_shadow_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/buttom1"
+                        android:layout_width="117dp"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_battle_season_rank1_bottom"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/buttom2"
+                        tools:ignore="MissingConstraints" />
+
+                    <ImageView
+                        android:id="@+id/buttom2"
+                        android:layout_width="117dp"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_battle_season_rank1_bottom"
+                        app:layout_constraintLeft_toRightOf="@+id/buttom1"
+                        app:layout_constraintRight_toLeftOf="@+id/buttom3"
+                        tools:ignore="MissingConstraints" />
+
+                    <ImageView
+                        android:id="@+id/buttom3"
+                        android:layout_width="117dp"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_battle_season_rank_bottom"
+                        app:layout_constraintLeft_toRightOf="@+id/buttom2"
+                        app:layout_constraintRight_toRightOf="parent"
+                        tools:ignore="MissingConstraints" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@mipmap/bg_battle_season_rank_bottom"
+                    android:orientation="vertical"
+                    tools:visibility="gone"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tvMyRank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="13dp"
+                        android:drawableLeft="@mipmap/ic_battle_rank_rectangle"
+                        android:drawableRight="@mipmap/ic_battle_rank_rectangle"
+                        android:drawablePadding="12dp"
+                        android:textColor="#ffffffff"
+                        android:textSize="@dimen/sp_14"
+                        tools:text="当前我的排名：2456" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvRank"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </com.mooc.resource.widget.MoocSwipeRefreshLayout>
+
+</layout>

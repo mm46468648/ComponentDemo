@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_top"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+
+    <ImageView
+        android:id="@+id/clock"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="13dp"
+        android:background="@mipmap/my_share_img_folder"
+        android:scaleType="centerInside" />
+
+
+    <TextView
+        android:id="@+id/tv_learning_title"
+        tools:text="管理学"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/clock"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_toRightOf="@+id/clock"
+        android:gravity="start"
+        android:textColor="@color/color_2"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:id="@+id/tv_resources"
+        tools:text="@string/already_certification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_learning_title"
+        android:layout_alignLeft="@+id/tv_learning_title"
+        android:layout_marginTop="10dp"
+        android:gravity="start"
+        android:textColor="@color/color_5D5D5D"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/img_zan"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_below="@+id/tv_resources"
+        android:layout_alignLeft="@+id/tv_learning_title"
+        android:layout_marginTop="11dp"
+        android:background="@mipmap/my_iv_grey_like"
+        android:scaleType="centerInside" />
+
+
+    <TextView
+        android:id="@+id/tv_zan"
+        tools:text="2435人点赞"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_below="@+id/tv_resources"
+        android:layout_alignLeft="@+id/tv_resources"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="start"
+        android:textColor="@color/color_5D5D5D"
+        android:textSize="13sp" />
+
+
+    <View
+        android:id="@+id/bottom_seperator"
+        style="@style/VerifyLine"
+        android:layout_below="@+id/tv_zan"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="15dp" />
+</RelativeLayout>

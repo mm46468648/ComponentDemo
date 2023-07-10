@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="53dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <CheckBox
+        android:id="@+id/itemDownloadChxSelect"
+        android:enabled="false"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:button="@drawable/common_drawable_download_checkbox"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+
+    <TextView
+        android:id="@+id/tvChapterName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical"
+        tools:text="手动阀奥迪阿斯顿发"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/color_5"
+        android:textSize="16sp" />
+
+</LinearLayout>

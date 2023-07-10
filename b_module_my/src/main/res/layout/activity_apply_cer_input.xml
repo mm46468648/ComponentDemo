@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_white"
+            android:orientation="vertical">
+
+            <com.mooc.resource.widget.CommonTitleLayout
+                android:id="@+id/commonTitleLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ctl_adapteStatusBar="true"
+                app:ctl_middle_text="@string/apply_cer"
+               />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/title_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="请输入用户名"
+                    android:textColor="@color/color_2"
+                    android:textSize="18sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <EditText
+                    android:id="@+id/edit_nick_name"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/shape_radius3_stroke0_5_colorf1"
+                    android:gravity="left|center_vertical"
+                    android:maxLength="11"
+                    android:paddingLeft="6dp"
+                    android:paddingBottom="4dp"
+                    android:paddingRight="30dp"
+                    android:singleLine="true"
+                    android:textColor="@color/color_2"
+                    android:textColorHint="@color/color_D3D3D3"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/title_tip" />
+                <RelativeLayout
+                    android:id="@+id/rl_delete_edit"
+                    app:layout_constraintTop_toTopOf="@+id/edit_nick_name"
+                    app:layout_constraintBottom_toBottomOf="@+id/edit_nick_name"
+                    app:layout_constraintRight_toRightOf="@+id/edit_nick_name"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:layout_width="30dp"
+                    android:layout_height="0dp"
+                    >
+                    <ImageView
+                        android:src="@mipmap/ic_mini_deletegray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="*请注意："
+                    android:textColor="@color/color_F5A623"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_nick_name" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:text="@string/apply_cer_tip"
+                    android:textSize="@dimen/sp_14"
+                    android:lineSpacingMultiplier="1.3"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tip" />
+
+                <LinearLayout
+                    android:id="@+id/ll_check_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_cancel"
+                    app:layout_constraintLeft_toLeftOf="parent">
+
+                    <CheckBox
+                        android:id="@+id/check_box"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/bg_adapter_item_checkbox"
+                        android:checked="false"
+                        android:clickable="false"
+                        android:longClickable="false" />
+
+                    <TextView
+                        android:id="@+id/tv_check_box"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我已确认信息无误"
+                        app:layout_constraintBottom_toBottomOf="@+id/check_box"
+                        app:layout_constraintLeft_toRightOf="@+id/check_box"
+                        tools:ignore="MissingConstraints" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/shape_radius3_stroke1_colorf"
+                    android:text="@string/text_cancel"
+                    android:gravity="center"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/btn_ok" />
+
+                <TextView
+                    android:id="@+id/btn_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/shape_radius5_colorb6ebd4"
+                    android:text="@string/text_ok"
+                    android:textColor="@color/color_white"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/btn_cancel"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

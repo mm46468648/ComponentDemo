@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mooc.resource.widget.photoview.MPhotoViewContainer
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+
+    <com.lxj.xpopup.widget.HackyViewPager
+        android:background="@color/black"
+        android:id="@+id/viewPage2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.mooc.resource.widget.CommonTitleLayout
+        android:id="@+id/commonTitle"
+        app:ctl_middle_text_color="@color/color_white"
+        app:ctl_right_icon="@mipmap/common_ic_right_share_white"
+        app:ctl_right_second_icon="@mipmap/common_ic_download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</com.mooc.resource.widget.photoview.MPhotoViewContainer>

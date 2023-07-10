@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="15dp">
+
+    <com.mooc.resource.widget.MoocImageView
+        android:id="@+id/cover"
+        android:layout_width="97dp"
+        android:layout_height="65dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:src="@mipmap/common_bg_cover_default" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/item_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/cover"
+        tools:ignore="MissingConstraints"
+        tools:text="活动任务" />
+
+
+    <TextView
+        android:id="@+id/orgs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_A3A3A3"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cover"
+        app:layout_constraintLeft_toLeftOf="@+id/title"
+        app:layout_constraintRight_toLeftOf="@+id/cover"
+        app:layout_constraintTop_toTopOf="@+id/cover"
+        tools:text="活动时间" />
+
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_9"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cover"
+        app:layout_constraintLeft_toLeftOf="@+id/title"
+        tools:text="2022.22.22" />
+
+
+    <TextView
+        android:id="@+id/tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/shape_recommend_type"
+        android:textColor="@color/color_white"
+        android:textSize="11sp"
+        app:layout_constraintRight_toRightOf="@+id/cover"
+        app:layout_constraintTop_toTopOf="@+id/cover"
+        tools:ignore="RtlHardcoded"
+        tools:text="活动" />
+
+
+    <TextView
+        android:id="@+id/column_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_6F86A2"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/cover"
+        app:layout_constraintLeft_toLeftOf="@+id/title"
+        app:layout_constraintRight_toLeftOf="@+id/time" />
+
+
+    <View
+        android:id="@+id/line"
+        style="@style/Style.Horizontal.Origin.Line"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/column_name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_player"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:background="@drawable/shape_radius2_solide_grayf2f2f2">
+
+    <ImageView
+        android:id="@+id/play_voice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="14dp"
+        android:src="@mipmap/common_ic_voice_play" />
+
+    <TextView
+        android:id="@+id/play_tv"
+        android:layout_width="48dp"
+        android:layout_centerVertical="true"
+        android:layout_height="match_parent" />
+
+    <SeekBar
+        android:id="@+id/play_prg"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/pro_time"
+        android:layout_toRightOf="@+id/play_voice"
+        android:max="100"
+        android:maxHeight="2dp"
+        android:minHeight="2dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:progressDrawable="@drawable/common_bg_progres"
+        android:thumb="@mipmap/common_ic_voice_seekbar" />
+
+    <TextView
+        android:id="@+id/pro_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="1dp"
+        android:layout_toLeftOf="@+id/diver"
+        android:text="00:00"
+        android:textColor="@color/color_9"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/diver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/total_time"
+        android:text="/" />
+
+    <TextView
+        android:id="@+id/total_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:text="00:00"
+        android:textColor="@color/color_9"
+        android:textSize="12sp" />
+
+</RelativeLayout>

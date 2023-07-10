@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingBottom="10dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:background="@drawable/shape_corner5_graye5e5e5"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/mivBookCover"
+            android:layout_width="53dp"
+            android:layout_height="70dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvBookName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="#ff7a5e3c"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="@id/mivBookCover"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/mivBookCover"
+            tools:text="好设计是不过时的撒地方阿斯顿发阿斯顿发手动阀手动阀阿斯顿发阿斯顿发" />
+
+
+        <TextView
+            android:id="@+id/tvBookAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textColor="#ff7a5e3c"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@+id/mivBookCover"
+            app:layout_constraintLeft_toLeftOf="@id/tvBookName"
+            tools:text="胥发" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

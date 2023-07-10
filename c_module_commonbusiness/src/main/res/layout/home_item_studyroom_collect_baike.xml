@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <TextView
+        android:id="@+id/tvBaikeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:maxLines="1"
+        tools:text="我_百度百科"
+        android:textStyle="bold"
+        android:textColor="@color/color_2"
+        android:textSize="17sp" />
+
+
+    <TextView
+        android:id="@+id/tvBaikeContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_baike_title"
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@+id/iv_course"
+        android:ellipsize="end"
+        android:gravity="left"
+        tools:text="我_百度百科阿斯顿发阿斯顿发阿斯顿发阿斯顿发撒地方撒地方撒地方"
+        android:lineSpacingExtra="3dp"
+        android:maxLines="2"
+        android:textColor="@color/color_9"
+        android:textSize="13sp" />
+
+    <View
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:background="@color/color_e2"
+        android:layout_height="0.5dp"/>
+</LinearLayout>

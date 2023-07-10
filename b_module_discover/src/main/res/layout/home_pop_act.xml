@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.mooc.resource.widget.MoocImageView
+        android:id="@+id/act_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <com.mooc.resource.widget.MoocImageView
+        android:id="@+id/act_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/act_point"
+        android:layout_alignEnd="@+id/act_point"
+        android:layout_alignRight="@+id/act_point"
+        android:layout_marginBottom="20dp" />
+
+</RelativeLayout>

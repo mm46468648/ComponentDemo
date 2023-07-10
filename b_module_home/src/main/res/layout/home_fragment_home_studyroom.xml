@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mooc.resource.widget.MoocSwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/msrlRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/cLContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/home_bg_home_study_room"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_transparent"
+            android:elevation="0dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="120dp"
+                android:orientation="vertical"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="162dp"
+                    android:background="@mipmap/home_bg_study_room_head">
+
+                    <com.mooc.resource.widget.StatusBarView
+                        android:id="@+id/stateBarView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvTodayScoreStr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="今日积分"
+                        android:textColor="#ffffffff"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toTopOf="@+id/tvLookScoreDetail"
+                        app:layout_constraintLeft_toLeftOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvTodayScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:textColor="#ffffffff"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBaseline_toBaselineOf="@id/tvTodayScoreStr"
+                        app:layout_constraintLeft_toRightOf="@id/tvTodayScoreStr"
+                        tools:text="126" />
+
+                    <TextView
+                        android:id="@+id/tvLookScoreDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:drawableRight="@mipmap/home_ic_studyroom_right_arrow"
+                        android:drawablePadding="4dp"
+                        android:gravity="center_vertical"
+                        android:text="查看详情"
+                        android:textColor="#ffffffff"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toTopOf="@+id/tvRegistNum"
+                        app:layout_constraintLeft_toLeftOf="@id/tvTodayScoreStr" />
+
+
+                    <TextView
+                        android:id="@+id/tvIntegralList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="3dp"
+                        android:visibility="gone"
+                        android:paddingRight="3dp"
+                        android:background="@drawable/shape_radius2_solide_yellow_d37c00"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:gravity="center"
+                        android:text="积分兑换"
+                        android:textColor="#ffffffff"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toTopOf="@+id/tvRegistNum"
+                        app:layout_constraintLeft_toRightOf="@id/tvLookScoreDetail" />
+
+
+
+
+                    <TextView
+                        android:id="@+id/tvFriendRank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:drawableLeft="@mipmap/studyroom_ic_friend_rank"
+                        android:drawableRight="@mipmap/home_ic_studyroom_right_arrow"
+                        android:drawablePadding="4dp"
+                        android:gravity="center_vertical"
+                        android:text="好友排行"
+                        android:visibility="invisible"
+                        android:textColor="#ffffffff"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toTopOf="@+id/tvRegistNum"
+                        app:layout_constraintLeft_toLeftOf="@id/tvAllScore" />
+
+                    <TextView
+                        android:id="@+id/tvRegistNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:textColor="#ffffffff"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="@id/tvTodayScoreStr"
+                        tools:text="123986" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:text="人注册"
+                        android:textColor="#ffffffff"
+                        android:textSize="14sp"
+                        app:layout_constraintBaseline_toBaselineOf="@id/tvRegistNum"
+                        app:layout_constraintLeft_toRightOf="@id/tvRegistNum" />
+
+                    <TextView
+                        android:id="@+id/tvAllScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="100dp"
+                        android:textColor="#ffffffff"
+                        android:textSize="14sp"
+                        app:layout_constraintBaseline_toBaselineOf="@id/tvRegistNum"
+                        app:layout_constraintLeft_toRightOf="@id/tvRegistNum"
+                        tools:text="共3429积分" />
+
+                    <TextView
+                        android:id="@+id/tvSetHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginRight="6dp"
+                        android:gravity="center"
+                        android:text="设为首页"
+                        android:textColor="#ffffffff"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ibMessageTip"
+                        app:layout_constraintRight_toLeftOf="@+id/ibMessageTip"
+                        app:layout_constraintTop_toTopOf="@+id/ibMessageTip" />
+
+                    <ImageButton
+                        android:id="@+id/ibMessageTip"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="18dp"
+                        android:background="@null"
+                        android:src="@mipmap/home_ic_studyroom_massage_tip"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/stateBarView" />
+
+                    <TextView
+                        android:id="@+id/tvMessageNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/shape_radius10_solid_redff532e"
+                        android:maxLength="3"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:paddingBottom="2dp"
+                        android:textColor="@color/color_white"
+                        android:textSize="9sp"
+                        android:translationX="-8dp"
+                        android:translationY="-10dp"
+                        android:visibility="invisible"
+                        app:layout_constraintLeft_toRightOf="@id/ibMessageTip"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/ibMessageTip"
+                        tools:text="9" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_corner2_top_solid_white"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clMiddle"
+                        android:layout_width="match_parent"
+                        android:layout_height="78dp"
+                        android:layout_margin="15dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        app:layout_constraintBottom_toTopOf="@+id/nestedScrollView"
+                        app:layout_constraintTop_toBottomOf="@+id/clHead">
+
+                        <TextView
+                            android:id="@+id/tvDataBoard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableTop="@mipmap/home_ic_studyroom_databoard"
+                            android:drawablePadding="7dp"
+                            android:gravity="center"
+                            android:text="@string/studyroom_data_board"
+                            android:textColor="#ff000000"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintHorizontal_chainStyle="spread_inside"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@+id/tvStudyRecord"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvStudyRecord"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableTop="@mipmap/home_ic_studyroom_todayfile"
+                            android:drawablePadding="7dp"
+                            android:gravity="center"
+                            android:text="@string/studyroom_study_record"
+                            android:textColor="#ff000000"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/tvDataBoard"
+                            app:layout_constraintRight_toLeftOf="@+id/tvMyDownload"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvMyDownload"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableTop="@mipmap/home_ic_studyroom_download"
+                            android:drawablePadding="7dp"
+                            android:gravity="center"
+                            android:text="@string/studyroom_my_download"
+                            android:textColor="#ff000000"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/tvStudyRecord"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingRight="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:tag="skin:shape_width4_height17_primary:drawableLeft"
+                            android:drawableLeft="@drawable/shape_width4_height17_primary"
+                            android:drawablePadding="15dp"
+                            android:text="学习清单"
+                            android:textColor="#ff222222"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvStudyListSort"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center_vertical"
+                            android:text="排序"
+                            android:textColor="#ff666666"
+                            android:textSize="12sp" />
+                    </FrameLayout>
+
+                    <com.mooc.resource.widget.NoIntercepteRecyclerView
+                        android:id="@+id/rvStudyList"
+                        android:layout_width="match_parent"
+                        android:layout_height="68dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        tools:orientation="horizontal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:tag="skin:shape_width4_height17_primary:drawableLeft"
+                        android:drawableLeft="@drawable/shape_width4_height17_primary"
+                        android:drawablePadding="15dp"
+                        android:text="学习资源"
+                        android:textColor="#ff222222"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/shape_radius_learning_resources_solid_f2f2f2"
+                        android:drawableLeft="@mipmap/home_ic_studyroom_notice"
+                        android:drawablePadding="3dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="10dp"
+                        android:text="长按可移动或删除资源"
+                        android:textColor="#fff5a623"
+                        android:textSize="10sp" />
+
+
+                    <com.mooc.resource.widget.MCustomTablayout
+                        android:id="@+id/mctStudyRoom"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/color_white"
+                        app:mct_select_text_blod="true"
+                        app:mct_select_text_size="17sp"
+                        app:mct_tab_layout="@layout/common_layout_studyroom_tab_indicator"
+                        app:mct_unselect_text_size="13sp"
+                        app:tabGravity="fill"
+                        app:tabIndicatorColor="@color/transparent"
+                        app:tabIndicatorHeight="0dp"
+                        app:tabMinWidth="1dp"
+                        app:tabMode="scrollable"
+                        app:tabRippleColor="@android:color/transparent"
+                        app:tabSelectedTextColor="@color/color_2"
+                        app:tabTextColor="@color/color_6" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPage2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_white"
+            android:overScrollMode="never"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</com.mooc.resource.widget.MoocSwipeRefreshLayout>
+

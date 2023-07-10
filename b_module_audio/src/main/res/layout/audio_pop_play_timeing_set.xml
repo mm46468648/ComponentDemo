@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:paddingLeft="35dp"
+    android:paddingRight="35dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvStop"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:text="不开启"
+        android:textColor="@color/color_3"
+        android:textSize="14sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvClose"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="关闭"
+        android:textColor="@color/color_3"
+        android:textSize="14sp" />
+</LinearLayout>

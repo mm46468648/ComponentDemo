@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="schoolSourceBean"
+            type="com.mooc.my.model.SchoolSourceBean" />
+
+        <variable
+            name="lifeOwner"
+            type="androidx.lifecycle.LifecycleOwner" />
+
+        <variable
+            name="uid"
+            type="String" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp">
+
+        <include
+            android:id="@+id/incloud_head"
+            layout="@layout/my_include_school_circle_head_new"
+            app:lifeOwner="@{lifeOwner}"
+            app:schoolSourceBean="@{schoolSourceBean}"
+            app:uid="@{uid}" />
+
+        <include
+            android:id="@+id/incloud_item"
+            layout="@layout/my_include_item_study_firend_circle_dynamic"
+            app:showPrise="@{true}" />
+
+    </LinearLayout>
+</layout>

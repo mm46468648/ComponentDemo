@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/ivCover"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:src="@mipmap/common_bg_cover_vertical_default"
+        app:layout_constraintDimensionRatio="100:100"
+        android:scaleType="centerCrop"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/ivPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="@+id/ivCover"
+        app:layout_constraintBottom_toBottomOf="@id/ivCover"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
+        android:src="@mipmap/home_ic_study_room_play"
+        android:visibility="gone"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/tvTypeFive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/ivCover"
+        app:layout_constraintRight_toRightOf="@+id/ivCover"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/shape_recommend_type"
+        android:gravity="center"
+        android:textColor="@color/color_white"
+        android:textSize="9sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvTypeListFive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/ivCover"
+        app:layout_constraintTop_toTopOf="@id/ivCover"
+        app:layout_constraintRight_toRightOf="@+id/ivCover"
+        android:background="@drawable/shape_recommend_custom_type"
+        android:gravity="center"
+        android:textColor="@color/color_white"
+        android:textSize="11sp"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivCover"
+        app:layout_constraintLeft_toLeftOf="@id/ivCover"
+        app:layout_constraintRight_toRightOf="@id/ivCover"
+        app:layout_constraintTop_toBottomOf="@id/ivCover"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/color_2"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:text="撒旦法阿ZDF撒旦法是的发顺丰是的" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

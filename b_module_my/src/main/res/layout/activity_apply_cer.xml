@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:background="@color/color_white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.mooc.resource.widget.CommonTitleLayout
+        android:id="@+id/commonTitleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ctl_adapteStatusBar="true"
+        app:ctl_middle_text="@string/apply_cer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.mooc.resource.widget.MoocSwipeRefreshLayout
+        android:id="@+id/swipe_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commonTitleLayout">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.mooc.resource.widget.MoocSwipeRefreshLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

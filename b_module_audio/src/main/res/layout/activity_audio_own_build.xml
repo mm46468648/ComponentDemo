@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivHead"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintDimensionRatio="360:225"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/audio_time_zero"
+            android:src="@mipmap/audio_bg_playpage_head"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.mooc.resource.widget.CommonTitleLayout
+            android:id="@+id/commonTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ctl_left_icon="@mipmap/common_ic_back_white"
+            app:ctl_right_icon="@mipmap/common_ic_title_right_menu_white"
+            app:ctl_right_second_icon="@mipmap/common_ic_title_right_add_white"
+            app:ctl_right_text="举报"
+            app:ctl_right_text_color="@color/color_white"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivPlayStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/audio_ic_middle_track_play"
+            app:layout_constraintBottom_toBottomOf="@id/ivHead"
+            app:layout_constraintLeft_toLeftOf="@id/ivHead"
+            app:layout_constraintRight_toRightOf="@id/ivHead"
+            app:layout_constraintTop_toTopOf="@id/ivHead"
+            android:contentDescription="@string/audio_play_state"
+            tools:ignore="ImageContrastCheck" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Base.Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/ivHead"
+            app:layout_constraintLeft_toLeftOf="@id/ivHead"
+            app:layout_constraintRight_toRightOf="@id/ivHead"
+            app:layout_constraintTop_toTopOf="@id/ivHead" />
+
+        <TextView
+            android:id="@+id/tvPlayTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/audio_time_zero"
+            android:textColor="@color/color_white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivHead"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <SeekBar
+            android:id="@+id/sbPlayProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:max="100"
+            android:maxHeight="4dp"
+            android:minHeight="4dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:progress="0"
+            android:progressDrawable="@drawable/audio_pb_progres_bg"
+            android:thumb="@mipmap/audio_ic_play_pb_thumb"
+            app:layout_constraintBottom_toBottomOf="@id/tvPlayTime"
+            app:layout_constraintLeft_toRightOf="@id/tvPlayTime"
+            app:layout_constraintRight_toLeftOf="@+id/tvTotalTime" />
+
+        <TextView
+            android:id="@+id/tvTotalTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:text="@string/audio_time_zero"
+            android:textColor="@color/color_white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvPlayTime"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTimeCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/audio_bg_time_count"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="2dp"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingBottom="2dp"
+            android:textColor="@color/color_white"
+            android:textSize="11sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/commonTitle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="00:00"
+            tools:visibility="visible" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="@dimen/dp_40">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/audio_platform_jzzx"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivHead" />
+
+            <TextView
+                android:id="@+id/tvAudioname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="25dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="3"
+                android:textColor="@color/color_3"
+                android:textSize="18sp"
+                tools:text="阿斯顿发阿斯顿发阿斯顿发阿斯顿发阿斯顿发阿斯顿发阿斯顿发阿斯顿发" />
+
+            <TextView
+                android:id="@+id/tvPlayCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                app:drawableStartCompat="@drawable/shape_solid_333333_width2_height12"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
+                android:text="@string/track_des"
+                android:textColor="@color/color_3"
+                android:textSize="13sp" />
+
+            <FrameLayout
+                android:id="@+id/flContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+<!--                <com.mooc.webview.andriodkit.AndroidKitWebView-->
+<!--                    android:id="@+id/mWebview"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content" />-->
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/tvTestPaperTitle"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                app:drawableStartCompat="@drawable/shape_solid_333333_width2_height12"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
+                android:text="@string/test_volume"
+                android:textColor="@color/color_3"
+                android:textSize="13sp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tvTestPaperName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@string/test_volume"
+                android:textColor="@color/color_4A90E2"
+                android:textSize="@dimen/sp_14"
+                android:visibility="gone"
+                tools:ignore="TextContrastCheck"
+                tools:visibility="visible" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

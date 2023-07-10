@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.mooc.resource.widget.MoocImageView
+        android:id="@+id/mivMiddle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:src="@mipmap/common_bg_cover_big_default"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="360:550"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp" />
+
+    <ImageButton
+        android:background="@null"
+        android:id="@+id/ibClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/mivMiddle"
+        app:layout_constraintRight_toRightOf="@id/mivMiddle"
+        android:src="@mipmap/common_ic_read_close" />
+    <TextView
+        android:id="@+id/tvShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mivMiddle"
+        android:layout_marginTop="20dp"
+        android:drawablePadding="@dimen/dp_10"
+        android:text="@string/text_share"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:drawableLeftCompat="@mipmap/common_ic_right_share_white" />
+</androidx.constraintlayout.widget.ConstraintLayout>

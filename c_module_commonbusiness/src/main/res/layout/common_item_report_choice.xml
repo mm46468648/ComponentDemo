@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tvChoiceName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:ellipsize="end"
+        android:maxLines="1"
+        tools:text="含有色情"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:drawableRight="@mipmap/common_ic_arrow_right_black"
+        android:textColor="@color/color_3"
+        android:textSize="@dimen/sp_14" />
+
+    <View
+        android:layout_gravity="bottom"
+        style="@style/ViewLine1pxStyle" />
+</FrameLayout>

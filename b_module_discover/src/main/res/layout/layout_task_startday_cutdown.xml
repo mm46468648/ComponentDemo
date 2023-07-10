@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llStartTimeAway"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="6dp"
+        android:text="距任务开始还有"
+        android:textStyle="bold"
+        android:textColor="#ff000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvDay1"
+        android:layout_width="21dp"
+        android:layout_height="28dp"
+        android:background="@drawable/shape_radius2_white"
+        android:gravity="center"
+        android:textColor="#ff10955b"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/tvDay2"
+        android:layout_width="21dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="1dp"
+        android:background="@drawable/shape_radius2_white"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#ff10955b"
+        android:textSize="15sp"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/tvDay3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dp"
+        android:text="天"
+        android:textStyle="bold"
+        android:textColor="#ff000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvHour1"
+        android:layout_width="21dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="1dp"
+        android:background="@drawable/shape_radius2_white"
+        android:gravity="center"
+        android:textColor="#ff10955b"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/tvHour2"
+        android:layout_width="21dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="3dp"
+        android:background="@drawable/shape_radius2_white"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#ff10955b"
+        android:textSize="15sp"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/tvHour3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dp"
+        android:text="小时"
+        android:textStyle="bold"
+        android:textColor="#ff000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvMin1"
+        android:layout_width="21dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="1dp"
+        android:background="@drawable/shape_radius2_white"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#ff10955b"
+        android:textSize="15sp"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/tvMin2"
+        android:layout_width="21dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="3dp"
+        android:background="@drawable/shape_radius2_white"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#ff10955b"
+        android:textSize="15sp"
+        tools:text="1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dp"
+        android:text="分钟"
+        android:textStyle="bold"
+        android:textColor="#ff000000"
+        android:textSize="15sp" />
+</LinearLayout>

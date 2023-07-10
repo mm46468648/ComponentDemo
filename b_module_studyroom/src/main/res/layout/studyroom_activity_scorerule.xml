@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.mooc.resource.widget.CommonTitleLayout
+        android:id="@+id/commonTitleLayout"
+        android:layout_width="match_parent"
+        app:ctl_middle_text="积分规则"
+        android:layout_height="wrap_content"
+        app:ctl_adapteStatusBar="true" />
+
+    <FrameLayout
+        android:id="@+id/flRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.mooc.webview.WebviewActivity" >
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressDrawable="@drawable/web_bg_loading_progressbar"
+            android:layout_width="match_parent"
+            android:max="100"
+            android:layout_height="3dp"/>
+    </FrameLayout>
+</LinearLayout>

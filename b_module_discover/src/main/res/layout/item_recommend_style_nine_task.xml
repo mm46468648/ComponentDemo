@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:id="@+id/ivImgTask"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/common_bg_task_item_shape"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/common_bg_task_item_shape"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTitleTask"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/color_white"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints,RtlHardcoded"
+            tools:text="测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试" />
+
+
+        <TextView
+            android:id="@+id/tvGetTimeTask"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_D4D4D4"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@+id/tvTitleTask"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleTask"
+            tools:ignore="RtlHardcoded"
+            tools:text="领取时间：2029.09.08-2029.09.08" />
+
+        <TextView
+            android:id="@+id/tvTimeTask"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/color_D4D4D4"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvPeopleNumTask"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvGetTimeTask"
+            tools:ignore="RtlHardcoded"
+            tools:text="任务时间：2029.09.08-2029.09.08" />
+
+        <TextView
+            android:id="@+id/tvPeopleNumTask"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_D4D4D4"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRewardScoreTask"
+            app:layout_constraintLeft_toRightOf="@+id/tvRewardScoreTask"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvRewardScoreTask"
+            tools:ignore="RtlHardcoded"
+            tools:text="122323人参加" />
+
+        <TextView
+            android:id="@+id/tvRewardTask"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="奖励积分"
+            android:textColor="@color/color_D4D4D4"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRewardScoreTask"
+            app:layout_constraintLeft_toLeftOf="@+id/tvTitleTask"
+            app:layout_constraintTop_toTopOf="@+id/tvRewardScoreTask"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/tvRewardScoreTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:minWidth="80dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/tvRewardTask"
+            app:layout_constraintRight_toLeftOf="@+id/tvPeopleNumTask"
+            app:layout_constraintTop_toBottomOf="@+id/tvTimeTask"
+            tools:ignore="RtlHardcoded"
+            tools:text="1000" />
+
+
+        <TextView
+            android:id="@+id/tvStatusTask"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:textColor="@color/color_4C4C4C"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTimeTask"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:ignore="RtlHardcoded"
+            tools:text="测试"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvTypeTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/shape_color9e0_corners2"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="任务"
+            android:textColor="#ffffffff"
+            android:textSize="9sp"
+            app:layout_constraintRight_toRightOf="@id/ivImgTask"
+            app:layout_constraintTop_toTopOf="@+id/ivImgTask" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/viewBottomLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/color_e2" />
+
+</LinearLayout>

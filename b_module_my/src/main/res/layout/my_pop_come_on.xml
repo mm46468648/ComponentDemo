@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_member_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:src="@mipmap/common_ic_read_close"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+    <LinearLayout
+        android:background="@drawable/shape_radius2_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:gravity="center"
+            android:text="坚持不易，给他们加个油吧"
+            android:textColor="#ff333333"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:text="为他人加油可增加贡献点噢"
+            android:textColor="#ff999999"
+            android:textSize="14sp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp">
+
+            <View
+                android:id="@+id/viewCenter"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.mooc.my.widget.ViewComeOnUser
+                android:id="@+id/ivHead1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintCircle="@id/viewCenter"
+                app:layout_constraintCircleAngle="185"
+                app:layout_constraintCircleRadius="120dp"
+                android:visibility="gone"
+                tools:src="@mipmap/ic_launcher"
+                tools:visibility="visible"
+                tools:scaleX="0.9"
+                tools:scaleY="0.9"
+                />
+
+            <com.mooc.my.widget.ViewComeOnUser
+                android:id="@+id/ivHead2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintCircle="@id/viewCenter"
+                app:layout_constraintCircleAngle="205"
+                app:layout_constraintCircleRadius="220dp"
+                android:visibility="gone"
+                tools:visibility="visible"
+                tools:src="@mipmap/ic_launcher" />
+
+            <com.mooc.my.widget.ViewComeOnUser
+                android:id="@+id/ivHead3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintCircle="@id/viewCenter"
+                app:layout_constraintCircleAngle="90"
+                app:layout_constraintCircleRadius="80dp"
+                android:visibility="gone"
+                tools:visibility="visible"
+                tools:scaleX="0.8"
+                tools:scaleY="0.8"
+                tools:src="@mipmap/ic_launcher" />
+
+            <com.mooc.my.widget.ViewComeOnUser
+                android:id="@+id/ivHead4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintCircle="@id/viewCenter"
+                app:layout_constraintCircleAngle="235"
+                app:layout_constraintCircleRadius="120dp"
+                tools:src="@mipmap/ic_launcher"
+                tools:scaleX="0.7"
+                tools:scaleY="0.7"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <com.mooc.my.widget.ViewComeOnUser
+                android:id="@+id/ivHead5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintCircle="@id/viewCenter"
+                app:layout_constraintCircleAngle="155"
+                app:layout_constraintCircleRadius="160dp"
+                tools:src="@mipmap/ic_launcher"
+                android:visibility="gone"
+                tools:scaleX="0.5"
+                tools:scaleY="0.5"
+                tools:visibility="visible" />
+
+            <com.mooc.my.widget.ViewComeOnUser
+                android:id="@+id/ivHead6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintCircle="@id/viewCenter"
+                app:layout_constraintCircleAngle="180"
+                app:layout_constraintCircleRadius="200dp"
+                tools:src="@mipmap/ic_launcher"
+                tools:scaleX="0.5"
+                tools:scaleY="0.5"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <com.mooc.my.widget.ViewComeOnUser
+                android:id="@+id/ivHead7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintCircle="@id/viewCenter"
+                app:layout_constraintCircleAngle="190"
+                app:layout_constraintCircleRadius="280dp"
+                tools:src="@mipmap/ic_launcher"
+                tools:scaleX="0.4"
+                tools:scaleY="0.4"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <com.mooc.my.widget.ViewComeOnUser
+                android:id="@+id/ivHead8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintCircle="@id/viewCenter"
+                app:layout_constraintCircleAngle="165"
+                app:layout_constraintCircleRadius="260dp"
+                tools:src="@mipmap/ic_launcher"
+                tools:scaleX="0.7"
+                tools:scaleY="0.7"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:text="最近这些小伙伴也在这里留下了足迹"
+            android:textColor="#ff6f86a2"
+            android:textSize="12sp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clMusic"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:background="@color/color_e9">
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/color_E9EEF5"
+                android:text="今日梦说心语"
+                android:textColor="#ff333333"
+                android:textSize="13sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.mooc.resource.widget.MoocImageView
+                android:id="@+id/ivMusicCover"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="20dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/my_ic_cover_msxy"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvMusicName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/color_4D"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivMusicCover"
+                app:layout_constraintLeft_toRightOf="@+id/ivMusicCover"
+                app:layout_constraintRight_toLeftOf="@+id/ivArrow"
+                app:layout_constraintTop_toTopOf="@+id/ivMusicCover"
+                tools:text="孙子兵法" />
+
+            <ImageView
+                android:id="@+id/ivPlayPause"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@mipmap/my_ic_music_play"
+                app:layout_constraintBottom_toBottomOf="@id/ivMusicCover"
+                app:layout_constraintLeft_toLeftOf="@id/ivMusicCover"
+                app:layout_constraintRight_toRightOf="@id/ivMusicCover"
+                app:layout_constraintTop_toTopOf="@id/ivMusicCover"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/ivArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@mipmap/icon_arrow_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</LinearLayout>

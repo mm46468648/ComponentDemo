@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_radius3_white">
+
+        <TextView
+            android:id="@+id/layout_title_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="24dp"
+            android:text="@string/shake_str_title"
+            android:textColor="@color/color_3"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/layout_message_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_title_msg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginRight="45dp"
+            android:gravity="center"
+            android:lineSpacingExtra="8dp"
+            android:text="@string/shake_str_message"
+            android:textColor="@color/color_3"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:layout_below="@id/layout_message_msg"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="25dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/layout_ignore_msg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="-5dp"
+                android:layout_weight="1"
+                android:background="@mipmap/common_bg_pop_cancel_left"
+                android:gravity="center"
+                android:text="没有问题"
+                android:textColor="@color/color_9"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/layout_ok_msg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="-5dp"
+                android:layout_weight="1"
+                android:background="@mipmap/common_bg_pop_ok_right"
+                android:gravity="center"
+                android:text="意见反馈"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+

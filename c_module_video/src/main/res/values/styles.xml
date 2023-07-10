@@ -1,0 +1,28 @@
+<resources>
+
+
+    <!--exo custom_controll全屏按钮style-->
+    <style name="ExoMediaButton.Fullscreen">
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:contentDescription">@null</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:visibility">visible</item>
+    </style>
+
+
+    <!-- 进度条-->
+    <style name="ExoMediaTimeBar">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="bar_height">2dp</item>
+        <item name="buffered_color">@color/white</item>
+        <item name="played_color">#FF7000</item>
+        <item name="unplayed_color">@color/white</item>
+        <item name="scrubber_color">#FF7000</item>
+    </style>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- file select layout padding -->
+    <dimen name="padding_layout_little">3dp</dimen>
+    <dimen name="padding_layout_small">5dp</dimen>
+    <dimen name="padding_layout_normal">10dp</dimen>
+    <dimen name="padding_layout_big">15dp</dimen>
+    <dimen name="padding_layout_large">20dp</dimen>
+    <dimen name="minheight_text_normal">35dp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="fileselect_icon_minwidth">50dp</dimen>
+    <dimen name="fileselect_item_minheight">50dp</dimen>
+    <dimen name="margin_layout_normal">10dp</dimen>
+
+</resources>

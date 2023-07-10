@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_F1F1F1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="54dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="54dp"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:text="@string/text_feed_empty_hint"
+            android:textColor="@color/color_6"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_feed_top_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginBottom="25dp"
+            android:background="@mipmap/my_bg_green_btn"
+            android:gravity="center"
+            android:text="@string/text_feed_top_submit"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_feed_past"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="11dp"
+        android:background="@color/color_white"
+        android:text="@string/text_feed_past"
+        android:textColor="@color/color_3"
+        android:textSize="22sp" />
+
+</LinearLayout>

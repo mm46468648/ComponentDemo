@@ -1,0 +1,151 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp">
+
+    <ImageView
+        android:id="@+id/iv_recommend_style_three"
+        android:layout_width="70dp"
+        android:layout_height="90dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tv_type_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/iv_recommend_style_three"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/shape_recommend_type"
+        android:gravity="center"
+        android:textColor="@color/color_white"
+        android:textSize="9sp"
+        android:visibility="gone"
+        tools:text="标签"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvTypeListThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/iv_recommend_style_three"
+        android:background="@drawable/shape_recommend_custom_type"
+        android:gravity="center"
+        android:textColor="@color/color_white"
+        android:textSize="11sp"
+        android:visibility="gone"
+        tools:text="标签" />
+
+    <ImageView
+        android:id="@+id/ivPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/iv_recommend_style_three"
+        android:layout_alignBottom="@id/iv_recommend_style_three"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
+        android:src="@mipmap/home_ic_study_room_play"
+        android:visibility="gone"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llRight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_recommend_style_three"
+        android:minHeight="90dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitleStyleThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_recommend_style_three"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/color_2"
+            android:textSize="15sp"
+            tools:ignore="RtlHardcoded"
+            tools:text="标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/tvCenterOneStyleThree"
+                android:layout_width="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tvCenterTwoStyleThree"
+                android:layout_toRightOf="@+id/iv_recommend_style_three"
+                android:layout_weight="1.5"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/color_6B"
+                android:textSize="12sp"
+                tools:ignore="RtlHardcoded"
+                tools:text="标题标题标题标题标题标题标题标题" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/tv_right_style_three"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tvCenterTwoStyleThree"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/color_9"
+                android:textSize="12sp"
+                tools:text="标题标题标题标题"
+                tools:visibility="visible" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <TextView
+            android:id="@+id/tvCenterTwoStyleThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvBottomStyleThree"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/iv_recommend_style_three"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_9"
+            android:textSize="12sp"
+            tools:ignore="RtlHardcoded"
+            tools:text="标题标题标题标题" />
+
+        <TextView
+            android:id="@+id/tvBottomStyleThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_recommend_style_three"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/iv_recommend_style_three"
+            android:ellipsize="end"
+            android:lineSpacingExtra="4dp"
+            android:maxLines="1"
+            android:textColor="@color/color_9"
+            android:textSize="12sp"
+            tools:ignore="RtlHardcoded"
+            tools:text="标题标题标题标题" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/llRight"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/color_e2" />
+
+</RelativeLayout>

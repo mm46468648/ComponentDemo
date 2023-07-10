@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">b_module_search</string>
+    <string name="search_book">搜索需要推荐的电子书</string>
+    <string name="search_typechose">筛选</string>
+    <string name="search_history">搜索历史</string>
+    <string name="search_text_exact">精确搜索</string>
+    <string name="search_text_fuzzy">模糊搜索</string>
+    <string name="search_text_str_have_exam">有考试</string>
+    <string name="search_text_str_no_exam">无考试</string>
+    <string name="point">·</string>
+    <string name="search">搜索</string>
+
+</resources>

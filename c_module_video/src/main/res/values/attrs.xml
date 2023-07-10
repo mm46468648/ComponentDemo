@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--播放器longding动画控件属性-->
+    <declare-styleable name="VideoLoadAnim">
+        <attr name="vla_circleRadius" format="dimension" />
+        <attr name="vla_circleSpacing" format="dimension" />
+        <attr name="vla_cycle" format="integer" />
+    </declare-styleable>
+
+
+    <!--自定义播放器属性-->
+    <declare-styleable name="VideoPlayerWrapper">
+        <!--自定义加载布局-->
+        <attr name="vpw_load_layout_id" format="reference" />
+        <!--自定义重播放布局-->
+        <attr name="vpw_replay_layout_id"   format="reference" />
+
+        <!--竖屏高度-->
+        <attr name="vpw_player_vertial_height" format="integer" />
+
+        <!--自定义控制器-->
+        <attr name="vpw_custom_controll_layout_id" format="reference" />
+    </declare-styleable>
+
+    <!--自定义控制器属性-->
+    <declare-styleable name="VideoCustomLayout">
+
+    </declare-styleable>
+
+</resources>

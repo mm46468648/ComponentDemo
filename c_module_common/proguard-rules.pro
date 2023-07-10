@@ -1,0 +1,61 @@
+# Add project specific ProGuard rules here.
+# You can control the set of applied configuration files using the
+# proguardFiles setting in build.gradle.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+#}
+
+# Uncomment this to preserve the line number information for
+# debugging stack traces.
+#-keepattributes SourceFile,LineNumberTable
+
+# If you keep the line number information, uncomment this to
+# hide the original source file name.
+#-renamesourcefileattribute SourceFile
+
+#ARouter
+-keep public class com.alibaba.android.arouter.routes.**{*;}
+-keep public class com.alibaba.android.arouter.facade.**{*;}
+-keep class * implements com.alibaba.android.arouter.facade.template.ISyringe{*;}
+-keep class * implements com.alibaba.android.arouter.facade.template.IProvider{*;}
+-keep class * implements com.alibaba.android.arouter.facade.template.IInterceptor{*;}
+#网易易盾
+-keep class  com.netease.NetSecKit.**{*;}
+#czxing
+-keep class me.devilsen.czxing.**
+-keep class me.devilsen.czxing.** { *; }
+#腾讯X5
+-dontwarn dalvik.**
+-dontwarn com.tencent.smtt.**
+-keep class com.tencent.smtt.** {*;}
+-keep class com.tencent.tbs.** {*;}
+#协程
+-keep class kotlinx.coroutines.android.AndroidDispatcherFactory {*;}
+# Gson specific classes
+-dontwarn com.google.gson.**
+-keep class com.google.gson.stream.** { *; }
+-keep class com.google.gson.**{*;}
+-keep interface com.google.gson.**{*;}
+#eventbus
+-keepclassmembers class * {
+    @org.greenrobot.eventbus.Subscribe <methods>;
+}
+-keep enum org.greenrobot.eventbus.ThreadMode { *; }
+
+#网络变化监听
+-keep class com.dlong.netstatus.** {*;}
+-dontwarn com.dlong.netstatus.**
+-keepclassmembers class * {
+    @com.mooc.common.utils.net.NetUtils <methods>;
+    @com.mooc.common.utils.net.NetType <fields>;
+}
+#bugly
+-dontwarn com.tencent.bugly.**
+-keep public class com.tencent.bugly.**{*;}

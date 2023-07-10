@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="simpleIntro"
+            type="com.mooc.commonbusiness.model.studyproject.JoinStudyState" />
+
+        <import type="com.mooc.studyproject.binding.ResSimpleInroPresent"/>
+        <import type="android.text.Html"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.mooc.resource.widget.CommonTitleLayout
+            android:id="@+id/commonTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingTop="20dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="40dp">
+
+
+                <LinearLayout
+                    android:id="@+id/rl_course_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_F1F1F1"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp">
+
+                    <TextView
+                        android:id="@+id/note_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:maxLines="2"
+                        android:textColor="@color/color_3"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="@{simpleIntro.detail_title}"
+                        tools:text="标题" />
+
+                    <TextView
+                        android:id="@+id/note_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="12dp"
+                        android:lineSpacingExtra="4dp"
+                        android:minWidth="200dp"
+                        android:minHeight="40dp"
+                        android:textColor="@color/color_6"
+                        android:textSize="13sp"
+                        android:text="@{Html.fromHtml(simpleIntro.about)}"
+                        tools:text="内容" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:drawableLeft="@mipmap/studyproject_ic_notice_red"
+                    android:drawablePadding="10dp"
+                    android:gravity="top"
+                    android:text="@{String.format(@string/tip_simple_res_intro,simpleIntro.study_plan_name)}"
+                    tools:text="该资源仅支持在《台湾卤肉饭》学习项目中查看，请先报名该项目。"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <View style="@style/ViewLine1pxStyle" />
+
+        <TextView
+            android:id="@+id/tv_study_res"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:enabled="@{System.currentTimeMillis()&lt;simpleIntro.study_plan_end_time * 1000}"
+            android:background="@{System.currentTimeMillis()>simpleIntro.study_plan_end_time * 1000 ? @color/color_64e1 : @color/white}"
+            android:text='@{System.currentTimeMillis()>simpleIntro.study_plan_end_time * 1000 ? "学习项目报名已结束" : "前往学习该项目"}'
+            android:textColor="@{System.currentTimeMillis()>simpleIntro.study_plan_end_time * 1000 ? @color/color_6 : @color/color_10955B}"
+            android:onClick="@{()->ResSimpleInroPresent.toStudyProject(simpleIntro.study_plan_id)}"
+            android:textSize="16sp" />
+    </LinearLayout>
+</layout>

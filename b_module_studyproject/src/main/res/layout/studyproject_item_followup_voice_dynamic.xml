@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingTop="10dp"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingRight="15dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tvNum"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        tools:text="45"
+        android:gravity="center"
+        android:textColor="#ff9a9a9a"
+        android:textSize="14sp"
+        />
+
+    <com.mooc.commonbusiness.widget.VoicePlayerController
+        android:id="@+id/voicePlayerController"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"/>
+</LinearLayout>

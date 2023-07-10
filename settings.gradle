@@ -1,0 +1,46 @@
+rootProject.name='MoocApp'
+
+include ':a_mooc_app'
+
+
+include ':b_module_discover'
+include ':b_module_studyroom'
+include ':b_module_webview'
+include ':b_module_home'
+include ':b_module_search'
+include ':b_module_splash'
+//include ':c_module_route'
+//include ':c_module_resource'
+include ':b_module_login'
+include ':b_module_my'
+//打点统计
+include ':b_module_statistics'
+include ':b_module_setting'
+include ':b_module_course'
+include ':b_module_audio'
+include ':b_module_ebook'
+include ':b_module_studyproject'
+include ':b_module_periodical'    //刊物
+//include ':b_module_microknowledge' //微知识
+include ':b_module_battle'
+
+include ':c_module_download'
+//include ':c_module_middle'
+include ':c_module_commonbusiness'
+include ':c_module_video'
+include ':c_module_music'
+include ':c_module_common'
+
+//第三方
+//数据binding
+//include ':t_module_csbrvahbinding'
+include ':t_module_skeleton'
+include ':t_module_shimmerlayout'
+include ':t_module_logcollector'
+include ':t_module_calendarview'
+include ':t_module_shadowLibrary'
+include ':t_module_qmui'
+include ':t_module_skin'
+include ':b_module_microknowledge'
+//容联云sdk
+//include ':t_module_ykfsdk'

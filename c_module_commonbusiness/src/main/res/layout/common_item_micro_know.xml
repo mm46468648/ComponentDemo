@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/tvTitleMicroKnow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_2"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="微知识标题" />
+
+        <ImageView
+            android:id="@+id/ivImgMicroKnow"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintDimensionRatio="97:65"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleMicroKnow"
+            tools:ignore="ContentDescription"
+            tools:src="@mipmap/common_bg_cover_default" />
+
+        <TextView
+            android:id="@+id/tvTypeMicroKnowledge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/shape_color9e0_corners2"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="微知识"
+            android:textColor="#ffffffff"
+            android:textSize="9sp"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="@id/ivImgMicroKnow"
+            app:layout_constraintTop_toTopOf="@+id/ivImgMicroKnow" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/color_e2"
+            app:layout_constraintTop_toBottomOf="@+id/ivImgMicroKnow" />
+
+        <TextView
+            android:id="@+id/tvNumLearnMicroKnow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_5D5D5D"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toRightOf="@+id/ivImgMicroKnow"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivImgMicroKnow"
+            tools:text="11人学习" />
+
+        <TextView
+            android:id="@+id/tvNumPassMicroKnow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_5D5D5D"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toRightOf="@+id/ivImgMicroKnow"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNumLearnMicroKnow"
+            tools:text="111人通过微测试" />
+
+
+        <TextView
+            android:id="@+id/tvNumLikeMicroKnow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_5D5D5D"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivImgMicroKnow"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/ivImgMicroKnow"
+            tools:text="点赞人数" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
+

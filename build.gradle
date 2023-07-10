@@ -1,0 +1,73 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: "config.gradle"
+
+buildscript {
+//    ext {
+//        kotlin_version = '1.5.20'
+//    }
+    repositories {
+        maven { url  'https://repo1.maven.org/maven2/'}
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        //代码扫描
+//        maven { url  'https://plugins.gradle.org/m2/'}
+        mavenCentral()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.1.2'
+
+        //gradle 插件进行自动注册可以缩短初始化时间解决应用加固导致无法直接访问 dex 文件
+        classpath "com.alibaba:arouter-register:1.0.2"
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10'
+        //代码扫描
+//        classpath 'org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:4.0.0.2929'
+
+//        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${ext.version["kotlin_version"]}"
+//        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        //美团打包插件
+//        classpath "com.meituan.android.walle:plugin:1.1.7"
+        //aspecj
+//        classpath "com.hujiang.aspectjx:gradle-android-plugin-aspectjx:2.0.10"
+
+    }
+}
+
+allprojects {
+    repositories {
+        flatDir {
+            //ebook中掌阅so，common中加密so
+            dirs 'libs', '../b_module_ebook/libs',  '../c_module_common/libs','../c_module_commonbusiness/libs','../c_module_music/libs'
+        }
+        maven { url  'https://repo1.maven.org/maven2/'}
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        mavenCentral()
+        google()
+    }
+}
+
+//代码扫描
+//apply plugin: 'org.sonarqube'
+//sonarqube {
+//    properties {
+//        //Sonar服务器地址
+//        property "sonar.host.url", "http://localhost:9000"
+//        //Token模式
+////        property "sonar.login","**********************************"
+//        //账号密码模式
+//        property "sonar.login","admin"
+//        property "sonar.password","hx104066"
+//        property "sonar.sourceEncoding", "UTF-8"
+//        property "sonar.projectKey", "MoocndApp"
+//        property "sonar.projectName", project.name
+//        //需要扫描的上传检测代码的模块，可以选择也可以配置哪一些需要或者不需要上传的模块(这里指APP模块下面的java包里面的全部)
+//        property "sonar.sources", "src"
+//        property "sonar.projectVersion", project.version
+//    }
+//}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

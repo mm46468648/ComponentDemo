@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.mooc.resource.widget.CommonTitleLayout
+        android:id="@+id/commonTitleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ctl_middle_text="@string/system_setting"
+        app:ctl_adapteStatusBar="true"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <View
+       style="@style/ViewLine8pxStyle"/>
+    <View
+        style="@style/ViewLine8pxStyle"/>
+    <com.mooc.resource.widget.CommonSettingItem
+        android:id="@+id/msg_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:csi_left_text="消息设置"
+        app:csi_right_icon="@mipmap/set_ic_right_arrow" />
+
+
+    <com.mooc.resource.widget.CommonSettingItem
+        android:id="@+id/privacy_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:csi_left_text="隐私设置"
+        app:csi_right_icon="@mipmap/set_ic_right_arrow" />
+
+
+    <com.mooc.resource.widget.CommonSettingItem
+        android:id="@+id/csiShakeFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:csi_left_text="摇一摇反馈意见"
+        app:csi_right_icon="@mipmap/set_ic_switch_open" />
+
+    <com.mooc.resource.widget.CommonSettingItem
+        android:id="@+id/csiOnlyWifiDownload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:csi_left_text="仅wifi下载"
+        app:csi_right_icon="@mipmap/set_ic_switch_open" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clDownloadPathSetting"
+        android:paddingTop="25dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/tvDownloadPath"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下载路径"
+            android:textColor="@color/color_3"
+            android:textSize="15sp" />
+
+        <TextView
+            app:layout_constraintLeft_toRightOf="@+id/tvDownloadPath"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDownloadPath"
+            android:id="@+id/tvStoreType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="手机存储器"
+            android:textColor="@color/color_3"
+            android:textSize="12sp" />
+        <TextView
+            app:layout_constraintTop_toBottomOf="@+id/tvDownloadPath"
+            android:id="@+id/tvStoreSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="剩余/总共"
+            android:textColor="@color/color_6"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvStorePath"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tvStoreSize"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="文件路径:\n sdcard://"
+            android:textColor="@color/color_6"
+            android:textSize="12sp" />
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:src="@mipmap/set_ic_right_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <View
+            app:layout_constraintTop_toBottomOf="@+id/tvStorePath"
+            android:layout_marginTop="25dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            style="@style/ViewLine1pxStyle"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.mooc.resource.widget.CommonSettingItem
+        android:id="@+id/csiAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:csi_left_text="关于我们"
+        app:csi_right_icon="@mipmap/set_ic_right_arrow" />
+
+    <com.mooc.resource.widget.CommonSettingItem
+        android:id="@+id/csiOperateGuide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:csi_left_text="平台操作指南"
+        app:csi_right_icon="@mipmap/set_ic_right_arrow" />
+
+    <com.mooc.resource.widget.CommonSettingItem
+        android:id="@+id/csiQrDownload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:csi_left_text="下载二维码"
+        app:csi_right_icon="@mipmap/set_ic_right_arrow" />
+
+    
+    
+    <com.mooc.resource.widget.CommonSettingItem
+        android:id="@+id/csiController"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:csi_left_text="控制台"
+        android:visibility="gone"
+        app:csi_right_icon="@mipmap/set_ic_right_arrow" />
+    <View
+        android:id="@+id/viewHiddenDor"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"/>
+</LinearLayout>

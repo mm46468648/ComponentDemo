@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mooc.music">
+
+    <!--连接网络-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--用于管理监听网络状态的变化-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--用于管理监听网络状态的变化-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--用于管理监听网络状态的变化-->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!--获取电话的状态,在打电话的时候暂停播放-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--target >=28 需要设置此权限 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <application
+        android:usesCleartextTraffic="true"
+        tools:ignore="UnusedAttribute">
+
+        <meta-data
+            android:name="app_key"
+            android:value="7dda552f9900e8a4733f84df74fe83c4" />
+        <meta-data
+            android:name="pack_id"
+            android:value="com.moocxuetang" />
+
+
+        <service
+            android:name="com.ximalaya.ting.android.opensdk.player.service.XmPlayerService"
+            android:exported="false"
+            android:process=":player" />
+
+
+        <receiver
+            android:name="com.ximalaya.ting.android.opensdk.player.receive.WireControlReceiver"
+            android:exported="false"
+            android:process=":player" />
+
+
+
+        <receiver
+            android:name="com.ximalaya.ting.android.opensdk.player.receive.PlayerReceiver"
+            android:exported="false"
+            android:process=":player">
+            <intent-filter>
+                <action android:name="com.ximalaya.ting.android.ACTION_CONTROL_START_PAUSE" />
+                <action android:name="com.ximalaya.ting.android.ACTION_CONTROL_PLAY_PRE" />
+                <action android:name="com.ximalaya.ting.android.ACTION_CONTROL_PLAY_NEXT" />
+                <action android:name="com.ximalaya.ting.android.ACTION_CLOSE" />
+                <action android:name="com.ximalaya.ting.android.ACTION_CONTROL_RELEASE_SERVICE" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

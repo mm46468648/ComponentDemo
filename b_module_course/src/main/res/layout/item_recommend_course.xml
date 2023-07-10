@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="110dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="20dp"
+    tools:ignore="MissingDefaultResource">
+
+    <ImageView
+        android:id="@+id/cover"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/common_bg_cover_default"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="#ff262626"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@+id/cover"
+        app:layout_constraintRight_toRightOf="@+id/cover"
+        app:layout_constraintTop_toBottomOf="@+id/cover"
+        tools:ignore="MissingConstraints"
+        tools:text="课程标题" />
+
+    <TextView
+        android:id="@+id/org"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="开课单位"
+        android:textColor="#ff5d5d5d"
+        android:textSize="11sp"
+        app:layout_constraintLeft_toLeftOf="@+id/cover"
+        app:layout_constraintRight_toRightOf="@+id/cover"
+        app:layout_constraintTop_toBottomOf="@+id/cover" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

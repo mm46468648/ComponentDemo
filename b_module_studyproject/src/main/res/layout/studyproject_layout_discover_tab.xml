@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/dp_40">
+
+    <View
+        android:id="@+id/viewTabLine"
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"
+        android:layout_marginTop="25dp"
+        android:layout_alignLeft="@+id/tvTabTitle"
+        android:layout_alignRight="@+id/tvTabTitle"
+        android:background="@color/color_A9EACE" />
+
+    <TextView
+        android:id="@+id/tvTabTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textColor="@drawable/studyproject_tab_discover_text_color"
+        android:textSize="13sp" />
+
+</RelativeLayout>

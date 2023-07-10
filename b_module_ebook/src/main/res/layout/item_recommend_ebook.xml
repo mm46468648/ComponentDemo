@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    tools:ignore="MissingDefaultResource">
+
+    <ImageView
+        android:id="@+id/cover"
+        android:layout_width="89dp"
+        android:layout_height="115dp"
+        android:src="@mipmap/my_iv_vertical_option"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="89dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textColor="@color/color_2"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="@+id/cover"
+        app:layout_constraintRight_toRightOf="@+id/cover"
+        app:layout_constraintTop_toBottomOf="@+id/cover"
+        tools:text="电子书标题书" />
+
+    <TextView
+        android:id="@+id/tv_author"
+        android:layout_width="89dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_5D5D5D"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="@+id/cover"
+        app:layout_constraintRight_toRightOf="@+id/cover"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        tools:text="作者姓名" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

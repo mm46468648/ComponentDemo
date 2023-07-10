@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="guessLike"
+            type="com.mooc.home.model.GuessYouLike" />
+
+        <import type="android.text.TextUtils" />
+        <import type="android.view.View" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/incloud_head"
+        tools:visibility="visible">
+
+
+        <com.mooc.resource.widget.MoocImageView
+            android:id="@+id/ivCover"
+            android:layout_marginTop="15dp"
+            android:layout_width="70dp"
+            android:layout_height="90dp"
+            android:layout_marginBottom="15dp"
+            android:scaleType="centerCrop"
+            app:image_url="@{guessLike.picture}"
+            app:isCircle="@{false}"
+            app:radius="@{2}"
+            tools:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="#ff222222"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@+id/ivCover"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivCover"
+            tools:text="使用设计工具的好处在于，当这些项目材料同时呈现" />
+
+        <TextView
+            android:id="@+id/tvOrgan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text='@{guessLike.platform_zh}'
+            android:textColor="#ffa3a3a3"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toRightOf="@+id/ivCover"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCover"
+            tools:text="学堂在线 ｜ 广业出版社" />
+
+
+        <View
+            android:id="@+id/viewBottomLine"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            style="@style/ViewLine1pxStyle"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

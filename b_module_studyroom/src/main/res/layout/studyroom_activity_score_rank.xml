@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:src="@mipmap/studyroom_bg_score_rank_head"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_height="121dp"/>
+
+        <com.mooc.resource.widget.CommonTitleLayout
+            android:id="@+id/commonTitle"
+            app:ctl_left_icon="@mipmap/common_ic_back_white"
+            app:ctl_middle_text="好友积分排行"
+            app:ctl_middle_text_color="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvMyRank"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="我的排名：142445"
+            android:textColor="#ff10955b"
+            android:layout_marginBottom="8dp"
+            android:textSize="13sp"
+            />
+    </FrameLayout>
+
+
+
+    <FrameLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/shape_score_rank_tab_bg"
+        app:tabIndicator="@drawable/shape_rank_tab_indicator_bg"
+        app:tabPaddingStart="2dp"
+        app:tabPaddingEnd="2dp"
+        app:tabSelectedTextColor="@color/white"
+        app:tabIndicatorFullWidth="true"
+        app:tabRippleColor = "@android:color/transparent"
+        app:tabTextAppearance="@style/FriendRankTabLayoutTextStyle"
+        app:tabTextColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"/>
+    </FrameLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPage2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="15dp">
+
+    <com.mooc.resource.widget.tagtext.TagTextView
+        android:id="@+id/tvTitleQuestionnaire"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="#ff222222"
+        android:textSize="15sp"
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:text="        那些更棒的点子来自于个体依然用过去习惯的方式思考创意时——坐在办公桌前时，…" />
+
+    <View
+        android:id="@+id/viewBottomLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/color_e2" />
+</LinearLayout>

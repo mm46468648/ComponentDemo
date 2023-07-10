@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:background="@drawable/shape_radius10_color_ededed"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="2dp"
+    android:gravity="center_vertical"
+    android:paddingTop="2dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        tools:text="有考试"
+        android:textSize="10sp"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/tvCertificateType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        tools:text="有证书"
+        android:textSize="10sp"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/tvPriceType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        tools:text="免费"
+        android:textSize="10sp"
+        tools:ignore="RtlHardcoded" />
+</LinearLayout>

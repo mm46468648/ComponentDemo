@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="20dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="right"
+        android:paddingRight="8dp"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            tools:text="2022"
+            android:textColor="#ff6c6c6c"
+            android:textSize="13sp"
+            />
+
+        <TextView
+            android:id="@+id/tvDay"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="09/18"
+            android:textColor="#ff0d0d0d"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="6dp"
+        android:layout_height="match_parent">
+
+        <com.mooc.resource.widget.DashView
+            app:divider_line_color="#ebebeb"
+            app:divider_orientation="vertical"
+            app:dashLength="1dp"
+            app:dashGap="2dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"/>
+
+        <View
+            android:layout_marginTop="35dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/set_update_log_dot"
+            android:layout_width="6dp"
+            android:layout_height="6dp"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:paddingLeft="11dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvVersion"
+            android:layout_marginTop="27dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="版本号：3.5.5（build 206）"
+            android:textColor="#ff0d0d0d"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="更新说明"
+            android:layout_marginTop="6dp"
+            android:textColor="#ff5d5d5d"
+            android:textSize="14sp"
+            />
+
+        <android.webkit.WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/bg_battle_answering1"
+        android:paddingTop="14dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="76dp"
+                    android:layout_marginRight="13dp">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivMyHead"
+                            android:padding="2dp"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@mipmap/common_ic_user_head_default" />
+
+
+                        <TextView
+                            android:id="@+id/tvMyScore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="0"
+                            android:textColor="#ffffffff"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="3dp">
+
+                        <TextView
+                            android:id="@+id/tvMyName"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical"
+                            android:maxLines="2"
+                            android:textColor="#ffbed1fd"
+                            android:textSize="13sp"
+                            tools:text="王大宽王." />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <com.mooc.battle.view.RoundProgressBarWidthNumber
+                            android:id="@+id/rpbCutDown"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_game_battle_cuttime"
+                            android:padding="8dp"
+                            app:progress_reached_bar_height="3dp"
+                            app:progress_reached_color="#F6322B"
+                            app:progress_text_color="@color/white"
+                            app:progress_text_size="27sp"
+                            app:progress_unreached_bar_height="1dp"
+                            app:progress_unreached_color="#331C4AB3" />
+
+                        <!--                    <TextView-->
+                        <!--                        android:id="@+id/tvTime"-->
+                        <!--                        android:layout_gravity="center"-->
+                        <!--                        android:layout_width="wrap_content"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        tools:text="5"-->
+                        <!--                        android:textColor="#ffffffff"-->
+                        <!--                        android:textSize="27sp"-->
+                        <!--                        />-->
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="7dp">
+
+                        <TextView
+                            android:id="@+id/tvOtherName"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:gravity="right|center_vertical"
+                            android:maxLines="2"
+                            android:textColor="#ffbed1fd"
+                            android:textSize="13sp"
+                            tools:text="王大宽" />
+                    </FrameLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivOtherHead"
+                            android:padding="2dp"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@mipmap/common_ic_user_head_default" />
+
+
+                        <TextView
+                            android:id="@+id/tvOtherScore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="0"
+                            android:textColor="#ffffffff"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginRight="13dp">
+
+                    <com.mooc.resource.widget.expandabletextview.ExpandableTextView
+                        android:id="@+id/tvQuestionTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:lineSpacingExtra="3dp"
+                        android:lineSpacingMultiplier="1.2"
+                        android:textColor="@color/color_white"
+                        android:textSize="15sp"
+                        app:ep_contract_color="@color/color_8FB1F6"
+                        app:ep_expand_color="@color/color_8FB1F6"
+                        app:ep_max_line="5"
+                        app:ep_need_always_showright="true"
+                        app:ep_need_contract="true"
+                        tools:text="品牌也远不是强调名称，强调名称，标志" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/llOptionContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp">
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rlPublicTitle"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="20dp">
+
+
+            <ImageButton
+                android:id="@+id/tvBack"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:src="@mipmap/common_ic_back_white" />
+
+
+            <TextView
+                android:id="@+id/tvPublicTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxWidth="200dp"
+                android:maxLines="1"
+                android:text="对战"
+                android:textColor="@color/color_white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llMatchingContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/bg_battle_matching"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:visibility="gone">
+
+            <FrameLayout
+                android:layout_width="360dp"
+                android:layout_height="360dp">
+
+                <ImageView
+                    android:id="@+id/ivCircle1"
+                    android:layout_width="360dp"
+                    android:layout_height="360dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_battle_matching_circle1" />
+
+                <ImageView
+                    android:id="@+id/ivCircle2"
+                    android:layout_width="291dp"
+                    android:layout_height="291dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_battle_matching_circle2" />
+
+                <ImageView
+                    android:id="@+id/ivCircle3"
+                    android:layout_width="261dp"
+                    android:layout_height="261dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_battle_matching_circle3" />
+
+                <ImageView
+                    android:id="@+id/ivCircle4"
+                    android:layout_width="246dp"
+                    android:layout_height="246dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_battle_matching_circle4" />
+
+                <ImageView
+                    android:id="@+id/ivCircle5"
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_battle_matching_circle5" />
+
+                <ImageView
+                    android:id="@+id/ivCircle6"
+                    android:layout_width="193dp"
+                    android:layout_height="193dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_battle_matching_circle6" />
+
+                <ImageView
+                    android:id="@+id/ivHeadMiddle"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop" />
+            </FrameLayout>
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_battle_matching_tips" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/flMatchSuccess"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/bg_match_success"
+            android:visibility="gone"
+            tools:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivShape1"
+                android:layout_width="129dp"
+                android:layout_height="187dp"
+                android:layout_marginRight="95dp"
+                android:src="@mipmap/bg_match_success_shape1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivShape2"
+                android:layout_width="75dp"
+                android:layout_height="256dp"
+                android:layout_marginBottom="14dp"
+                android:src="@mipmap/bg_match_success_shape2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivShape3"
+                android:layout_width="97dp"
+                android:layout_height="72dp"
+                android:layout_marginLeft="156dp"
+                android:src="@mipmap/bg_match_success_shape3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivShape4"
+                android:layout_width="74dp"
+                android:layout_height="132dp"
+                android:layout_marginBottom="260dp"
+                android:src="@mipmap/bg_match_success_shape4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivShape5"
+                android:layout_width="24dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/bg_match_success_shape5"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glMatchSuccess"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintGuide_percent="0.5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clLeftContainer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginRight="132dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/glMatchSuccess"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/ivLeftBg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/bg_match_success_left"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivHeadLeft"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginLeft="47dp"
+                    android:layout_marginBottom="120dp"
+                    android:background="@mipmap/ic_battle_match_head_bg_left"
+                    android:padding="10dp"
+                    app:layout_constraintBottom_toBottomOf="@id/ivLeftBg"
+                    app:layout_constraintLeft_toLeftOf="@+id/ivLeftBg"
+                    tools:src="@mipmap/common_ic_user_head_default" />
+
+                <TextView
+                    android:id="@+id/tvNameLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="29dp"
+                    android:layout_marginTop="4dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="#ffffffff"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toLeftOf="@+id/ivHeadLeft"
+                    app:layout_constraintTop_toBottomOf="@+id/ivHeadLeft"
+                    tools:text="王大宽王...\n王大宽王大宽" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clRightContainer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="132dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/glMatchSuccess">
+
+                <ImageView
+                    android:id="@+id/ivRightBg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/bg_match_success_right"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivHeadRight"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginRight="65dp"
+                    android:background="@mipmap/ic_battle_match_head_bg_right"
+                    android:padding="10dp"
+                    app:layout_constraintRight_toRightOf="@+id/ivRightBg"
+                    app:layout_constraintTop_toTopOf="@id/ivRightBg"
+                    tools:src="@mipmap/common_ic_user_head_default" />
+
+                <TextView
+                    android:id="@+id/tvNameRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="4dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="#ffffffff"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toLeftOf="@+id/ivHeadRight"
+                    app:layout_constraintTop_toBottomOf="@+id/ivHeadRight"
+                    tools:text="王大宽王...\n王大宽王大宽" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/ivKnifeBlast"
+                android:layout_width="366dp"
+                android:layout_height="461dp"
+                android:src="@mipmap/bg_game_match_success_blast"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <FrameLayout
+                android:id="@+id/flKnifeContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/ivKnifeRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_match_knife_right" />
+
+                <ImageView
+                    android:id="@+id/ivKnifeLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_match_knife_left" />
+
+            </FrameLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+</layout>

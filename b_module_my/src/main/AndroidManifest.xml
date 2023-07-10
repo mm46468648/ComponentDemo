@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mooc.my">
+
+    <application>
+        <activity android:name=".ui.UserInfoNameActivity" />
+        <activity android:name=".ui.CheckInRepairRulesActivity" />
+        <activity android:name=".ui.SchoolCircleActivity" />
+        <activity android:name=".ui.UserFollowActivity" />
+        <activity android:name=".ui.UserInfoActivity" />
+        <activity android:name=".ui.FeedBackListActivity" />
+        <activity android:name=".ui.FeedListActivity" />
+        <activity android:name=".ui.FeedBackActivity" />
+        <activity
+            android:name=".ui.CustomerServiceActivity"
+            android:exported="false" />
+        <activity android:name=".ui.QuestionMoreActivity" />
+        <activity android:name=".ui.QuestionListActivity" />
+        <activity android:name=".ui.QuestionInfoActivity" />
+        <activity android:name=".ui.ApplyCerInputActivity" />
+        <activity android:name=".ui.ApplyCerActivity" />
+        <activity android:name=".ui.UserInfoEditActivity" />
+        <activity android:name=".ui.activity.DailyReadingNewActivity" />
+        <activity android:name=".ui.CheckInActivity" />
+    </application>
+
+</manifest>

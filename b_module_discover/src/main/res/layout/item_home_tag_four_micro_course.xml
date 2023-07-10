@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:paddingBottom="10dp">
+
+    <com.mooc.resource.widget.MoocImageView
+        android:id="@+id/cover"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="13dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="h,148:98"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/icon_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="4dp"
+        android:src="@mipmap/home_ic_study_room_play"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/cover"
+        app:layout_constraintRight_toRightOf="@+id/cover" />
+
+    <TextView
+        android:id="@+id/tv_identify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/shape_recommend_type"
+        android:gravity="center"
+        android:textColor="@color/color_white"
+        android:textSize="9sp"
+        android:visibility="visible"
+        app:layout_constraintRight_toRightOf="@+id/cover"
+        app:layout_constraintTop_toTopOf="@+id/cover" />
+
+    <TextView
+        android:id="@+id/tvTypeHomeFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/shape_recommend_custom_type"
+        android:gravity="center"
+        android:textColor="@color/color_white"
+        android:textSize="11sp"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="@+id/cover"
+        app:layout_constraintTop_toTopOf="@+id/cover" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:lineSpacingExtra="3dp"
+        android:maxLines="2"
+        tools:text="撒旦法撒旦法sad发生的发生的说的是"
+        android:textColor="@color/color_262626"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@+id/cover"
+        app:layout_constraintRight_toRightOf="@+id/cover"
+        app:layout_constraintTop_toBottomOf="@+id/cover" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

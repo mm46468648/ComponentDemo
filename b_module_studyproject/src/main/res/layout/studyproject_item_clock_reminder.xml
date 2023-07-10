@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/shape_radius2_white">
+
+
+
+    <TextView
+        android:id="@+id/tvMiddle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/item_observer_clock"
+
+        android:textColor="@color/color_2"
+        android:textSize="18sp" />
+    <TextView
+        android:layout_marginTop="13dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/clock_remind_reminding"
+        android:textColor="#ffd37c00"
+        android:textSize="15sp"
+        />
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13sp"
+        android:gravity="center"
+        android:text="是否确定订阅打卡提醒？"
+        android:textColor="#ff222222"
+        android:textSize="15sp"
+        />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="41dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="-3dp"
+            android:layout_weight="1"
+            android:background="@mipmap/common_bg_pop_cancel_left"
+            android:gravity="center"
+            android:text="@string/text_cancel"
+            android:textColor="@color/color_9B9B9B"
+            android:textSize="17sp" />
+
+
+        <TextView
+            android:id="@+id/tvOk"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="-3dp"
+            android:layout_weight="1"
+            android:background="@mipmap/common_bg_pop_ok_right"
+            android:gravity="center"
+            android:text="@string/text_ok"
+            android:textColor="@color/color_white"
+            android:textSize="17sp" />
+    </LinearLayout>
+</LinearLayout>

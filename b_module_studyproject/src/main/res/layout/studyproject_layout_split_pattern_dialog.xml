@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_radius3_stroke2_colorf">
+
+    <LinearLayout
+        android:id="@+id/ll_close_split_pattern"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/common_iv_close"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_desc_split_pattern"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="65dp"
+        android:lineSpacingExtra="8dp"
+        android:textColor="@color/color_9"
+        android:textSize="17sp"
+        android:visibility="gone" />
+    <FrameLayout
+        android:id="@+id/flRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="65dp"/>
+
+
+</RelativeLayout>

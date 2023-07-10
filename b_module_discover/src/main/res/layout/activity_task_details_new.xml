@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.mooc.resource.widget.CommonTitleLayout
+        android:id="@+id/commonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ctl_middle_text="任务详情"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.mooc.resource.widget.MoocSwipeRefreshLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/commonTitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.mooc.resource.widget.EmptyView
+                android:id="@+id/emptyView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:visibility="gone"
+                tools:visibility="gone" />
+
+            <View
+                android:id="@+id/viewEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:visibility="gone"
+                tools:visibility="gone" />
+
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestedScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/llTaskContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/llProgressContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clProgress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/llTotalProgress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <TextView
+                                    android:id="@+id/tvTip"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:drawableLeft="@drawable/shape_solid_primary_width4_height17"
+                                    android:drawablePadding="10dp"
+                                    android:text="任务进度"
+                                    android:textColor="#ff222222"
+                                    android:textSize="17sp" />
+
+                                <TextView
+                                    android:id="@+id/tvTaskTime"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="10dp"
+                                    android:textColor="#ff767676"
+                                    android:textSize="14sp"
+                                    tools:text="任务时间：2034.09.12-2035.10.23"
+                                    tools:visibility="gone" />
+
+                                <com.mooc.discover.view.TaskStartDayCutdownView
+                                    android:id="@+id/taskCutdownView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="10dp"
+                                    tools:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/tvTaskEndAway2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="25dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginRight="25dp"
+                                    android:text="距任务截止还有 4 天，您已完成 3/7 天任务。"
+                                    android:textColor="#ff222222"
+                                    android:textSize="14sp"
+                                    tools:visibility="visible" />
+
+                                <LinearLayout
+                                    android:id="@+id/llTotalProgressContainer"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="13dp"
+                                    android:layout_marginRight="15dp"
+                                    android:background="@color/color_EDEDED"
+                                    android:orientation="vertical"
+                                    android:paddingTop="15dp"
+                                    tools:visibility="gone">
+
+                                    <TextView
+                                        android:id="@+id/tvTotalProgressTip"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_marginBottom="9dp"
+                                        android:drawableLeft="@drawable/shape_solid_primary_width4_height17"
+                                        android:drawablePadding="7dp"
+                                        android:text="总进度"
+                                        android:textColor="#ff767676"
+                                        android:textSize="15sp"
+                                        tools:visibility="gone" />
+
+                                    <TextView
+                                        android:id="@+id/tvTaskEndAway"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:text="距任务截止还有 4 天，您已完成 3/7 天任务。"
+                                        android:textColor="#ff222222"
+                                        android:textSize="14sp" />
+
+
+                                    <TextView
+                                        android:id="@+id/tvMorningTimeDuration"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="@dimen/dp_10"
+                                        android:layout_marginRight="10dp"
+                                        android:text="指定时间: 00:00:00~06:00:00"
+                                        android:textColor="#ff222222"
+                                        android:textSize="14sp"
+                                        android:visibility="gone" />
+
+                                    <View
+                                        android:id="@+id/progressBarSpace"
+                                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="7dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="12dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_marginBottom="15dp"
+                                        android:max="100"
+                                        android:progressDrawable="@drawable/bg_task_detail_progressbar"
+                                        android:visibility="visible"
+                                        app:layout_constraintBottom_toTopOf="@+id/tvTaskTip"
+                                        app:layout_constraintLeft_toLeftOf="@+id/tvTaskTitle"
+                                        app:layout_constraintTop_toBottomOf="@+id/tvTaskDetails"
+                                        tools:progress="100"
+                                        tools:visibility="visible" />
+
+                                </LinearLayout>
+
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rvChildResources"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="-35dp"
+                                    android:orientation="vertical"
+                                    android:visibility="gone"
+                                    app:layout_constraintTop_toBottomOf="@+id/llTotalProgress"
+                                    tools:visibility="visible" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/llProgressSpace"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:background="@color/color_EDEDED"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="@+id/llTodayProgressContainer"
+                                app:layout_constraintLeft_toLeftOf="@+id/llTodayProgressContainer"
+                                app:layout_constraintRight_toRightOf="@+id/llTodayProgressContainer"
+                                app:layout_constraintTop_toBottomOf="@+id/llTotalProgress"
+                                app:layout_constraintTop_toTopOf="@+id/llTodayProgressContainer"
+                                tools:visibility="gone">
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llTodayProgressContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="15dp"
+                                android:orientation="vertical"
+                                android:paddingBottom="15dp"
+                                android:translationZ="10dp"
+                                app:layout_constraintTop_toBottomOf="@+id/llTotalProgress"
+                                tools:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/tvTodayTip"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="15dp"
+                                    android:drawableLeft="@drawable/shape_solid_primary_width4_height17"
+                                    android:drawablePadding="7dp"
+                                    android:text="今日进度"
+                                    android:textColor="#ff767676"
+                                    android:textSize="15sp"
+                                    tools:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/tvTodayRemain"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="9dp"
+                                    android:layout_marginRight="10dp"
+                                    android:textColor="#ff222222"
+                                    android:textSize="14sp"
+                                    tools:text="今日结束前只需再阅读 2 篇文章可提升任务总进度。"
+                                    tools:visibility="gone" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rvResources"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:elevation="100dp"
+                                    android:orientation="vertical"
+                                    android:translationZ="100dp" />
+
+                            </LinearLayout>
+
+
+                            <!--任务成功特别标识-->
+                            <ImageView
+                                android:id="@+id/ivSuccessPrise"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="45dp"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/iv_task_success"
+                                android:visibility="gone"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:visibility="visible" />
+
+                            <ProgressBar
+                                android:id="@+id/progressBar"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="7dp"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:layout_marginBottom="15dp"
+                                android:max="100"
+                                android:progressDrawable="@drawable/bg_task_detail_progressbar"
+                                android:visibility="visible"
+                                app:layout_constraintBottom_toBottomOf="@+id/llTotalProgress"
+                                app:layout_constraintLeft_toLeftOf="@+id/llTotalProgress"
+                                app:layout_constraintRight_toRightOf="@+id/llTotalProgress"
+                                tools:progress="40"
+                                tools:visibility="gone" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/llBindStudyList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/color_F5" />
+
+                        <TextView
+                            android:id="@+id/tvBindTip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="15dp"
+                            android:drawableLeft="@drawable/shape_solid_primary_width4_height17"
+                            android:drawablePadding="10dp"
+                            android:text="绑定一个学习清单"
+                            android:textColor="#ff222222"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/tvInputStudyListName"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="15dp"
+                            android:drawableRight="@mipmap/ic_right_arrow_gray"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="12dp"
+                            android:text="@string/task_select_hint"
+                            android:textColor="#ff999999"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tvNoStudyListTip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="27dp"
+                            android:text="*当前无此学习清单，确定后将为您自动创建"
+                            android:textColor="@color/color_10955B"
+                            android:textSize="12sp"
+                            android:visibility="gone"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_bind_content"
+                            tools:visibility="visible" />
+                    </LinearLayout>
+
+
+                    <View
+                        android:id="@+id/viewUnAcceptSpace"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/color_F5"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clTaskDes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="10dp"
+                        tools:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/ivTaskDes"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintBottom_toBottomOf="@+id/llTaskDesContainer"
+                            app:layout_constraintLeft_toLeftOf="@+id/llTaskDesContainer"
+                            app:layout_constraintRight_toRightOf="@+id/llTaskDesContainer"
+                            app:layout_constraintTop_toTopOf="@+id/llTaskDesContainer"
+                            tools:src="@mipmap/common_bg_holder_test" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:background="@drawable/bg_task_detail_img_forground"
+                            app:layout_constraintBottom_toBottomOf="@+id/llTaskDesContainer"
+                            app:layout_constraintLeft_toLeftOf="@+id/llTaskDesContainer"
+                            app:layout_constraintRight_toRightOf="@+id/llTaskDesContainer"
+                            app:layout_constraintTop_toTopOf="@+id/llTaskDesContainer" />
+
+                        <LinearLayout
+                            android:id="@+id/llTaskDesContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="15dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <TextView
+                                android:id="@+id/tvTaskTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="15dp"
+                                android:ellipsize="end"
+                                android:maxLines="3"
+                                android:textColor="#ffffffff"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                tools:text="累计20天每天阅" />
+
+                            <TextView
+                                android:id="@+id/tvTaskDes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:textColor="#ff3e3e3e"
+                                android:textSize="15sp"
+                                android:visibility="gone"
+                                tools:text="连续X天早起打卡：任务领取之日第二天开始，连续X天在早4:30-6:30之间完成打卡。X在CMS后台配置。一旦在任务当中一天未在规定时间内打卡则任务失败。最后一次打卡成功后任务成功。" />
+
+
+                            <TextView
+                                android:id="@+id/tvGetTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:textColor="#ffd4d4d4"
+                                android:textSize="12sp"
+                                tools:text="领取时间：2034.09.12-2035.10.23" />
+
+                            <TextView
+                                android:id="@+id/tvOpenTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:textColor="#ffd4d4d4"
+                                android:textSize="12sp"
+                                tools:text="任务时间：2034.09.12-2035.10.23" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center_vertical">
+
+                                <LinearLayout
+                                    android:id="@+id/llAwardContainer"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="29dp"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvAward"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="奖励积分"
+                                        android:textColor="#ffd4d4d4"
+                                        android:textSize="12sp"
+                                        android:visibility="invisible"
+                                        tools:visibility="visible" />
+
+                                    <TextView
+                                        android:id="@+id/tvAwardScore"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="6dp"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="17sp"
+                                        android:textStyle="bold"
+                                        tools:text="100" />
+
+                                    <TextView
+                                        android:id="@+id/tvFailScore"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="6dp"
+                                        android:textColor="#ffffffff"
+                                        android:textSize="12sp"
+                                        tools:text="(失败-20)"
+                                        tools:visibility="visible" />
+                                </LinearLayout>
+
+
+                                <TextView
+                                    android:id="@+id/tvPeopleNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#ffd4d4d4"
+                                    android:textSize="12sp"
+                                    tools:text="123456/200000人 参与" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!--互斥型组合任务容器-->
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/llmutualTaskContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/color_F5" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginRight="10dp"
+                            android:drawableLeft="@drawable/shape_solid_primary_width4_height17"
+                            android:drawablePadding="10dp"
+                            android:text="任务列表"
+                            android:textColor="#ff222222"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/shape_radius_learning_resources_solid_f2f2f2"
+                            android:drawableLeft="@mipmap/home_ic_studyroom_notice"
+                            android:drawablePadding="3dp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="10dp"
+                            android:text="通过完成所有指定子任务完成组合任务"
+                            android:textColor="#fff5a623"
+                            android:textSize="10sp" />
+
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tabLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_height="35dp"
+                            app:tabPaddingStart="2dp"
+                            app:tabPaddingEnd="2dp"
+                            app:tabMaxWidth="200dp"
+                            app:tabMinWidth="20dp"
+                            app:tabGravity="center"
+                            app:tabIndicatorColor="@color/transparent"
+                            app:tabIndicatorHeight="0dp"
+                            app:tabMode="scrollable"
+                            app:tabRippleColor="@android:color/transparent"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/color_F5" />
+
+                        <androidx.viewpager2.widget.ViewPager2
+                            android:id="@+id/vpMutualTask"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/llWebContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+
+                        <LinearLayout
+                            android:id="@+id/llRuleContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/color_F5" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginRight="10dp"
+                                android:drawableLeft="@drawable/shape_solid_primary_width4_height17"
+                                android:drawablePadding="10dp"
+                                android:text="任务规则"
+                                android:textColor="#ff222222"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tvRuleDetail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="10dp"
+                                android:textColor="#fff5a623"
+                                android:textSize="12sp"
+                                tools:text="*任务文章需要通过绑定的学习清单进入阅读，认真阅读一定时间后，点击文章末尾出现的验证码才能完成任务计数。该任务只能在军职在线App中完成，微信公众号中无法完成。" />
+
+                            <android.webkit.WebView
+                                android:id="@+id/webRule"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"
+                                android:scrollbars="none" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llTaskDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/color_F5" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginRight="10dp"
+                                android:drawableLeft="@drawable/shape_solid_primary_width4_height17"
+                                android:drawablePadding="10dp"
+                                android:text="任务详情"
+                                android:textColor="#ff222222"
+                                android:textSize="16sp" />
+
+                            <android.webkit.WebView
+                                android:id="@+id/webDesc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="10dp"
+                                android:scrollbars="none" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvLookDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp"
+                        android:drawableRight="@mipmap/task_ic_arrow_down"
+                        android:drawablePadding="7dp"
+                        android:text="查看详情"
+                        android:textColor="#ff82a2c7"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+                    <!--                </LinearLayout>-->
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="154dp" />
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+
+    </com.mooc.resource.widget.MoocSwipeRefreshLayout>
+
+
+    <FrameLayout
+        android:id="@+id/flBottom"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:background="@drawable/shape_gradient_white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/btBottom"
+            android:layout_width="274dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_radius22_color_primary"
+            android:gravity="center"
+            android:text="领取任务"
+            android:textColor="@color/white" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:id="@+id/llMutualBottom"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="74dp">
+
+        <TextView
+            android:id="@+id/tvCombinAward"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_marginRight="15dp"
+            android:text="预计获得积分奖励 400 失败(-1)"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvConfirm"
+            android:layout_width="100dp"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:text="确认领取"
+            android:textColor="#ffffffff"
+            android:textSize="15sp"
+            android:background="@drawable/shape_radius22_color_primary"
+            />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

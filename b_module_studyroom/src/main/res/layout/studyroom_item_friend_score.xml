@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="54dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivRank"
+                tools:visibility="gone"
+                android:scaleType="centerCrop"
+                tools:src="@mipmap/studyroom_ic_friend_rank_one"
+                android:layout_width="28dp"
+                android:layout_height="35dp"/>
+            <TextView
+                android:gravity="center"
+                tools:visibility="visible"
+                android:id="@+id/tvRank"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                tools:text="1000" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/ivHead"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            tools:src="@mipmap/common_ic_user_head_default" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#ff636262"
+            android:textSize="13sp"
+            tools:text="长城里的石头长城里的石头长城里的石头" />
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="22dp"
+            android:gravity="right"
+            android:minWidth="58dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            tools:text="2736092" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewBottomLine"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_gravity="bottom"
+        android:background="#e2e2e2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+</FrameLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <com.mooc.resource.widget.MoocImageView
+        android:id="@+id/cover"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@mipmap/common_bg_cover_default" />
+
+
+    <TextView
+        android:id="@+id/type_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="3dp"
+        android:background="@drawable/shape_recommend_type"
+        android:gravity="center"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:text="自建音频"
+        android:textColor="@color/color_white"
+        android:textSize="10sp"
+        app:layout_constraintRight_toRightOf="@+id/cover"
+        app:layout_constraintTop_toTopOf="@+id/cover" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        android:src="@mipmap/home_ic_study_room_play"
+        app:layout_constraintBottom_toBottomOf="@+id/cover"
+        app:layout_constraintRight_toRightOf="@+id/cover" />
+
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/item_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/cover"
+        app:layout_constraintTop_toTopOf="@+id/cover"
+        tools:text="自建音频标题" />
+
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:drawableLeft="@mipmap/icon_track_play_count"
+        android:drawablePadding="5dp"
+        android:textColor="#ff5d5d5d"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@+id/time"
+        app:layout_constraintLeft_toLeftOf="@+id/title"
+        tools:text="111" />
+
+
+    <TextView
+        android:id="@+id/play_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="5dp"
+        android:drawableLeft="@mipmap/icon_track_time"
+        android:drawablePadding="5dp"
+        android:textColor="#ffa3a3a3"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@+id/time"
+        app:layout_constraintLeft_toRightOf="@+id/count"
+        tools:text="11:11" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:drawablePadding="5dp"
+        android:textColor="#ffa3a3a3"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cover"
+        app:layout_constraintLeft_toLeftOf="@+id/title" />
+
+
+    <View
+        android:id="@+id/line"
+        style="@style/Style.Horizontal.Origin.Line"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cover" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

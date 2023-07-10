@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="20dp"
+    android:background="@drawable/shape_radius5_white"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/llBottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="15sp"
+        android:textColor="@color/color_2"
+        android:id="@+id/tvContent"
+        tools:text="公开后平台其它用户将通过您的个人主页看到此学习清单，每个学习清单奖励 "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="25dp"
+        android:id="@+id/llBottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btCancle"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="@mipmap/common_bg_pop_cancel_left"
+            android:gravity="center"
+            tools:text="取消"
+            tools:visibility="gone"
+            android:textColor="@color/color_9B9B9B"
+            android:textSize="15sp" />
+
+        <Button
+            tools:visibility="gone"
+            android:id="@+id/btConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="-3dp"
+            android:layout_weight="1"
+            android:background="@mipmap/common_bg_pop_ok_right"
+            android:gravity="center"
+            tools:text="确认"
+            android:textColor="@color/color_white"
+            android:textSize="15sp" />
+
+        <Button
+            tools:visibility="visible"
+            android:id="@+id/btSingle"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@drawable/shape_green_gradient25c794_cornor15_with135"
+            android:gravity="center"
+            android:visibility="gone"
+            tools:text="确认"
+            android:textColor="@color/color_white"
+            android:textSize="15sp" />
+    </LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

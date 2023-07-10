@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    tools:background="#000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvRank"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:minWidth="40dp"
+            android:textColor="#ffe5e5e5"
+            android:textSize="12sp"
+            tools:text="100" />
+
+        <ImageView
+            android:id="@+id/ivHead"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            tools:src="@mipmap/common_ic_user_head_default" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:minWidth="60dp"
+                android:textColor="#ffffffff"
+                android:textSize="15sp"
+                tools:text="王大宽王大宽王大宽王大宽王大宽王大宽宽王大宽王大宽王大宽宽王大宽王大宽王大宽宽王大宽王大宽王大宽宽王大宽王大宽王大宽" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/ic_battle_season_rank_medal"
+                    android:drawablePadding="6dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#ffe0e0e0"
+                    android:textSize="13sp"
+                    tools:text="中将" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="12dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:background="@drawable/bg_rank_normal_star_gray"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="3dp">
+
+                        <ImageView
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/ic_battle_season_rank_star" />
+
+                        <TextView
+                            android:id="@+id/tvStar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:textColor="#ffffffff"
+                            android:textSize="14sp"
+                            tools:text="1000" />
+                    </LinearLayout>
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/bg_battle_rank_divider" />
+</FrameLayout>

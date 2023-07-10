@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data></data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/bg_game_rank"
+        android:orientation="vertical">
+
+
+        <com.mooc.resource.widget.CommonTitleLayout
+            android:id="@+id/commonTitle"
+            app:ctl_middle_text="我的历史赛季排行"
+            app:ctl_left_icon="@mipmap/common_ic_back_white"
+            app:ctl_middle_text_color="@color/color_white"
+            app:ctl_right_text_color="@color/color_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp_5"
+            android:paddingRight="@dimen/dp_5"
+            android:paddingBottom="17dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="25dp"
+                android:background="@mipmap/frame_game_brum">
+
+
+                <com.mooc.resource.widget.MoocSwipeRefreshLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/swipe"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                 >
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcy_brum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.mooc.resource.widget.MoocSwipeRefreshLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

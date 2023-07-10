@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp">
+
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/item_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <com.mooc.resource.widget.MoocImageView
+            android:id="@+id/cover"
+            android:layout_width="97dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@mipmap/common_bg_cover_default"
+            android:scaleType="fitXY"
+            app:isCircle="@{false}"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:radius="@{2}"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/bg_plan_light_green"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingTop="1.5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="1.5dp"
+            android:textColor="@color/color_white"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="@+id/cover"
+            app:layout_constraintRight_toRightOf="@+id/cover" />
+
+
+        <TextView
+            android:id="@+id/tag"
+            android:layout_width="12dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/shape_recommend_type"
+            android:textColor="@color/color_white"
+            android:textSize="9sp"
+            app:layout_constraintRight_toRightOf="@+id/cover"
+            app:layout_constraintTop_toTopOf="@+id/cover"
+            tools:ignore="RtlHardcoded" />
+
+
+        <TextView
+            android:id="@+id/orgs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_5D5D5D"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toLeftOf="@+id/title"
+            app:layout_constraintRight_toLeftOf="@+id/cover"
+            app:layout_constraintTop_toTopOf="@+id/cover" />
+
+
+        <TextView
+            android:id="@+id/before_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/color_A3A3A3"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@+id/cover"
+            app:layout_constraintLeft_toLeftOf="@+id/title"
+            app:layout_constraintTop_toTopOf="@+id/cover" />
+
+        <TextView
+            android:id="@+id/num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:textColor="@color/color_A3A3A3"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@+id/cover"
+            app:layout_constraintRight_toLeftOf="@+id/cover"
+            app:layout_constraintTop_toTopOf="@+id/cover" />
+
+
+        <TextView
+            android:id="@+id/column_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_6F86A2"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/cover"
+            app:layout_constraintLeft_toLeftOf="@+id/title"
+            app:layout_constraintRight_toLeftOf="@+id/cover" />
+
+
+        <View
+            android:id="@+id/line"
+            style="@style/Style.Horizontal.Origin.Line"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cover" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

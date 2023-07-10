@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlRoot"
+    android:padding="20dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_radius5_white"
+    tools:background="@mipmap/bg_match_dialog">
+
+    <LinearLayout
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/llContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_desc_dialog"
+        android:layout_marginTop="17dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+
+        <TextView
+            android:id="@+id/layout_right_dialog"
+            android:layout_width="147dp"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="-5dp"
+            android:background="@mipmap/bg_btn_green_shape"
+            android:gravity="center"
+            android:text="@string/text_ok"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/sp_14" />
+
+
+    </LinearLayout>
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/llContainer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/layout_desc_dialog"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="90dp"
+        android:layout_centerHorizontal="true"
+        android:lineSpacingExtra="3dp"
+        android:text=""
+        tools:text="服务器异常服务器异常服务器异常服务器异常服务器异常"
+        android:textColor="#ffdff7ff"
+        android:textSize="15sp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

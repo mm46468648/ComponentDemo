@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shap_corner2_efefef"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/tvNoteTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#ff222222"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvNoteContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textColor="#ff5d5d5d"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvNoteBelong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#ffa3a3a3"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llContent"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_radius2_stroke05_979797"
+        android:gravity="center"
+        android:text="@string/note"
+        android:textColor="#ff979797"
+        android:textSize="9sp"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/tvPriseNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llContent"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="7dp"
+        android:padding="5dp"
+        android:textColor="#ffa3a3a3"
+        android:textSize="11sp"
+        tools:ignore="RtlHardcoded,SmallSp" />
+
+</RelativeLayout>

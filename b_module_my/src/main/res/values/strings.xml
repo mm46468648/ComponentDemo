@@ -1,0 +1,78 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingDefaultResource,MissingTranslation">
+    <string name="app_name">b_module_my</string>
+    <string name="sign_rule_detail">1. 通过军职在线移动客户端每日签到，可以获得积分。\n2. 连续签到积分奖励：\n（1）连续签到3天以上（包含3天，3–6天），获取积分=转盘获得积分+1分；\n（2）连续签到7天以上（包含7天,7–41天），获取积分=转盘获得积分+3分；\n（3）连续签到42天以上（包含42天），获取积分=转盘获得积分+5分；\n（4）在打卡界面显示打卡获取分规则。\n</string>
+    <string name="re_sign_rule">
+        1. 补打卡无积分奖励，连续打卡奖励积分不重新计算发放；\n\n2. 仅支持对最近一次没有打卡的日期进行补打卡；\n\n3. 每半年（间隔182天）有一次补打卡机会，若最近半年（182天）时间内有补打卡过，则不能进行补打卡；\n\n4. 申请补打卡后，需完成以下规定的任务，任务成功，则连续打卡天数、累计打卡天数将进行重新计算，连续打卡奖励积分以新的连续天数进行奖励；若任务失败，则不重新进行计算。
+    </string>
+    <string name="sign_rule_title">打卡积分规则</string>
+    <string name="re_sign_rule_title">补打卡规则</string>
+    <string name="sign_current_score">当前获得&#160;%1$d&#160;积分</string>
+    <string name="sign_continuity_day">已连续签到&#160;%1$d&#160;天</string>
+    <string name="sign_people_count">今日有&#160;%1$d&#160;位小伙伴打卡</string>
+    <string name="sign_today_user">%1$s&#160;今日打卡，获得&#160;%2$d&#160;积分</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="apply_cer_tip">1、证书只有一次申请机会，一旦提交不可修改，请谨慎申请\n
+2、姓名只用于证书显示，军职在线不存储\n
+3、姓名若不填写，证书上则会显示军职在线昵称。为保证显示正常，请先确保昵称中无特殊字符、表情符号，长度不超过11个汉字。若不符合要求，可先修改昵称后再申请证书</string>
+    <string name="text_question_search_tips">有问题，搜我试一试</string>
+    <string name="text_str_meng_title">联系客服的方法：</string>
+    <string name="text_meng_one">用手机微信扫描下方二维码，或截图此界面分享到微信，长按二维码，添加客服为好友。</string>
+    <string name="text_meng_one_title">1、</string>
+    <string name="text_meng_two_title">2、电话：</string>
+    <string name="text_meng_phone">13548570682</string>
+    <string name="text_ment_three_title">3、</string>
+    <string name="text_meng_three">手机微信添加\&#034;junzhizaixian\&#034;，添加客服为好友。</string>
+    <string name="text_meng_wx">\&#034;客服\&#034;微信号：junzhizaixian</string>
+    <string name="text_feedback_ac_content">问题、意见和建议</string>
+    <string name="text_feedback_ac_title">请选择您的问题类型</string>
+    <string name="text_feedback_ac_contact">联系电话（选填）</string>
+    <string name="hint_feedback_ac_contact">便于我们与您联系</string>
+    <string name="text_feedback_ac_img">图片（选填，提供问题截图）</string>
+    <string name="hint_feedback_ac_content">请填写问题描述，以便我们更好的优化产品</string>
+    <string name="feed_str_img_count">0/4</string>
+    <string name="feed_str_content_count">0/200</string>
+    <string name="text_str_sub_feed_back">提交反馈意见</string>
+    <string name="text_feedback">意见反馈</string>
+    <string name="text_feed_empty_hint">您好，这里是军职在线产品和运营团队，有任何问题，欢迎随时联系我们。</string>
+    <string name="text_feed_empty_submit">点我提交反馈</string>
+    <string name="text_filter">筛选</string>
+    <string name="text_feed_type">问题类型：%1$s</string>
+    <string name="text_feed_top_submit">提交新反馈</string>
+    <string name="text_feed_past">以往反馈</string>
+    <string name="text_un_read">未读</string>
+    <string name="text_feed_all">全部</string>
+    <string name="txt_send">发送</string>
+    <string name="hint_txt_send">请输入反馈内容</string>
+    <string name="reply_faile">回复失败</string>
+    <string name="reply_succeess">回复成功</string>
+    <string name="toast_upload_pic_too_large">图片太大,请重新选择上传</string>
+
+    <string name="text_photo">从手机相册选择</string>
+    <string name="feed_title_empty">请选择一个问题类型</string>
+    <string name="feedback_content_empty">反馈意见不能为空</string>
+    <string name="feedback_submit_suc">反馈提交成功，感谢您的宝贵意见！</string>
+    <string name="feedback_submit_fail">反馈提交失败，请稍后重试！</string>
+    <string name="text_regex_phone">请输入正确的手机号</string>
+    <string name="text_minimize">最小化</string>
+    <string name="text_quit">退出</string>
+    <string name="text_str_fill">%1$d赞</string>
+    <string name="text_user_look_share">关注后可查看该学友全部分享</string>
+    <string name="text_follow_user">确认关注该学友吗？</string>
+    <string name="text_cancel_follow_user">确认取消关注该学友吗？</string>
+    <string name="text_is_del_resource_school">删除学友圈资源，需扣除1积分，是否删除所选分享？</string>
+    <string name="text_app_share_distinguish">长按识别二维码下载</string>
+    <string name="text_share_user_name">%1$s的分享</string>
+    <string name="string_vertical_bar">|&#160;&#160;</string>
+    <string name="text_user_follow_my">我关注的人</string>
+    <string name="text_user_fans_my">关注我的人</string>
+    <string name="text_user_follow_other">他关注的人</string>
+    <string name="text_user_fans_other">关注他的人</string>
+    <string name="questions">常见问题</string>
+    <string name="report_str">举报</string>
+    <string name="text_cancel_like_user">确认取消点赞该学友吗？</string>
+    <string name="text_like_user">确认点赞该学友吗？</string>
+    <string name="text_cancel_dis_like_user">确认取消点踩该学友吗？</string>
+    <string name="text_dis_like_user">确认点踩该学友吗？</string>
+    <string name="text_user_like_and_dis">不能对自己操作</string>
+</resources>

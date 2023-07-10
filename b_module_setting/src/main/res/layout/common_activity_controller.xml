@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.mooc.resource.widget.CommonTitleLayout
+        android:id="@+id/commonTitleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ctl_adapteStatusBar="true"
+        app:ctl_middle_text="控制台"/>
+
+    <com.mooc.resource.widget.CommonSettingItem
+        android:id="@+id/csiOpenLog"
+        app:csi_left_text="开启log日志"
+        app:csi_right_icon="@mipmap/set_ic_switch_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.mooc.resource.widget.CommonSettingItem
+        android:id="@+id/csiOpenNoDebugMode"
+        app:csi_left_text="开启调试模式"
+        app:csi_right_icon="@mipmap/set_ic_switch_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.mooc.resource.widget.CommonSettingItem
+        android:id="@+id/csiEnterTestAccount"
+        app:csi_left_text="选择测试账号"
+        app:csi_right_icon="@mipmap/set_ic_right_arrow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.mooc.resource.widget.CommonSettingItem
+        android:id="@+id/csiChannel"
+        app:csi_left_text="当前渠道"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <com.mooc.resource.widget.CommonSettingItem
+        android:id="@+id/csiChangeRootUrl"
+        app:csi_left_text="切换域名"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.mooc.resource.widget.CommonSettingItem
+        android:id="@+id/csiChangeSkin"
+        app:csi_left_text="切换皮肤"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.mooc.resource.widget.CommonSettingItem
+        android:id="@+id/csiResourceTest"
+        app:csi_left_text="资源跳转测试"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

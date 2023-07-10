@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="default_platform">国家开放大学</string>
+
+    <!--修改Adapter endview提示-->
+    <string name="brvah_load_end">没有更多了</string>
+    <string name="shake_str_title">您遇到了什么问题？</string>
+    <string name="shake_str_message">您可以在个人页面的设置菜单中关闭摇一摇意见反馈功能</string>
+
+    <string name="text_camera">拍照</string>
+    <string name="text_choose">筛选</string>
+    <string name="text_from_photo">从手机相册选择</string>
+
+    <!--图片选择-->
+    <string name="picker_str_error">点错了</string>
+    <string name="picker_str_sure">确定</string>
+
+    <string name="text_score_share">+%1$d</string>
+    <string name="text_study_day">连续学习%1$d天奖励</string>
+    <string name="text_study_resource_score">学习资源奖励积分</string>
+
+    <!--download-->
+    <string name="not_wifi_only_wifi_false">当前为非Wifi环境，请注意流量资费</string>
+    <string name="text_study_course_pro">已学：%1$.2f</string>
+
+    <string name="text_plan_success">恭喜您</string>
+    <string name="pop_plan_look_my_point">查看我的积分</string>
+    <string name="pop_plan_title">恭喜您已完成本学习项目</string>
+    <string name="pop_plan_extra_score">额外奖励%1$d积分</string>
+    <string name="pop_plan_get">获得</string>
+    <string name="pop_plan_bet_score">预存积分</string>
+    <string name="text_plan_success_title">完成&#160;#%1$s#&#160;学习项目</string>
+    <string name="toast_get_app_share_faile">获取分享信息失败</string>
+    <string name="text_to_applets">即将打开\&#034;军职在线\&#034;\n党史军史知识竞赛平台</string>
+
+    <!--studyroom-->
+    <string name="text_no_publicate_tip">当前学习清单为公开状态，不可编辑。</string>
+    <string name="text_other_folder_tip">当前学习清单为他人的，不可编辑。</string>
+
+    <string name="text_str_rename">重命名</string>
+    <string name="text_str_move">移动</string>
+    <string name="text_str_del">删除</string>
+
+    <string name="permission_with_camera">请前往系统设置打开摄像头和存储权限</string>
+    <string name="daliy_read">每日一读</string>
+</resources>

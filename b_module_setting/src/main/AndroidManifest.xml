@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mooc.setting">
+
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application>
+        <activity
+            android:name=".ui.PrivacyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.UpdateLogActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.SettingMsgActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.AboutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.QrCodeDownloadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ApkUpdateActivity"
+            android:exported="false"
+            android:theme="@style/ActivityDialogStyle" />
+        <activity
+            android:name=".ui.DownloadPathSelectDialogActivity"
+            android:exported="false"
+            android:theme="@style/ActivityDialogStyle" />
+        <activity
+            android:name=".fileselector.FsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".ui.ChooseTestAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ControllerActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.ResourceTurnTestActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+    </application>
+
+</manifest>

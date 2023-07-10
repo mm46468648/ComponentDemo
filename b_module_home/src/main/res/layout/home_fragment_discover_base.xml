@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mooc.resource.widget.MoocSwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/flHorziontalContainer"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.mooc.resource.widget.NoIntercepteRecyclerView
+                android:id="@+id/rvHorziontalTab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical" />
+        </FrameLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvLeft"
+            android:layout_width="78dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/flHorziontalContainer"
+            android:background="@color/color_F5"
+            android:paddingBottom="50dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/flHorziontalContainer"
+            tools:visibility="visible" />
+
+        <com.mooc.home.widget.DiscoverMoocHeadView
+            android:id="@+id/discoverMoocHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/flHorziontalContainer"
+            android:layout_toRightOf="@id/rvLeft"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@id/rvLeft"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/flHorziontalContainer"
+            tools:visibility="gone" />
+
+        <com.mooc.home.widget.DiscoverCommonListHeadView
+            android:id="@+id/discoverCommonSortHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/discoverMoocHead"
+            android:layout_toRightOf="@id/rvLeft"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@id/rvLeft"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/discoverMoocHead" />
+
+        <FrameLayout
+            android:id="@+id/flChildContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/discoverCommonSortHead"
+            android:layout_toRightOf="@id/rvLeft"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/rvLeft"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/discoverCommonSortHead">
+
+            <com.mooc.resource.widget.EmptyView
+                android:id="@+id/emptyView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+    </RelativeLayout>
+</com.mooc.resource.widget.MoocSwipeRefreshLayout>
+

@@ -1,0 +1,99 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="QMUI" parent="">
+
+    </style>
+
+
+    <!--ActivityNoActionBar Theme-->
+    <style name="AppNoActionBarTheme" parent="AppTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <!--Dialog弹窗样式Activity，作用于不依赖Activity全局的显示的弹窗-->
+    <style name="ActivityDialogStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/color_transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!--DefaultDialog-->
+    <style name="DefaultDialogStyle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- 貌似是跟上面一个重复的？？？-->
+<!--    <style name="DefaultDialog" parent="android:Theme.Dialog">-->
+<!--        <item name="android:windowFrame">@null</item>-->
+<!--        <item name="android:windowNoTitle">true</item>-->
+<!--        <item name="android:windowBackground">@android:color/transparent</item>-->
+<!--        <item name="android:windowIsFloating">true</item>-->
+<!--        <item name="android:windowContentOverlay">@null</item>-->
+<!--    </style>-->
+
+    <style name="TabLayoutTextStyle15">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!--parent Widget是什么?-->
+    <style name="VerifyLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/color_D7</item>
+    </style>
+
+    <style name="ViewLine1pxStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/color_e2</item>
+    </style>
+
+    <style name="ViewLine8pxStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">4dp</item>
+        <item name="android:background">@color/color_e2</item>
+    </style>
+
+    <style name="ViewLine10pxStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">5dp</item>
+        <item name="android:background">@color/color_E</item>
+    </style>
+
+    <style name="ViewLine20pxStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">10dp</item>
+        <item name="android:background">@color/color_E</item>
+    </style>
+
+    <!--这也没用啊？？-->
+    <!--CustomTabLayout Tab TextView选中样式-->
+    <style name="TabLayoutBoldTextSize" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#fc5a44</item>
+    </style>
+    <style name="TabLayoutNormalTextSize" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#24272E</item>
+    </style>
+</resources>

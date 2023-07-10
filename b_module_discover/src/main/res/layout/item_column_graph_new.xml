@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:id="@+id/llComplete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:visibility="visible"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:drawableLeft="@mipmap/column_ic_line_letf"
+            android:drawableRight="@mipmap/column_ic_line_letf"
+            android:drawablePadding="5dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/color_6C88BE"
+            android:textSize="16sp"
+            tools:text="2020-03-11" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/color_2"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="测试课程" />
+
+        <TextView
+            android:id="@+id/tvVideoSource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/color_9"
+            android:textSize="13sp"
+            android:visibility="gone"
+            tools:text="来源：学堂在线" />
+
+        <ImageView
+            android:id="@+id/ivImg"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop" />
+
+        <android.webkit.WebView
+            android:id="@+id/webVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"
+            android:scrollbars="none"
+            android:visibility="gone"
+            tools:ignore="WebViewLayout"
+            tools:visibility="visible" />
+
+        <com.mooc.discover.view.ForbitTouchWebView
+            android:id="@+id/webDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:scrollbars="none"
+            tools:ignore="WebViewLayout" />
+
+
+        <TextView
+            android:id="@+id/tvLookDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="查看详情"
+            android:textColor="@color/color_9"
+            android:textSize="13sp"
+            tools:visibility="visible" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llSimple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:visibility="gone"
+        tools:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvTitleSimple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/color_3"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="测试课程" />
+
+        <TextView
+            android:id="@+id/tvTimeSimple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_6C88BE"
+            android:textSize="15sp"
+            tools:text="2020-03-11" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="18dp"
+        android:background="@color/color_EBEBEB" />
+</FrameLayout>

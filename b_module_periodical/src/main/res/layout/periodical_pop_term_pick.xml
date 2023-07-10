@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/white"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp"
+    android:layout_height="320dp">
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="刊物出版时间"
+        android:textColor="#ff222222"
+        android:textSize="18sp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        >
+
+        <com.contrarywind.view.WheelView
+            android:id="@+id/wvYear"
+            app:wheelview_textSize="18sp"
+            app:wheelview_dividerWidth="58dp"
+            app:wheelview_lineSpacingMultiplier="2"
+            app:wheelview_textColorCenter="@color/color_3"
+            android:layout_width="58dp"
+            android:layout_height="100dp"/>
+
+        <com.contrarywind.view.WheelView
+            android:id="@+id/wvTerm"
+            app:wheelview_textSize="18sp"
+            app:wheelview_dividerWidth="58dp"
+            app:wheelview_lineSpacingMultiplier="2"
+            app:wheelview_textColorCenter="@color/color_3"
+            android:layout_marginLeft="62dp"
+            android:layout_width="58dp"
+            android:layout_height="100dp"/>
+    </LinearLayout>
+ 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#ff222222"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/tvOk"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="完成"
+            android:textColor="#ff222222"
+            android:textSize="15sp"
+            />
+    </LinearLayout>
+</LinearLayout>

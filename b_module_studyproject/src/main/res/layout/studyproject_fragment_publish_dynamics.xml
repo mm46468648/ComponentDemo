@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.core.widget.NestedScrollView
+    android:layout_above="@+id/rl_submit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+       <LinearLayout
+           android:id="@+id/ll_text"
+           android:layout_width="wrap_content"
+           android:orientation="vertical"
+           android:layout_height="wrap_content">
+           <TextView
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="22dp"
+               android:layout_marginTop="15dp"
+               android:layout_marginBottom="15dp"
+               android:gravity="left"
+               android:text="@string/tv_dynamic_word"
+               android:textColor="@color/color_2"
+               android:textSize="14sp" />
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="25dp"
+               android:paddingBottom="10dp"
+               android:layout_marginRight="25dp"
+               android:background="@color/color_F4F5F7">
+
+               <EditText
+                   android:id="@+id/edtContent"
+                   android:layout_width="match_parent"
+                   android:layout_height="115dp"
+                   android:background="@color/color_F4F5F7"
+                   android:gravity="top"
+                   android:hint="@string/hint_str_dynamic"
+                   android:paddingLeft="12dp"
+                   android:paddingTop="10dp"
+                   android:paddingRight="12dp"
+                   android:textColor="@color/color_5"
+                   android:textColorHint="@color/color_D3D3D3"
+                   android:textSize="13sp" />
+
+               <TextView
+                   android:id="@+id/tvContentCount"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentRight="true"
+                   android:layout_below="@+id/edtContent"
+                   android:layout_alignParentBottom="true"
+                   android:layout_marginRight="10dp"
+                   android:layout_marginBottom="10dp"
+                   android:background="@color/color_F4F5F7"
+                   android:gravity="right"
+                   android:text="0"
+                   android:textColor="@color/color_9"
+                   android:textSize="12sp" />
+
+           </RelativeLayout>
+       </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="25dp"
+            android:background="@color/color_F4F5F7" />
+        <LinearLayout
+            android:id="@+id/ll_pic"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="15dp"
+                android:gravity="left"
+                android:text="@string/tip_pic"
+                android:textColor="@color/color_2"
+                android:textSize="14sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcyPublishkImg"
+                android:layout_width="match_parent"
+                android:nestedScrollingEnabled="false"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="22dp"
+                android:background="@color/color_white" />
+
+            <TextView
+                android:id="@+id/tv_img_count"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/color_white"
+                android:gravity="right|center_vertical"
+                android:text="0/9"
+                android:textColor="@color/color_9"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+    <RelativeLayout
+        android:id="@+id/rl_submit"
+        android:paddingBottom="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:id="@+id/submitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp"
+            android:background="@drawable/shape_radius20_stroke1_gray9"
+            android:gravity="center"
+            android:text="@string/submit"
+            android:textColor="@color/color_D8D8D8" />
+    </RelativeLayout>
+</RelativeLayout>

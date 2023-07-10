@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/llContainer"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:background="@color/color_white"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvCourseAll"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:text="全部"
+        android:textColor="@color/color_6"
+        android:textSize="14sp" />
+    <TextView
+        android:id="@+id/tvCourseStarted"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:text="已开课"
+        android:textColor="@color/color_6"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvCourseWillStart"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:text="即将开课"
+        android:textColor="@color/color_6"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvCourseEnd"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:text="已结课"
+        android:textColor="@color/color_6"
+        android:textSize="14sp" />
+</LinearLayout>

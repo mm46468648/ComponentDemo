@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/shape_radius20_color_white"
+    android:layout_marginTop="10dp"
+    android:gravity="center_vertical"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:layout_width="match_parent" android:layout_height="25dp">
+
+    <TextView
+        android:text="公告"
+        android:drawableLeft="@mipmap/home_ic_discover_trumpet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:textSize="13sp"
+        android:drawablePadding="4dp"
+        />
+
+    <View
+        android:background="@color/color_E0E0E0"
+        android:layout_marginLeft="12dp"
+        android:layout_width="0.5dp"
+        android:layout_height="12dp"/>
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"/>
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="263dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_radius3_white"
+    android:paddingLeft="24dp"
+    android:paddingTop="22dp"
+    android:paddingRight="24dp"
+    android:paddingBottom="30dp">
+
+    <TextView
+        android:id="@+id/layout_dialog_confirm_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="是否确认选课"
+        android:textColor="@color/color_2"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="订阅该课程公告消息"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/layout_dialog_confirm_title"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/tip2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="(开启后，将在消息系统中收到未读消息提醒；也可前往消息系统修改设置)"
+        android:textSize="13sp"
+        app:layout_constraintTop_toBottomOf="@+id/tip"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tip"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tip2">
+
+
+        <Button
+            android:id="@+id/btCancle"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="@mipmap/common_bg_pop_cancel_left"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/color_9B9B9B"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="-3dp"
+            android:layout_weight="1"
+            android:background="@mipmap/common_bg_pop_ok_right"
+            android:gravity="center"
+            android:text="确认"
+            android:textColor="@color/color_white"
+            android:textSize="15sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

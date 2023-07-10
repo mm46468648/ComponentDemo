@@ -1,0 +1,35 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mooc.commonbusiness">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_LOGS" tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!--腾讯X5申请权限-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <application>
+        <activity
+            android:exported="false" android:name="com.mooc.commonbusiness.module.report.ReportDialogNewActivity" android:theme="@style/ActivityDialogStyle"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:exported="false" android:name="com.mooc.commonbusiness.module.report.ShakeFeekbackDialogActivity" android:theme="@style/ActivityDialogStyle"
+            android:launchMode="singleTop"/>
+        <activity
+            android:exported="false" android:name=".dialog.ToWeixinProgramDialog" android:theme="@style/ActivityDialogStyle"
+            android:launchMode="singleTop"/>
+        <activity
+            android:exported="false" android:name=".module.BigImagePreviewActivity"
+            android:launchMode="singleTop"/>
+
+        <activity
+            android:exported="false" android:name=".base.PermissionApplyActivity" android:theme="@style/PermissonApplyActivity" android:launchMode="singleTop"/>
+
+    </application>
+</manifest>

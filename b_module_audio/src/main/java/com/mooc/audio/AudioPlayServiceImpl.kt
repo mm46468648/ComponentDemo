@@ -1,0 +1,138 @@
+package com.mooc.audio
+
+import android.app.PendingIntent
+import android.content.Context
+import android.content.Intent
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.mooc.audio.manager.XiMaUtile
+import com.mooc.commonbusiness.base.BaseApplication
+import com.mooc.commonbusiness.route.Paths
+import com.mooc.commonbusiness.route.routeservice.AudioPlayService
+import com.mooc.common.utils.DebugUtil
+import com.mooc.audio.receiver.XMLYPlayerReceiver
+import com.ximalaya.ting.android.opensdk.constants.ConstantsOpenSdk
+import com.ximalaya.ting.android.opensdk.datatrasfer.CommonRequest
+import com.ximalaya.ting.android.opensdk.player.appnotification.XmNotificationCreater
+import com.ximalaya.ting.android.opensdk.util.BaseUtil
+import com.ximalaya.ting.android.player.XMediaPlayerConstants
+import org.xutils.x
+
+/**
+ *
+ */
+@Route(path = Paths.SERVICE_AUDIO_PLAY)
+class AudioPlayServiceImpl : AudioPlayService {
+    /**
+     * 外部调用sdk的初始化
+     */
+    override fun initSdk() {
+        ConstantsOpenSdk.isDebug = DebugUtil.debugMode
+        XMediaPlayerConstants.isDebug = DebugUtil.debugMode
+        x.Ext.init(BaseApplication.instance)
+        val mXimalaya = CommonRequest.getInstanse()
+        mXimalaya.setAppkey("7dda552f9900e8a4733f84df74fe83c4");
+        mXimalaya.setPackid("com.moocxuetang");
+        // 优先取oaid作为设备ID，如果获取不到再按照列表顺序优先级进行获取，如果出于用户隐私数据安全考虑，可以对得到的设备ID再进行MD5/SHA1/SHA256哈希，注意不要加盐，并请告知平台技术支持同学。
+        BaseApplication.instance?.let {
+            if (BaseUtil.isMainProcess(it)){
+                mXimalaya.init(BaseApplication.instance, "fbac060c0f0928e090422d581eab59ff", null)
+            }
+//            makeCustomNotifycation()
+        }
+    }
+
+
+    /**
+     * 如果正在播放则暂停
+     */
+    override fun stopPlay() {
+//        if(TrackPlayManger.mIsPlaying.value == true){
+//            TrackPlayManger.pause()
+//        }
+
+        if (XiMaUtile.getInstance().isPlaying) {
+            XiMaUtile.getInstance().pause()
+        }
+    }
+
+    override fun setStudyPlanId(ownTrackID: String, studyPlayId: String) {
+//        TrackPlayManger.ownTrackToStudyProject.put(ownTrackID,studyPlayId)
+        XiMaUtile.getInstance().ownTrackToStudyProject.put(ownTrackID, studyPlayId)
+    }
+
+    /**
+     * 音频是否在播放
+     */
+    override fun isPlaying(): Boolean {
+        return XiMaUtile.getInstance().isPlaying
+    }
+
+    /**
+     * 上传本地音频的打点记录
+     */
+    override fun postErrorPoint() {
+        val audioPointManager = XiMaUtile.getInstance().audioPointManager
+        audioPointManager?.postNativiePoint()
+    }
+
+
+    fun makeCustomNotifycation() {
+        if (BaseApplication.instance == null) return
+//        if(!BaseUtil.getCurProcessName(BaseApplication.instance).contains(":player")) return
+        //自定义关闭通知
+        val instanse = XmNotificationCreater.getInstanse(BaseApplication.instance)
+        val actionName_close = XMLYPlayerReceiver.ACTION_CLOSE
+        val intent = Intent(actionName_close)
+        intent.setClass(
+            BaseApplication.instance as Context,
+            XMLYPlayerReceiver::class.java
+        )
+        val broadcast = PendingIntent.getBroadcast(
+            BaseApplication.instance,
+            0,
+            intent,
+            0
+        )
+        instanse.setClosePendingIntent(broadcast)
+        val actionName_play = XMLYPlayerReceiver.ACTION_PLAY_PLAUSE
+        val intent_play = Intent(actionName_play)
+        intent_play.setClass(
+            BaseApplication.instance as Context,
+            XMLYPlayerReceiver::class.java
+        )
+        val broadcast_play = PendingIntent.getBroadcast(
+            BaseApplication.instance as Context,
+            0,
+            intent_play,
+            0
+        )
+        instanse.setStartOrPausePendingIntent(broadcast_play)
+        val actionName_next = XMLYPlayerReceiver.ACTION_NEXT
+        val intent_next = Intent(actionName_next)
+        intent_next.setClass(
+            BaseApplication.instance as Context,
+            XMLYPlayerReceiver::class.java
+        )
+        val broadcast_next = PendingIntent.getBroadcast(
+            BaseApplication.instance as Context,
+            0,
+            intent_next,
+            0
+        )
+        instanse.setNextPendingIntent(broadcast_next)
+        val actionName_pre = XMLYPlayerReceiver.ACTION_PRE
+        val intent_pre = Intent(actionName_pre)
+        intent_pre.setClass(
+            BaseApplication.instance as Context,
+            XMLYPlayerReceiver::class.java
+        )
+        val broadcast_pre = PendingIntent.getBroadcast(
+            BaseApplication.instance as Context,
+            0,
+            intent_pre,
+            0
+        )
+        instanse.setPrePendingIntent(broadcast_pre)
+    }
+
+}

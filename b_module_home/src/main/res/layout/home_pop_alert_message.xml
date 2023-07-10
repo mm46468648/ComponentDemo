@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:background="@drawable/shape_radius3_white"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:textColor="@color/color_2"
+        android:textSize="18sp"
+        tools:text="升级提示" />
+
+    <android.webkit.WebView
+        android:id="@+id/webDes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:layout_weight="1"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="41dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="-3dp"
+            android:layout_weight="1"
+            android:background="@mipmap/common_bg_pop_cancel_left"
+            android:gravity="center"
+            android:text="@string/text_cancel"
+            android:textColor="@color/color_9B9B9B"
+            android:textSize="17sp"
+            tools:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/tvOk"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="-3dp"
+            android:layout_weight="1"
+            android:background="@mipmap/common_bg_pop_ok_right"
+            android:gravity="center"
+            android:text="前往"
+            android:textColor="@color/color_white"
+            android:textSize="17sp"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvSingleConfirm"
+            android:layout_width="135dp"
+            android:layout_height="35dp"
+            android:background="@drawable/shape_green_gradient25c794_primary_cornor18"
+            android:gravity="center"
+            android:text="我知道了"
+            android:textColor="@color/color_white"
+            android:visibility="gone"
+            tools:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

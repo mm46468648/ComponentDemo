@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:id="@+id/tab_home"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/llBottomContainer"
+        android:background="@mipmap/home_bg_home_bottom_tab"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:paddingTop="2dp"
+        android:layout_height="58dp">
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:tag="skin:home_bottomtab_discover:src"
+                android:src="@drawable/home_bottomtab_discover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginTop="2dp"
+                android:text="发现"
+                android:tag="skin:home_bottom_tab_text_color:textColor"
+                android:textColor="@color/home_bottom_tab_text_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:tag="skin:home_bottomtab_todaystudy:src"
+                android:src="@drawable/home_bottomtab_todaystudy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="今日学习"
+                android:layout_marginTop="2dp"
+                android:tag="skin:home_bottom_tab_text_color:textColor"
+                android:textColor="@color/home_bottom_tab_text_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:src="@drawable/home_bottomtab_discover"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="学习室"
+                android:layout_marginTop="2dp"
+                android:tag="skin:home_bottom_tab_text_color:textColor"
+                android:textColor="@color/home_bottom_tab_text_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:tag="skin:home_bottomtab_honorwall:src"
+                android:src="@drawable/home_bottomtab_honorwall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="荣誉墙"
+                android:layout_marginTop="2dp"
+                android:tag="skin:home_bottom_tab_text_color:textColor"
+                android:textColor="@color/home_bottom_tab_text_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:tag="skin:home_bottomtab_my:src"
+                android:src="@drawable/home_bottomtab_my"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="我的"
+                android:layout_marginTop="2dp"
+                android:tag="skin:home_bottom_tab_text_color:textColor"
+                android:textColor="@color/home_bottom_tab_text_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:tag="skin:home_bottomtab_studyroom:src"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/ivCenterTab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/home_bottomtab_studyroom" />
+</merge>

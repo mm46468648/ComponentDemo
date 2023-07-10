@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.mooc.commonbusiness.widget.HeadView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/mivAvatar"
+        android:src="@mipmap/common_ic_user_head_default"
+        android:layout_width="64dp"
+        android:layout_height="64dp"/>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintLeft_toRightOf="@+id/mivAvatar"
+        app:layout_constraintTop_toTopOf="@+id/mivAvatar"
+        app:layout_constraintRight_toLeftOf="@+id/tvFollow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="政论家"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="#ff222222"
+        android:textSize="15sp"
+        />
+
+    <TextView
+        android:id="@+id/tvDesc"
+        app:layout_constraintLeft_toLeftOf="@id/tvName"
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
+        app:layout_constraintRight_toRightOf="@+id/tvName"
+        android:layout_marginTop="7dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:ellipsize="end"
+        tools:text="政论家作家、苏联作家协会主席、参与俄罗斯帝国社会主义革命"
+        android:textColor="#ff666666"
+        android:textSize="12sp"
+        />
+
+    <TextView
+        android:id="@+id/tvFollow"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mivAvatar"
+        app:layout_constraintBottom_toBottomOf="@+id/mivAvatar"
+        android:layout_width="48dp"
+        android:layout_height="22dp"
+        android:gravity="center"
+        tools:text="+ 关注"
+        android:tag="skin:shape_conrners1_5_color_primary:background"
+        android:background="@drawable/shape_conrners1_5_color_primary"
+        android:textColor="#ff828282"
+        android:textSize="12sp"
+        tools:visibility="invisible"
+        />
+
+    <ProgressBar
+        android:id="@+id/pbFollow"
+        app:layout_constraintLeft_toLeftOf="@+id/tvFollow"
+        app:layout_constraintRight_toRightOf="@id/tvFollow"
+        app:layout_constraintTop_toTopOf="@+id/tvFollow"
+        app:layout_constraintBottom_toBottomOf="@id/tvFollow"
+        style="@style/Base.Widget.AppCompat.ProgressBar"
+        android:visibility="gone"
+        android:layout_width="20dp"
+        android:layout_height="20dp"/>
+    <View
+        android:id="@+id/viewLine"
+        style="@style/ViewLine1pxStyle"
+        app:layout_constraintLeft_toLeftOf="@+id/tvName"
+        app:layout_constraintRight_toRightOf="@+id/tvFollow"
+        app:layout_constraintTop_toBottomOf="@+id/tvDesc"
+        android:layout_marginTop="10dp"
+        android:layout_width="0dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

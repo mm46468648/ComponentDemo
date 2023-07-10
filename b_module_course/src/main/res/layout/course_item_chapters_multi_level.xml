@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:layout_height="wrap_content">
+
+
+    <View
+        android:id="@+id/line_top"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/color_E0E0E0"
+        app:layout_constraintBottom_toTopOf="@+id/viewIcon"
+        app:layout_constraintLeft_toLeftOf="@+id/viewIcon"
+        app:layout_constraintRight_toRightOf="@+id/viewIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/line_bottom"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/color_64e0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/viewIcon"
+        app:layout_constraintRight_toRightOf="@+id/viewIcon"
+        app:layout_constraintTop_toBottomOf="@+id/viewIcon" />
+    <ImageView
+        android:id="@+id/viewIcon"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/course_ic_chapter_spot"
+        app:layout_constraintBottom_toBottomOf="@+id/tvChapterName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tvChapterName"
+        app:layout_constraintTop_toTopOf="@+id/tvChapterName" />
+
+
+    <TextView
+        android:id="@+id/tvChapterName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        tools:text="第三章:感知与知觉多少啊爱上的发送到发阿斯顿发阿斯顿发手动阀手动阀撒地方阿斯顿发阿斯顿发"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/viewIcon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

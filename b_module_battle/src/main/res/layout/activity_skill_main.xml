@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_game_brum"
+    android:orientation="vertical">
+
+    <com.mooc.resource.widget.CommonTitleLayout
+        android:id="@+id/commonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ctl_left_icon="@mipmap/common_ic_back_white"
+        app:ctl_middle_text="比武平台"
+        app:ctl_middle_text_color="@color/white" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="17dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/frame_game_brum">
+
+
+            <View
+                android:id="@+id/user_view"
+                android:layout_width="0dp"
+                android:layout_height="92dp"
+                android:background="@mipmap/bg_game_head_top_shape"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <View
+                android:layout_width="85dp"
+                android:layout_height="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="6dp"
+                android:background="@mipmap/icon_game_top_shape"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="85dp"
+                android:layout_height="8dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="15dp"
+                android:background="@mipmap/icon_game_top_shape"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+                android:id="@+id/img_user_header"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="26dp"
+                android:src="@mipmap/common_ic_user_head_default"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:qmui_border_color="#B89553"
+                app:qmui_border_width="1dp"
+                app:qmui_is_circle="true"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="20dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#ffbed1fd"
+                android:textSize="18sp"
+                tools:text="王大宽"
+                app:layout_constraintLeft_toRightOf="@+id/img_user_header"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/img_user_header"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                app:layout_constraintBottom_toBottomOf="@+id/img_user_header"
+                android:layout_marginLeft="18dp"
+                android:gravity="center_vertical"
+                app:layout_constraintLeft_toRightOf="@+id/img_user_header"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Lv.1"
+                    android:textColor="#ffbed1fd"
+                    android:textSize="14sp"
+                    />
+                <ProgressBar
+                    android:id="@+id/progress"
+                    android:layout_marginLeft="21dp"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    tools:progress="50"
+                    android:progressDrawable="@drawable/battle_bg_level_progres"
+                    android:layout_width="110dp"
+                    android:layout_height="5dp"/>
+            </LinearLayout>
+              <com.mooc.battle.view.MainOptionView
+                  android:id="@+id/movMy"
+                  app:layout_constraintTop_toBottomOf="@+id/user_view"
+                  android:layout_marginTop="15dp"
+                  android:layout_marginLeft="15dp"
+                  android:layout_marginRight="15dp"
+                  app:mov_text="我发起的比武"
+                  app:mov_left_icon="@mipmap/ic_skill_main_my"
+                  android:layout_width="match_parent"
+                  android:layout_height="61dp"/>
+
+            <com.mooc.battle.view.MainOptionView
+                android:id="@+id/movIng"
+                app:layout_constraintTop_toBottomOf="@+id/movMy"
+                app:mov_text="正在进行的比武"
+                app:mov_left_icon="@mipmap/ic_skill_main_being"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="61dp"/>
+
+            <com.mooc.battle.view.MainOptionView
+                android:id="@+id/movNew"
+                app:layout_constraintTop_toBottomOf="@+id/movIng"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                app:mov_text="发起新的比武"
+                app:mov_left_icon="@mipmap/ic_skill_main_new"
+                android:layout_width="match_parent"
+                android:layout_height="61dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/joinBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@null"
+        android:gravity="center"
+        android:text="@string/join_study_sure"
+        android:textColor="@color/colorPrimary"
+        android:textSize="17sp" />
+
+    <View
+        android:id="@+id/diver1"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_above="@+id/joinBtn"
+        android:background="@drawable/bg_tab_black_line" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/diver1"
+        android:layout_below="@+id/common_title_layout"
+        android:background="@color/color_white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="40dp">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcy_bet_point"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="22dp" />
+            <TextView
+                android:id="@+id/invitationTip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/bet_id_intro"
+                android:textColor="@color/color_2"
+                android:textSize="18sp" />
+            <EditText
+                android:id="@+id/invitationEdt"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="22dp"
+                android:background="@drawable/studyproject_colore0_radius6"
+                android:hint="请填写ID"
+                android:inputType="number"
+                android:maxLength="12"
+                android:paddingLeft="10dp"
+                android:textColor="@color/color_2"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/betIntroTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginRight="25dp"
+                android:text="@string/bet_point_title"
+                android:textColor="@color/color_2"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/betIntroTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="25dp"
+                android:lineSpacingExtra="8dp"
+                android:textColor="@color/color_5"
+                android:textSize="@dimen/sp_14" />
+
+<!--            <WebView-->
+<!--                android:id="@+id/wvBetDesc"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="25dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:layout_marginRight="25dp"-->
+<!--                android:scrollbars="none" />-->
+            <FrameLayout
+                android:id="@+id/flRoot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="25dp" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.mooc.resource.widget.CommonTitleLayout
+        android:id="@+id/common_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ctl_adapteStatusBar="true"
+        app:ctl_middle_text="挑战项目设置" />
+
+</RelativeLayout>

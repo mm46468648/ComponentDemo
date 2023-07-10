@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Skinable">
+        <attr name="is_skin" format="boolean"></attr>
+        <attr name="tag" format="string"></attr>
+    </declare-styleable>
+</resources>

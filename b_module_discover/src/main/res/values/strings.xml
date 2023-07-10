@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="str_empty">暂无数据</string>
+    <string name="text_str_add_study">收藏</string>
+
+    <string name="text_str_source_xt">学堂在线</string>
+    <string name="text_str_play_count">播放%1$s次</string>
+    <string name="text_xi_ma">喜马拉雅</string>
+    <string name="show_all_column">查看全部栏目</string>
+    <string name="text_guess_you_like">以下内容根据学习兴趣为您定制</string>
+    <string name="order">订阅</string>
+    <string name="text_switch">换一换</string>
+    <string name="recommend_album_count">%1$s集</string>
+    <string name="text_feed_all">全部</string>
+    <string name="text_show_all">查看全部</string>
+    <string name="recommend_micro_lesson">微课</string>
+    <string name="brvah_load_complete">加载完成</string>
+
+    <string name="str_edit">编辑</string>
+    <string name="str_album_num">%d集</string>
+    <string name="str_student_num">%d人</string>
+    <string name="text_f">%.2f</string>
+    <string name="text_price_master">￥%1$s</string>
+    <string name="str_play_num">%d次</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="recommend_list_teacher_and_company">老师：%1$s&#160;&#160;%2$s</string>
+
+    <string name="column_str_subscribed">已订阅</string>
+    <string name="column_str_subscribe">订阅</string>
+    <string name="column_subscribe_count">%1$d人已订阅</string>
+    <string name="text_source">平台：%s</string>
+    <string name="all_select">全选</string>
+    <string name="my_str_subscribe_dialog_title">是否取消对\&#034;%1$s\&#034;的关注?</string>
+    <string name="my_str_subscribe_add">是否对\&#034;%1$s\&#034;关注?</string>
+    <string name="subscribe_str_success">您已成功订阅此专栏</string>
+    <string name="title_activity_task_details">TaskDetailsActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="task_str_receive">点击领取</string>
+    <string name="success_score">奖励积分 %s</string>
+    <string name="success_reputation">奖励声望 %s</string>
+    <string name="task_select_hint">请选择一个学习清单</string>
+    <string name="already_get_task">已领取的任务</string>
+    <string name="task_list">任务中心</string>
+    <string name="history_task">历史任务</string>
+    <string name="task_tips">*主题阅读任务需要通过绑定的学习清单进入阅读</string>
+    <string name="edit_str_hint">请输入</string>
+    <string name="task_sign_detail_top">在输入框中输入如下内容并点击提交，输入内容需与下面的文本完全一致，不包括标点符号。</string>
+    <string name="task_sign_detail_content">良好的方法能使我们更好地发挥运用天赋的才能，而拙劣的方法则可能阻拦才能的发挥。因此，科学中难能可贵的创造性才华，由于方法拙劣可能被削弱，甚至被扼杀；而良好的方法则会增长、促进这种才华补充补充补充补充。</string>
+    <string name="text_str_submit">提交</string>
+    <string name="str_early_content_tip">输入文本与指定文本不一致，请返回重新检查。</string>
+
+
+</resources>

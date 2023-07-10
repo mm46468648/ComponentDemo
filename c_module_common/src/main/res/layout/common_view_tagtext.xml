@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="14dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp">
+
+    <TextView
+        android:id="@+id/tv_tags"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:minWidth="35dp"
+        android:gravity="center"
+        tools:text="电子书"
+        android:layout_marginRight="5dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="9sp" />
+
+</LinearLayout>

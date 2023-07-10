@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:paddingTop="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <include
+            android:id="@+id/incloudItem"
+            layout="@layout/my_include_item_study_firend_circle_dynamic_followup"
+           />
+
+        <include
+            android:id="@+id/incloudBottom"
+            layout="@layout/my_include_item_myshare_bottom"
+            />
+    </LinearLayout>
+</layout>

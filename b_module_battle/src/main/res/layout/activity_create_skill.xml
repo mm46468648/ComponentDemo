@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_game_brum"
+    android:orientation="vertical">
+
+    <com.mooc.resource.widget.CommonTitleLayout
+        android:id="@+id/commonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ctl_left_icon="@mipmap/common_ic_back_white"
+        app:ctl_middle_text="创建比武"
+        app:ctl_middle_text_color="@color/white" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="17dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/frame_game_brum">
+
+
+            <View
+                android:layout_width="85dp"
+                android:layout_height="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="6dp"
+                android:background="@mipmap/icon_game_top_shape"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="85dp"
+                android:layout_height="8dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="15dp"
+                android:background="@mipmap/icon_game_top_shape"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ImageView
+                android:layout_width="307dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="52dp"
+                android:src="@mipmap/ic_skill_create_tip" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="29dp"
+                android:background="@drawable/bg_create_skill_name"
+                android:gravity="center"
+                android:hint="输入名字"
+                android:textColor="#ffffffff"
+                android:textColorHint="#ffa7d6ff"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="31dp"
+                android:lineSpacingExtra="10dp"
+                android:text="每场比武从选择的题库分类中随机选择30道生成题目，参与人员限时10分钟完成。每场比武从开始当日起持续七天。"
+                android:textColor="#ffd7d7d7"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="60dp"
+                android:background="@mipmap/icon_game_top_shape"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCreate"
+                android:layout_width="147dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="60dp"
+                android:background="@mipmap/bg_match_button_left"
+                android:gravity="center"
+                android:text="创建比武"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/sp_14"
+                android:visibility="visible"
+                tools:layout_marginRight="15dp" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/shape_bg_adapter_home2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="7.5dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="7.5dp"
+    android:padding="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="你可能想要关注的人"
+            android:textColor="#ff5d5d5d"
+            android:textSize="14sp"
+            />
+
+        <ImageView
+            android:id="@+id/ivChange"
+            app:layout_constraintTop_toTopOf="@+id/tvChange"
+            app:layout_constraintBottom_toBottomOf="@id/tvChange"
+            app:layout_constraintRight_toLeftOf="@+id/tvChange"
+            android:layout_marginRight="5dp"
+            android:tag="skin:ic_column_exchange:src"
+            android:src="@mipmap/ic_column_exchange"
+            android:layout_width="12dp"
+            android:layout_height="12dp"/>
+        <TextView
+            android:id="@+id/tvChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:tag="skin:colorPrimary:textColor"
+            android:text="换一换"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRecommendUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

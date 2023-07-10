@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/ivMiddle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+
+        <TextView
+            android:id="@+id/tvShareWX"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/ic_share_wechat"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="@string/share_wechat"
+            android:textColor="@color/color_5"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/tvShareWxCircle"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/ic_share_circle"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="@string/share_circle"
+            android:textColor="@color/color_5"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/tvShareSchoolCircle"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/ic_share_launcher"
+            android:visibility="gone"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="@string/share_school_circle"
+            android:textColor="@color/color_5"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

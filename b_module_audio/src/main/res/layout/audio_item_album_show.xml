@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+
+    <TextView
+        android:id="@+id/tvHasDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:drawableLeft="@mipmap/audio_ic_all_unselected"
+        android:visibility="gone"
+        tools:visibility="gone"
+        android:text="" />
+
+
+    <ImageView
+        android:id="@+id/ivTrackCover"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        app:layout_goneMarginLeft="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toRightOf="@id/tvHasDown"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@mipmap/audio_ic_track_cover_default" />
+
+    <com.mooc.resource.widget.tagtext.TagTextView
+        android:id="@+id/tvTrackTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/ivTrackCover"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintLeft_toRightOf="@+id/ivTrackCover"
+        app:layout_constraintRight_toRightOf="parent"
+        android:ellipsize="end"
+        tools:text="人民教师人民教民教民教师人民教师"
+        android:maxLines="2"
+        android:textColor="@color/color_3"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tvTrackPlayCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/tvTrackTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvTrackTitle"
+        android:layout_marginTop="14dp"
+        android:drawableLeft="@mipmap/audio_ic_track_play_count"
+        android:drawablePadding="5dp"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tvTrackPlayTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tvTrackPlayCount"
+        android:layout_marginLeft="12dp"
+        app:layout_constraintLeft_toRightOf="@id/tvTrackPlayCount"
+        android:drawableLeft="@mipmap/audio_ic_track_time"
+        android:drawablePadding="5dp"
+        android:textSize="10sp" />
+
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="@id/tvTrackPlayCount"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="15dp"
+        android:id="@+id/ivDownloadState"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@mipmap/audio_ic_download_start"
+        android:visibility="visible" />
+
+    <ProgressBar
+        app:layout_constraintTop_toTopOf="@id/tvTrackPlayCount"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="15dp"
+        android:id="@+id/pbDownloadState"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:indeterminateDrawable="@drawable/audio_pb_auto_rotate_downloading"
+        android:visibility="gone" />
+
+
+    <ImageView
+        android:id="@+id/ivAdd"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginRight="12dp"
+        app:layout_constraintTop_toTopOf="@id/tvTrackPlayCount"
+        app:layout_constraintRight_toLeftOf="@id/ivDownloadState"
+        android:src="@mipmap/audio_ic_right_add"
+        android:textSize="12sp"
+        android:visibility="visible" />
+
+
+    <View
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvTrackPlayCount"
+        style="@style/ViewLine1pxStyle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

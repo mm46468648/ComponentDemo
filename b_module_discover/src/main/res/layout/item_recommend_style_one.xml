@@ -1,0 +1,148 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp">
+
+    <ImageView
+        android:id="@+id/iv_recommend_style_one"
+        android:layout_width="97dp"
+        android:layout_height="65dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tv_reasons_one"
+        android:layout_width="97dp"
+        android:layout_height="21dp"
+        android:layout_alignBottom="@id/iv_recommend_style_one"
+        android:background="@drawable/shape_coners2_color7f0"
+        android:ellipsize="end"
+        android:gravity="center|left"
+        android:maxLines="1"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textColor="@color/color_white"
+        android:textSize="11sp"
+        android:visibility="gone"
+        tools:text="标签"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/ivPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/iv_recommend_style_one"
+        android:layout_alignBottom="@id/iv_recommend_style_one"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
+        android:src="@mipmap/home_ic_study_room_play"
+        android:visibility="gone"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/tv_type_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/iv_recommend_style_one"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/shape_recommend_type"
+        android:gravity="center"
+        android:textColor="@color/color_white"
+        android:textSize="9sp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvTypeListOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/iv_recommend_style_one"
+        android:background="@drawable/shape_recommend_custom_type"
+        android:gravity="center"
+        android:textColor="@color/color_white"
+        android:textSize="11sp"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llContainer"
+        android:minHeight="65dp"
+        android:layout_toEndOf="@+id/iv_recommend_style_one"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/tv_title_style_one_resource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_recommend_style_one"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/color_2"
+            android:textSize="15sp"
+            tools:ignore="RtlHardcoded"
+            tools:text="标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题" />
+
+        <TextView
+            android:id="@+id/tv_center_style_one_resource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_bottom_left_style_one_resource"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/iv_recommend_style_one"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_5D5D5D"
+            android:textSize="13sp"
+            tools:ignore="RtlHardcoded"
+            tools:text="简介" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_bottom_left_style_one_resource"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/color_9"
+                android:textSize="13sp"
+                tools:text="网易课程"
+                tools:ignore="RtlHardcoded" />
+
+
+            <TextView
+                android:id="@+id/tv_bottom_right_style_one_resource"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                tools:text="网易课程sad发的方式是"
+                android:textColor="@color/color_9"
+                android:textSize="13sp"
+                tools:visibility="visible"
+                android:visibility="gone"
+                tools:ignore="RtlHardcoded" />
+        </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/llContainer"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/color_e2" />
+
+
+</RelativeLayout>

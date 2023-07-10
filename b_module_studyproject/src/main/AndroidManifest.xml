@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mooc.studyproject">
+    <!-- 读取网络信息状态 -->
+    <application>
+        <activity
+            android:name=".ui.NoticeMoreListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ShowMedalActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/ActivityDialogStyle" />
+        <activity android:name=".ui.BetPointActivity" />
+        <activity
+            android:name=".ui.FollowUpNewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" /> <!-- <activity -->
+        <!-- android:name="com.mooc.studyproject.ui.ShowWebImageActivity" -->
+        <!-- android:configChanges="orientation|screenSize|keyboardHidden" /> -->
+
+        <activity
+            android:name=".ui.FollowUpActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity
+            android:name=".ui.CommentListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity
+            android:name=".ui.PublishingDynamicsCommentActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+
+        <activity
+            android:name=".ui.PublishingDynamicsActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+
+        <activity
+            android:name=".ui.StudyProjectActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+
+        <activity
+            android:name=".ui.ResSimpleIntroActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity
+            android:name=".ui.NominationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+    </application> <!-- 获取当前wifi状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 允许程序改变网络连接状态 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" /> <!-- 读取手机信息权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 外存储写权限，构建语法需要用到此权限 -->
+    <!-- 腾讯语音评测需要使用的权限START -->
+    <!-- 获取手机录音机使用权限，听写、识别、语义理解需要用到此权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 外存储读权限，构建语法需要用到此权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 连接网络权限，用于执行云端语音能力 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+</manifest>

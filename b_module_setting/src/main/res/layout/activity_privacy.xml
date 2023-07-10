@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.mooc.resource.widget.CommonTitleLayout
+        android:id="@+id/commonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ctl_adapteStatusBar="true"
+        app:ctl_middle_text="@string/text_str_privacy_setting"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.mooc.resource.widget.CommonSettingItem
+        android:id="@+id/baseSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:csi_left_text="允许个性化推荐"
+        app:csi_right_icon="@mipmap/set_ic_switch_close" />
+
+    <View style="@style/ViewLine20pxStyle" />
+
+
+    <com.mooc.resource.widget.CommonSettingItem
+        android:id="@+id/likeSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:csi_left_text="@string/text_str_like_setting"
+        app:csi_right_icon="@mipmap/set_ic_switch_open" />
+
+
+    <com.mooc.resource.widget.CommonSettingItem
+        android:id="@+id/resourceSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:csi_left_text="@string/text_str_resource_setting"
+        app:csi_right_icon="@mipmap/set_ic_switch_open" />
+
+    <com.mooc.resource.widget.CommonSettingItem
+        android:id="@+id/columnSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:csi_left_text="@string/text_str_column_setting"
+        app:csi_right_icon="@mipmap/set_ic_switch_open" />
+
+
+</LinearLayout>

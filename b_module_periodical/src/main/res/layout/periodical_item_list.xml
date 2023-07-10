@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_marginTop="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:ellipsize="end"
+        tools:text="如果你既不热爱你的工作，也不对之嗤之以鼻，那说明你做的还不够多"
+        android:textColor="#ff333333"
+        android:textSize="14sp"
+        />
+
+    <TextView
+        android:id="@+id/tvAuthor"
+        android:layout_marginTop="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="奚贵芝"
+        android:textColor="#ff999999"
+        android:textSize="12sp"
+        />
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_marginTop="14dp"
+        style="@style/ViewLine1pxStyle"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

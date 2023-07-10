@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="MissingDefaultResource">
+
+    <item android:drawable="@android:color/white" />
+    <item android:top="-30dp">
+        <bitmap android:gravity="center"
+            android:src="@drawable/splash_bg_center" />
+    </item>
+    <item>
+        <bitmap
+            android:gravity="bottom"
+            android:scaleType="center"
+            android:src="@drawable/splash_bg_bottom" />
+    </item>
+</layer-list>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textColor="#ff000000"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        tools:text="测试卷一的名字测试卷一的名字测试卷一的名字测试卷一的名字测试卷一的名字测试卷一的名字测试卷一的名字测试卷一的名字" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tvGoTest"
+            android:layout_width="140dp"
+            android:layout_height="35dp"
+            android:background="@drawable/shape_bg_go_test"
+            android:gravity="center"
+            android:text="去测试"
+            android:textColor="#ff000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvToApply"
+            android:layout_width="140dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="17dp"
+            android:background="@drawable/shape_bg_apply"
+            android:gravity="center"
+            android:text="申请学习证明"
+            android:textColor="#ffc7c7c7"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp">
+
+        <ImageView
+            android:id="@+id/ivStar"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@mipmap/knowledge_ic_start"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="12dp"
+            android:background="#E89D43"
+            app:layout_constraintBottom_toBottomOf="@+id/ivStar"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/ivStar"
+            app:layout_constraintTop_toTopOf="@+id/ivStar" />
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="17dp"
+            android:background="#E89D43"
+            app:layout_constraintBottom_toBottomOf="@+id/ivStar"
+            app:layout_constraintLeft_toRightOf="@+id/ivStar"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivStar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

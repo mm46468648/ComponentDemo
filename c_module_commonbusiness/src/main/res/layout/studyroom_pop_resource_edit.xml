@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llRoot"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/dp_40"
+    android:background="@mipmap/home_bg_studyroom_resource_edit_pop"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/tvRename"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/text_str_rename"
+        android:textColor="@color/color_6"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="0.5dp"
+        android:layout_height="wrap_content"
+        android:background="#E0E0E0"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvMove"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/text_str_move"
+        android:textColor="@color/color_6"
+        android:textSize="13sp" />
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="wrap_content"
+        android:background="#E0E0E0" />
+
+    <TextView
+        android:id="@+id/tvDelete"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/text_str_del"
+        android:textColor="@color/color_6"
+        android:textSize="13sp" />
+
+
+</LinearLayout>

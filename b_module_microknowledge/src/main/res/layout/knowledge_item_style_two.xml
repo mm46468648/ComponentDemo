@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_recommend_style_two"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_coners2_color7f0" />
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/shape_recommend_type"
+        android:gravity="center"
+        android:textColor="@color/color_white"
+        android:textSize="9sp"
+        tools:text="音频" />
+
+    <TextView
+        android:id="@+id/tvTitleStyleTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvCenterOneStyleTwo"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_white"
+        android:textSize="15sp"
+        tools:text="音频标题" />
+
+    <TextView
+        android:id="@+id/tvCenterOneStyleTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvCenterTwoStyleTwo"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_c"
+        android:textSize="12sp"
+        android:visibility="gone"
+        tools:text="专辑名称"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvCenterTwoStyleTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvCenterThreeStyleTwo"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_c"
+        android:textSize="12sp"
+        android:visibility="gone"
+        tools:text="专辑名称"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvCenterThreeStyleTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlLeftLineRight"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_c"
+        android:textSize="12sp"
+        android:visibility="gone"
+        tools:text="专辑名称"
+        tools:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/rlLeftLineRight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvReasonsStyleTwo"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/tvLineLift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_c"
+            android:textSize="12sp"
+            tools:text="专辑名称" />
+
+        <View
+            android:id="@+id/viewLine"
+            android:layout_width="0.5dp"
+            android:layout_height="12dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="27dp"
+            android:layout_marginRight="27dp"
+            android:layout_toRightOf="@+id/tvLineLift"
+            android:background="@color/color_white" />
+
+        <TextView
+            android:id="@+id/tvLineRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/viewLine"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_c"
+            android:textSize="12sp"
+            tools:text="专辑名称" />
+
+        <TextView
+            android:id="@+id/tvRight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@+id/tvLineRight"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_c"
+            android:textSize="12sp"
+            tools:text="专辑名称" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvReasonsStyleTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:ellipsize="end"
+        android:lineSpacingExtra="4dp"
+        android:maxLines="2"
+        android:textColor="@color/color_c"
+        android:textSize="11sp"
+        tools:text="专辑名称sad发送到发阿斯顿发阿斯顿发阿斯顿发阿斯顿" />
+
+
+</RelativeLayout>

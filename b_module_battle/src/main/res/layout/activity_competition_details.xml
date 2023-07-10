@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data></data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/bg_competition_details"
+        android:orientation="vertical">
+
+
+        <com.mooc.resource.widget.CommonTitleLayout
+            android:id="@+id/commonTitle"
+            app:ctl_middle_text="赛季"
+            app:ctl_right_text="参与规则"
+            app:ctl_left_icon="@mipmap/common_ic_back_white"
+            app:ctl_middle_text_color="@color/color_white"
+            app:ctl_right_text_color="@color/color_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/con_details"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/frame_game_brum"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/con_top"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:ignore="MissingConstraints">
+
+                    <View
+                        android:id="@+id/user_view"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@mipmap/bg_game_head_top_shape"
+                        app:layout_constraintDimensionRatio="H,336:141"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="50dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:textColor="#ffffffff"
+                        android:textSize="17sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="第一赛季第一赛季" />
+
+                    <TextView
+                        android:id="@+id/duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginRight="35dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="#ffbed1fd"
+                        android:textSize="13sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/title"
+                        tools:text="2045年03月30日～2045年03月30日" />
+
+                    <ImageView
+                        android:id="@+id/img_star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:src="@mipmap/icon_star"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/duration" />
+
+                    <View
+                        android:id="@+id/line_left"
+                        android:layout_width="0dp"
+                        android:layout_height="0.3dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:background="#557BD4"
+                        app:layout_constraintBottom_toBottomOf="@+id/img_star"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/img_star"
+                        app:layout_constraintTop_toTopOf="@+id/img_star" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0.3dp"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_marginRight="25dp"
+                        android:background="#557BD4"
+                        app:layout_constraintBottom_toBottomOf="@+id/img_star"
+                        app:layout_constraintLeft_toRightOf="@+id/img_star"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/img_star" />
+
+
+                    <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+                        android:id="@+id/img_user_header"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="35dp"
+                        android:src="@mipmap/common_ic_user_head_default"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/line_left"
+                        app:qmui_is_circle="true"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_marginTop="-5dp"
+                        android:layout_marginRight="25dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="#ffbed1fd"
+                        android:textSize="15sp"
+                        app:layout_constraintLeft_toRightOf="@+id/img_user_header"
+                        app:layout_constraintRight_toLeftOf="@+id/tv_rankContainer"
+                        app:layout_constraintTop_toTopOf="@+id/img_user_header"
+                        tools:ignore="MissingConstraints"
+                        tools:text="王大宽王大宽王大宽王大宽王大宽王大宽" />
+
+                    <ImageView
+                        android:id="@+id/img_level"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@mipmap/ic_game_rank_level_holder"
+                        app:layout_constraintBottom_toBottomOf="@+id/img_user_header"
+                        app:layout_constraintLeft_toLeftOf="@+id/tv_name" />
+
+                    <TextView
+                        android:id="@+id/user_leve_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_4"
+                        android:textColor="#ffbbd1ff"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/img_user_header"
+                        app:layout_constraintLeft_toRightOf="@+id/img_level"
+                        tools:text="上校" />
+
+
+
+
+                    <LinearLayout
+                        android:layout_marginRight="@dimen/dp_40"
+                        android:gravity="center_vertical"
+                        android:id="@+id/tv_rankContainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="@+id/tv_name"
+                        app:layout_constraintRight_toRightOf="parent">
+
+                        <ImageView
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginRight="@dimen/dp_4"
+                            android:src="@mipmap/icon_notify_left"
+                            app:layout_constraintBottom_toBottomOf="@+id/tv_rank"
+                            app:layout_constraintRight_toLeftOf="@+id/tv_rank"
+                            app:layout_constraintTop_toTopOf="@+id/tv_rank" />
+
+
+                        <TextView
+                            android:id="@+id/tv_rank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="2dp"
+                            android:text="排行榜"
+                            android:textColor="#ffbed1fd"
+                            android:textSize="13sp"
+                            app:layout_constraintRight_toLeftOf="@+id/arrow"
+                            app:layout_constraintTop_toTopOf="@+id/tv_name" />
+
+
+
+                        <ImageView
+                            android:id="@+id/arrow"
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:rotation="180"
+                            android:src="@mipmap/common_ic_back_black"
+                            app:layout_constraintBottom_toBottomOf="@+id/tv_rank"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/tv_rank" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/user_rank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffbed1fd"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/user_leve_name"
+                        app:layout_constraintRight_toRightOf="@+id/tv_rankContainer"
+                        tools:text="当前排名 1234" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="85dp"
+                    android:layout_height="8dp"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginTop="11dp"
+                    android:background="@mipmap/icon_game_top_shape"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:layout_width="85dp"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:background="@mipmap/icon_game_top_shape"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.mooc.resource.widget.MoocSwipeRefreshLayout
+                    android:id="@+id/swipe"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/con_top">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcy_brum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <include
+                        android:id="@+id/empty_view"
+                        layout="@layout/layout_empty_game_refresh" />
+                </com.mooc.resource.widget.MoocSwipeRefreshLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+</layout>

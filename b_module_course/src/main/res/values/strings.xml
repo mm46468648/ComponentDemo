@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">b_module_course</string>
+
+    <string name="text_course_community">课程评价</string>
+    <string name="text_normal_question">常见问题</string>
+    <string name="text_course_teacher_head">任课老师</string>
+    <string name="text_course_desc_title">课程简介</string>
+    <string name="text_open_class">开课班级</string>
+    <string name="text_course_chapter_title">课程大纲</string>
+    <string name="class_course_tip">开课:</string>
+
+    <string name="text_course_all_score">课程总得分</string>
+
+    <string name="exo_fenge">/</string>
+    <string name="tip_verify_top">注意:证书只能申请1次,申请后信息不能修改,请确保填写信息的准确性!</string>
+    <string name="tip_verify_name_zh">姓名（必填）</string>
+    <string name="tip_verify_name_en">英文名或全拼</string>
+    <string name="title_learn_unfinish">未完成</string>
+    <string name="title_learn_hasfinish">已完成</string>
+    <string name="text_id_send">绑定码：</string>
+    <string name="finish">完成</string>
+    <string name="course_chose_user">他们也在学这门课</string>
+
+</resources>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="15dp">
+
+    <com.mooc.resource.widget.MoocImageView
+        android:id="@+id/iv_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="15dp"
+        android:src="@color/color_e2"
+        app:layout_constraintTop_toBottomOf="@+id/iv_img" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:src="@mipmap/home_ic_study_room_play"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_img"
+        app:layout_constraintRight_toRightOf="@+id/iv_img" />
+
+
+    <TextView
+        android:id="@+id/tvOrg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:gravity="center"
+        android:text="喜马拉雅"
+        android:textColor="#ff5d5d5d"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_collection"
+        app:layout_constraintLeft_toLeftOf="@id/tv_title"
+        tools:text="喜马拉雅" />
+
+
+
+
+    <TextView
+        android:id="@+id/tv_collection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:ellipsize="end"
+        tools:text="500集"
+        android:singleLine="true"
+        android:textColor="@color/color_A3A3A3"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_img"
+        app:layout_constraintLeft_toRightOf="@+id/iv_img"
+         />
+
+    <TextView
+        android:id="@+id/tv_play_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:drawableLeft="@mipmap/common_ic_play_num_left"
+        android:drawablePadding="3dp"
+        tools:text="71.1111万"
+        android:textColor="@color/color_A3A3A3"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_img"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/tv_collection"
+        />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/color_2"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/iv_img"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
